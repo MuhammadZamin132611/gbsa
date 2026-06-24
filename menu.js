@@ -55,37 +55,87 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Business Development",
             items: [
                 {
-                    title: "Business Development",
+                    title: "Business Strategy & Expansion",
                     items: [
                         {
-                            name: "Universities",
-                            link: "/institutes/universities.html"
+                            name: "Startup & Business Consulting",
+                            link: "/businessDevelopment/businessStrategyExpansion/startupBusinessConsulting.html"
                         },
                         {
-                            name: "Training Institutes",
-                            link: "/institutes/trainingInstitutes.html"
-                        }
+                            name: "Business Growth & Scaling Strategy",
+                            link: "/businessDevelopment/businessStrategyExpansion/BusinessGrowthScalingStrategy.html"
+                        },
+                        {
+                            name: "Franchise Development & Expansion",
+                            link: "/businessDevelopment/businessStrategyExpansion/franchiseDevelopmentExpansion.html"
+                        },
+                        {
+                            name: "Investor & Funding Support",
+                            link: "/businessDevelopment/businessStrategyExpansion/investorFundingSupport.html"
+                        },
+                        {
+                            name: "Founder & Leadership Coaching",
+                            link: "/businessDevelopment/businessStrategyExpansion/founderLeadershipCoaching.html"
+                        },
                     ]
                 },
                 {
-                    title: "Gram to sadan",
+                    title: "Branding, Marketing & Lead Generation",
                     items: [
                         {
-                            name: "Planning",
-                            link: "/institutes/planning.html"
+                            name: "Branding, Marketing & Digital Growth",
+                            link: "/businessDevelopment/brandingMarketingLeadGeneration/brandingMarketingDigitalGrowth.html"
                         },
                         {
-                            name: "Training",
-                            link: "/institutes/training.html"
-                        }
+                            name: "PR, Marketing & Podcast Promotion",
+                            link: "/businessDevelopment/brandingMarketingLeadGeneration/PRMarketingPodcastPromotion.html"
+                        },
+                        {
+                            name: "Ads & Lead Generation",
+                            link: "/businessDevelopment/brandingMarketingLeadGeneration/adsLeadGeneration.html"
+                        },
+                        {
+                            name: "Video Marketing & Training",
+                            link: "/businessDevelopment/brandingMarketingLeadGeneration/videoMarketingTraining.html"
+                        },
                     ]
-                }
+                },
+                {
+                    title: "Technology & Automation Solutions",
+                    items: [
+                        {
+                            name: "Website & Mobile App Development",
+                            link: "/businessDevelopment/technologyAutomationSolutions/websiteMobileAppDevelopment.html"
+                        },
+                        {
+                            name: "WhatsApp API & Marketing Automation",
+                            link: "/businessDevelopment/technologyAutomationSolutions/whatsAppAPIMarketingAutomation.html"
+                        },
+                        {
+                            name: "IVR, CRM & Voice Marketing Systems",
+                            link: "/businessDevelopment/technologyAutomationSolutions/IVRCRMVoiceMarketingSystems.html"
+                        },
+                        {
+                            name: "Operations, Systems & Process Setup",
+                            link: "/businessDevelopment/technologyAutomationSolutions/operationsSystemsProcessSetup.html"
+                        },
+                    ]
+                },
+                {
+                    title: "Corporate Events & Recognition",
+                    items: [
+                        {
+                            name: "Events & Awards Show Management",
+                            link: "/businessDevelopment/corporateEventsRecognition/eventsAwardsShowManagement.html"
+                        },
+                    ]
+                },
             ]
         }
     ];
 
     /* ==========================
-       DESKTOP RENDER FUNCTION
+    DESKTOP RENDER FUNCTION
     ========================== */
 
     function renderDesktopItems(items) {
@@ -116,8 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             return `
-                <a href="${item.link}"
-                   class="block px-4 py-3 hover:bg-blue-50">
+                <a href="${item.link}" class="block px-4 py-3 hover:bg-blue-50">
                     ${item.name}
                 </a>
             `;
@@ -126,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ==========================
-       MOBILE RENDER FUNCTION
+    MOBILE RENDER FUNCTION
     ========================== */
 
     function renderMobileItems(items) {
@@ -158,8 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             return `
-                <a href="${item.link}"
-                   class="block px-10 py-3 border-t hover:bg-white">
+                <a href="${item.link}" class="block px-10 py-3 border-t hover:bg-white">
                     ${item.name}
                 </a>
             `;
@@ -168,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ==========================
-       DESKTOP SERVICES MENU
+    DESKTOP SERVICES MENU
     ========================== */
 
     const consultingDropdown =
@@ -252,7 +300,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ==========================
-       MOBILE MENU TOGGLE
+    MOBILE MENU TOGGLE
     ========================== */
 
     const mobileMenuBtn =
@@ -290,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ==========================
-       MOBILE SERVICES MENU
+    MOBILE SERVICES MENU
     ========================== */
 
     const mobileServicesContainer =
