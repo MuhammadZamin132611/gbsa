@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AARZOOAI Venture Private Limited</title>
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <a href="/index.html">
+                    <h1 class="text-2xl font-bold text-red-500">AARZOOAI</h1>
+                </a>
+                <!-- Mobile Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars transition-transform duration-300"></i>
+                </button>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium">
+
+                <a href="/index.html" class="hover:text-red-500">Home</a>
+
+                <a href="/about.html" class="hover:text-red-500">About</a>
+
+                <div class="relative group" id="consultingMenu">
+
+                    <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
+                        Consulting
+                        <i class="fa-solid fa-angle-down transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+
+                    <div id="consultingDropdown"
+                        class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
+
+                        <div class="menu-item relative">
+                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
+                                Courses
+                                <span class="course-arrow transition-transform duration-300">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
+
+                                <a href="/courses/dataScience.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Data Science
+                                </a>
+
+                                <a href="/courses/dataAnalytics.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Data Analytics
+                                </a>
+
+                                <a href="/courses/aiDiploma.html" class="block px-4 py-3 hover:bg-red-50">
+                                    AI Diploma
+                                </a>
+
+                                <a href="/courses/placementSupport.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Placement Support
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="menu-item relative">
+                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
+                                Organization
+                                <span class="course-arrow transition-transform duration-300">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
+
+                                <a href="/organization/governmentOrganizations.html"
+                                    class="block px-4 py-3 hover:bg-red-50">
+                                    Government Organizations
+                                </a>
+
+                                <a href="/organization/privateOrganizations.html"
+                                    class="block px-4 py-3 hover:bg-red-50">
+                                    Private Organizations
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="menu-item relative">
+                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
+                                Institutes
+                                <span class="course-arrow transition-transform duration-300">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
+
+                                <a href="/institutes/colleges.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Colleges
+                                </a>
+
+                                <a href="/institutes/universities.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Universities
+                                </a>
+
+                                <a href="/institutes/trainingInstitutes.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Training Institutes
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="/contact.html" class="hover:text-red-500">Contact</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+
+            <a href="/index.html" class="block px-6 py-4 border-b">Home</a>
+
+            <a href="/about.html" class="block px-6 py-4 border-b">About</a>
+
+            <!-- Consulting -->
+            <button id="mobileConsultingBtn" class="w-full flex justify-between items-center px-6 py-4 border-b">
+
+                Consulting
+
+                <i id="mobileConsultingArrow" class="fa-solid fa-angle-down transition-transform duration-300"></i>
+            </button>
+
+            <div id="mobileConsultingMenu" class="hidden bg-gray-50">
+
+                <!-- Courses -->
+                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
+                    Courses
+                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+                </button>
+
+                <div class="mobileSubmenu hidden">
+                    <a href="/courses/dataScience.html" class="block px-14 py-3">Data Science</a>
+                    <a href="/courses/dataAnalytics.html" class="block px-14 py-3">Data Analytics</a>
+                    <a href="/courses/aiDiploma.html" class="block px-14 py-3">AI Diploma</a>
+                    <a href="/courses/placementSupport.html" class="block px-14 py-3">Placement Support</a>
+                </div>
+
+                <!-- Organization -->
+                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
+                    Organization
+                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+                </button>
+
+                <div class="mobileSubmenu hidden">
+                    <a href="/organization/governmentOrganizations.html" class="block px-14 py-3">Government
+                        Organizations</a>
+                    <a href="/organization/privateOrganizations.html" class="block px-14 py-3">Private Organizations</a>
+                </div>
+
+                <!-- Institutes -->
+                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
+                    Institutes
+                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+                </button>
+
+                <div class="mobileSubmenu hidden">
+                    <a href="/institutes/colleges.html" class="block px-14 py-3">Colleges</a>
+                    <a href="/institutes/universities.html" class="block px-14 py-3">Universities</a>
+                    <a href="/institutes/trainingInstitutes.html" class="block px-14 py-3">Training Institutes</a>
+                </div>
+
+            </div>
+
+            <a href="/contact.html" class="block px-6 py-4">Contact</a>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+
+        <img src="/images/training_institutes.jpg"
+            class="absolute inset-0 w-full h-full object-cover" alt="Training Institute">
+
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <div class="relative z-10 flex items-center justify-center h-full text-center px-6">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+                    Training Institutes
+                </h1>
+
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                    Empowering students and professionals with AI, Data Science,
+                    Analytics, Software Development, Cloud Computing and Emerging Technologies.
+                </p>
+
+                <button class="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold">
+                    Explore Programs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Technology -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-8">
+                Search Technologies
+            </h2>
+
+            <input id="searchInput" type="text" placeholder="Search Technology..."
+                class="w-full p-4 border rounded-lg shadow">
+
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Training Technologies
+            </h2>
+
+            <div id="technologyGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">
+                    Popular Training Programs
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="text-2xl font-bold mb-4">
+                        AI & Data Analytics
+                    </h3>
+                    <p class="text-gray-600">
+                        Learn AI, Machine Learning, Data Analytics,
+                        Python, Power BI and real-world projects.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="text-2xl font-bold mb-4">
+                        Data Science
+                    </h3>
+                    <p class="text-gray-600">
+                        Statistics, Machine Learning, Deep Learning,
+                        Data Visualization and Predictive Analytics.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="text-2xl font-bold mb-4">
+                        Software Development
+                    </h3>
+                    <p class="text-gray-600">
+                        Full Stack Development using HTML, CSS,
+                        JavaScript, Angular, React and Node.js.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-20 bg-blue-900 text-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-4 gap-10 text-center">
+
+                <div>
+                    <h3 class="text-5xl font-bold">100+</h3>
+                    <p class="mt-3">Expert Trainers</p>
+                </div>
+
+                <div>
+                    <h3 class="text-5xl font-bold">5000+</h3>
+                    <p class="mt-3">Students Trained</p>
+                </div>
+
+                <div>
+                    <h3 class="text-5xl font-bold">100+</h3>
+                    <p class="mt-3">Industry Projects</p>
+                </div>
+
+                <div>
+                    <h3 class="text-5xl font-bold">95%</h3>
+                    <p class="mt-3">Placement Support</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Placement Support -->
+    <section class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <img src="/images/training institutes1.jpg" alt="Placement Support"
+                    class="rounded-xl shadow-lg">
+
+                <div>
+
+                    <h2 class="text-4xl font-bold mb-6">
+                        Placement Support
+                    </h2>
+
+                    <ul class="space-y-4 text-lg">
+
+                        <li>✓ Resume Development</li>
+                        <li>✓ LinkedIn Branding</li>
+                        <li>✓ Mock Interviews</li>
+                        <li>✓ Internship Opportunities</li>
+                        <li>✓ Corporate Placement Drives</li>
+                        <li>✓ Career Mentorship</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+
+        <div class="max-w-4xl mx-auto text-center px-6">
+
+            <h2 class="text-5xl font-bold mb-6">
+                Start Your Learning Journey Today
+            </h2>
+
+            <p class="text-xl mb-8">
+                Join India's Future Skills Training Institute and become industry-ready.
+            </p>
+
+            <a href="mailto:info@arzooai.com">
+                <button class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold">
+                    Enroll Now
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 group">
+        <a href="https://wa.me/919968852285" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+    <script src="/menu.js"></script>
+
+    <script>
+
+        const technologies = [
+            "Artificial Intelligence",
+            "Data Science",
+            "Data Analytics",
+            "Machine Learning",
+            "Deep Learning",
+            "Generative AI",
+            "Computer Vision",
+            "Natural Language Processing",
+            "Python",
+            "Advanced Python",
+            "Git & GitHub",
+            "API Integration",
+            "Statistics",
+            "Probability",
+            "Linear Algebra",
+            "Calculus",
+            "NumPy",
+            "Pandas",
+            "Power BI",
+            "Tableau",
+            "Matplotlib",
+            "Seaborn",
+            "Scikit-Learn",
+            "TensorFlow",
+            "Keras",
+            "PyTorch",
+            "Prompt Engineering",
+            "LLM Fine-Tuning",
+            "AI Agents",
+            "ChatGPT",
+            "Claude",
+            "Gemini",
+            "Midjourney",
+            "Stable Diffusion",
+            "OpenCV",
+            "Face Recognition",
+            "Speech Recognition",
+            "Chatbot Development",
+            "Cloud Computing",
+            "Full Stack Development",
+            "Angular",
+            "React",
+            "Node.js",
+            "Java",
+            "Cyber Security",
+            "DevOps"
+        ];
+
+        const grid = document.getElementById("technologyGrid");
+
+        function displayTechnologies(list) {
+
+            grid.innerHTML = "";
+
+            list.forEach(tech => {
+
+                grid.innerHTML += `
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+                    <h3 class="font-semibold text-lg text-center">
+                        ${tech}
+                    </h3>
+                </div>
+                `;
+            });
+        }
+
+        displayTechnologies(technologies);
+
+        document.getElementById("searchInput")
+            .addEventListener("keyup", function () {
+
+                const value = this.value.toLowerCase();
+
+                const filtered = technologies.filter(item =>
+                    item.toLowerCase().includes(value)
+                );
+
+                displayTechnologies(filtered);
+            });
+
+    </script>
+
+</body>
+
+</html>

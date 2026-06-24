@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AARZOOAI Venture Private Limited</title>
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: url('/images/dataScience_backgroung.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <a href="/index.html">
+                    <h1 class="text-2xl font-bold text-red-500">AARZOOAI</h1>
+                </a>
+                <!-- Mobile Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars transition-transform duration-300"></i>
+                </button>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium">
+
+                <a href="/index.html" class="hover:text-red-500">Home</a>
+
+                <a href="/about.html" class="hover:text-red-500">About</a>
+
+                <div class="relative group" id="consultingMenu">
+
+                    <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
+                        Consulting
+                        <i class="fa-solid fa-angle-down transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+
+                    <div id="consultingDropdown"
+                        class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
+
+                        <div class="menu-item relative">
+                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
+                                Courses
+                                <span class="course-arrow transition-transform duration-300">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
+
+                                <a href="/courses/dataScience.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Data Science
+                                </a>
+
+                                <a href="/courses/dataAnalytics.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Data Analytics
+                                </a>
+
+                                <a href="/courses/aiDiploma.html" class="block px-4 py-3 hover:bg-red-50">
+                                    AI Diploma
+                                </a>
+
+                                <a href="/courses/placementSupport.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Placement Support
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="menu-item relative">
+                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
+                                Organization
+                                <span class="course-arrow transition-transform duration-300">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
+
+                                <a href="/organization/governmentOrganizations.html"
+                                    class="block px-4 py-3 hover:bg-red-50">
+                                    Government Organizations
+                                </a>
+
+                                <a href="/organization/privateOrganizations.html"
+                                    class="block px-4 py-3 hover:bg-red-50">
+                                    Private Organizations
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="menu-item relative">
+                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
+                                Institutes
+                                <span class="course-arrow transition-transform duration-300">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
+
+                                <a href="/institutes/colleges.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Colleges
+                                </a>
+
+                                <a href="/institutes/universities.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Universities
+                                </a>
+
+                                <a href="/institutes/trainingInstitutes.html" class="block px-4 py-3 hover:bg-red-50">
+                                    Training Institutes
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="/contact.html" class="hover:text-red-500">Contact</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+
+            <a href="/index.html" class="block px-6 py-4 border-b">Home</a>
+
+            <a href="/about.html" class="block px-6 py-4 border-b">About</a>
+
+            <!-- Consulting -->
+            <button id="mobileConsultingBtn" class="w-full flex justify-between items-center px-6 py-4 border-b">
+
+                Consulting
+
+                <i id="mobileConsultingArrow" class="fa-solid fa-angle-down transition-transform duration-300"></i>
+            </button>
+
+            <div id="mobileConsultingMenu" class="hidden bg-gray-50">
+
+                <!-- Courses -->
+                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
+                    Courses
+                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+                </button>
+
+                <div class="mobileSubmenu hidden">
+                    <a href="/courses/dataScience.html" class="block px-14 py-3">Data Science</a>
+                    <a href="/courses/dataAnalytics.html" class="block px-14 py-3">Data Analytics</a>
+                    <a href="/courses/aiDiploma.html" class="block px-14 py-3">AI Diploma</a>
+                    <a href="/courses/placementSupport.html" class="block px-14 py-3">Placement Support</a>
+                </div>
+
+                <!-- Organization -->
+                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
+                    Organization
+                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+                </button>
+
+                <div class="mobileSubmenu hidden">
+                    <a href="/organization/governmentOrganizations.html" class="block px-14 py-3">Government
+                        Organizations</a>
+                    <a href="/organization/privateOrganizations.html" class="block px-14 py-3">Private Organizations</a>
+                </div>
+
+                <!-- Institutes -->
+                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
+                    Institutes
+                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+                </button>
+
+                <div class="mobileSubmenu hidden">
+                    <a href="/institutes/colleges.html" class="block px-14 py-3">Colleges</a>
+                    <a href="/institutes/universities.html" class="block px-14 py-3">Universities</a>
+                    <a href="/institutes/trainingInstitutes.html" class="block px-14 py-3">Training Institutes</a>
+                </div>
+
+            </div>
+
+            <a href="/contact.html" class="block px-6 py-4">Contact</a>
+
+        </div>
+    </nav>
+
+    <section class="hero-bg relative min-h-screen flex items-center justify-center">
+
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+
+            <span class="bg-blue-600 text-white px-5 py-2 rounded-full">
+                Future Ready Program
+            </span>
+
+            <!-- <h1 class="text-5xl md:text-7xl font-bold text-white mt-6">
+                Data Analytics Course
+            </h1> -->
+
+            <h1 class="text-5xl text-white md:text-7xl font-bold mt-6 leading-tight">
+                Become a
+                <span class="text-cyan-400">Data Analytics</span>
+            </h1>
+
+            <p class="text-xl text-gray-200 mt-6">
+                Master Data Analysis, Visualization, Business Intelligence,
+                Statistics, SQL, Python, Power BI & Tableau with Real-Time Projects.
+            </p>
+
+            <!-- <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#curriculum"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold">
+                    Explore Course
+                </a>
+
+                <a href="#technologies"
+                    class="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black">
+                    Technologies
+                </a>
+            </div> -->
+
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="mailto:info@arzooai.com">
+                    <button class="text-white bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-lg font-bold">
+                        Enroll Now
+                    </button>
+                </a>
+
+                <button class="border border-white text-white px-8 py-4 rounded-lg font-bold">
+                    Download Syllabus
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COURSE OVERVIEW -->
+    <section class="py-20 bg-white">
+
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-14">
+
+                <h2 class="text-4xl font-bold text-gray-800">
+                    Why Learn Data Analytics?
+                </h2>
+
+                <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                    Data Analytics helps organizations make data-driven decisions.
+                    Companies use analytics to improve sales, marketing, operations,
+                    customer experience, and business growth.
+                </p>
+
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+
+                <div class="bg-blue-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-chart-line text-4xl text-blue-600"></i>
+                    <h3 class="font-bold text-xl mt-4">Business Insights</h3>
+                </div>
+
+                <div class="bg-green-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-database text-4xl text-green-600"></i>
+                    <h3 class="font-bold text-xl mt-4">Big Data</h3>
+                </div>
+
+                <div class="bg-yellow-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-chart-pie text-4xl text-yellow-500"></i>
+                    <h3 class="font-bold text-xl mt-4">Visualization</h3>
+                </div>
+
+                <div class="bg-purple-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-brain text-4xl text-purple-600"></i>
+                    <h3 class="font-bold text-xl mt-4">Predictive Analytics</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section id="technologies" class="py-20 bg-gray-100">
+
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-bold">
+                    Real-Time Technologies Used in Data Analytics
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Microsoft Excel</h3>
+                    <p class="text-gray-600 mt-2">Data Cleaning & Reporting</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">SQL</h3>
+                    <p class="text-gray-600 mt-2">Database Querying</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Python</h3>
+                    <p class="text-gray-600 mt-2">Data Analysis & Automation</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Pandas</h3>
+                    <p class="text-gray-600 mt-2">Data Manipulation</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">NumPy</h3>
+                    <p class="text-gray-600 mt-2">Numerical Computing</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Matplotlib</h3>
+                    <p class="text-gray-600 mt-2">Data Visualization</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Seaborn</h3>
+                    <p class="text-gray-600 mt-2">Advanced Visualization</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Power BI</h3>
+                    <p class="text-gray-600 mt-2">Business Intelligence</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Tableau</h3>
+                    <p class="text-gray-600 mt-2">Interactive Dashboards</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Google Analytics</h3>
+                    <p class="text-gray-600 mt-2">Website Analytics</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Apache Spark</h3>
+                    <p class="text-gray-600 mt-2">Big Data Processing</p>
+                </div>
+
+                <div class="tech-card bg-white p-8 rounded-xl shadow transition-all duration-300">
+                    <h3 class="font-bold text-xl">Jupyter Notebook</h3>
+                    <p class="text-gray-600 mt-2">Analytics Development</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CURRICULUM -->
+    <section id="curriculum" class="py-20 bg-white">
+
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-bold">
+                    Course Curriculum
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="font-bold text-2xl mb-4">Module 1</h3>
+                    <ul class="space-y-3">
+                        <li>Excel Analytics</li>
+                        <li>Advanced Excel</li>
+                        <li>Data Cleaning</li>
+                        <li>Pivot Tables</li>
+                        <li>Business Reports</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="font-bold text-2xl mb-4">Module 2</h3>
+                    <ul class="space-y-3">
+                        <li>SQL Fundamentals</li>
+                        <li>Joins & Queries</li>
+                        <li>Database Management</li>
+                        <li>Data Extraction</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="font-bold text-2xl mb-4">Module 3</h3>
+                    <ul class="space-y-3">
+                        <li>Python Basics</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Exploratory Data Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow">
+                    <h3 class="font-bold text-2xl mb-4">Module 4</h3>
+                    <ul class="space-y-3">
+                        <li>Power BI</li>
+                        <li>Tableau</li>
+                        <li>Dashboard Creation</li>
+                        <li>Business Intelligence</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CAREER -->
+    <section class="py-20 bg-blue-600 text-white">
+
+        <div class="container mx-auto px-6 text-center">
+
+            <h2 class="text-4xl font-bold">
+                Career Opportunities
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-8 mt-12">
+
+                <div>
+                    <h3 class="text-2xl font-bold">Data Analyst</h3>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold">Business Analyst</h3>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold">BI Developer</h3>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold">Reporting Analyst</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gray-900 text-white text-center">
+
+        <h2 class="text-5xl font-bold">
+            Become a Data Analytics Professional
+        </h2>
+
+        <p class="mt-6 text-gray-300 max-w-3xl mx-auto">
+            Learn industry-leading analytics tools and work on real-world projects.
+            Get ready for high-demand careers in Data Analytics.
+        </p>
+        <a href="mailto:info@arzooai.com">
+            <button class="mt-8 bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-lg font-semibold">
+                Enroll Now
+            </button>
+        </a>
+
+    </section>
+
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 group">
+        <a href="https://wa.me/919968852285" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+    <script src="/menu.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Home | Global Business & Startup Association</title>
+
+  <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .hero-bg {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("images/index_background.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .glass {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-6 py-4">
+
+            <div class="flex justify-between items-center">
+
+                <a href="/index.html">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto" alt="BGSA Logo">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+
+                    <a href="/index.html" class="hover:text-red-500">
+                        Home
+                    </a>
+
+                    <a href="/about.html" class="hover:text-red-500">
+                        About
+                    </a>
+
+                    <!-- Services -->
+                    <div class="relative" id="consultingMenu">
+
+                        <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
+
+                            Services
+
+                            <i class="fa-solid fa-angle-down"></i>
+
+                        </button>
+
+                        <div id="consultingDropdown"
+                            class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
+                        </div>
+
+                    </div>
+
+                    <a href="/contact.html" class="hover:text-red-500">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 border-t">
+
+                <a href="/index.html" class="block px-4 py-3 border-b hover:bg-gray-50">
+                    Home
+                </a>
+
+                <a href="/about.html" class="block px-4 py-3 border-b hover:bg-gray-50">
+                    About
+                </a>
+
+                <!-- Mobile Services -->
+                <div id="mobileServicesContainer"></div>
+
+                <a href="/contact.html" class="block px-4 py-3 hover:bg-gray-50">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="glass rounded-3xl p-10 text-white">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          <!-- India's Premier AI, Data Science & Future Skills Talent Hub -->
+          Global Business & Startup Association
+        </h1>
+
+        <p class="text-xl leading-relaxed mb-8 max-w-4xl">
+          Empowering Human Intelligence Through Artificial Intelligence.
+          International AI Education, Data Science, Practical
+          Training and Placement Support.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-xl font-semibold">
+            <a href="mailto:info@arzooai.com">Apply Now</a>
+          </button>
+
+          <button class="border border-white px-8 py-3 rounded-xl">
+            Download Brochure
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        About Global Business & Startup Association
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <p class="text-lg leading-8">
+            Global Business & Startup Association Venture Private Limited is a Delhi-based technology and
+            skill-development company established to bridge the widening gap
+            between traditional education and the AI-driven global economy.
+            The company serves as the Indian operations arm of is committed to building an AI-ready workforce
+            through global education, industry certifications, practical
+            training and placement support.
+          </p>
+        </div>
+
+        <!-- <div class="bg-blue-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Leadership</h3>
+
+          <ul class="space-y-3">
+            <li>Chairperson: Vinod Sujan</li>
+            <li>Founder Director: Nasir Ahmad Siddiqui</li>
+            <li>Director: Sohail Siddiqui</li>
+            <li>Key Person: Ajay Sharma</li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION MISSION -->
+
+  <section class="bg-gradient-to-r from-blue-700 to-indigo-700 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-4xl font-bold mb-6">Vision</h2>
+
+          <p class="text-lg leading-8">
+            To become India's most trusted Artificial Intelligence Talent Hub
+            producing globally employable AI professionals through innovation,
+            ethical technology education and industry-integrated learning.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-4xl font-bold mb-6">Mission</h2>
+
+          <p class="text-lg leading-8">
+            Train and place more than 100,000 youth, graduates and
+            professionals in Artificial Intelligence, Data Science, Analytics,
+            Automation and Emerging Technologies by 2030.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+
+  <section id="programs" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">
+        International AI Programs
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h3 class="text-2xl font-bold mb-4">
+            Certificate in AI & Data Analytics
+          </h3>
+
+          <p>Duration: 6 Months</p>
+          <p>Learning Hours: 72 Hours</p>
+
+          <div class="mt-4 font-semibold">
+            Online: ₹49,000
+            <br />
+            Offline: ₹55,000
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 border-4 border-blue-600">
+          <h3 class="text-2xl font-bold mb-4">
+            Advanced Diploma in AI, Data Science & ML
+          </h3>
+
+          <p>Duration: 1 Year</p>
+          <p>Learning Hours: 144 Hours</p>
+
+          <div class="mt-4 font-semibold">
+            Online: ₹86,000
+            <br />
+            Offline: ₹99,000
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h3 class="text-2xl font-bold mb-4">Global Degree Program</h3>
+
+          <p>Duration: 3 Years</p>
+          <p>Learning Hours: 500+</p>
+
+          <div class="mt-4 font-semibold">
+            Online: ₹2,50,000
+            <br />
+            Offline: ₹3,00,000
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIZATIONS -->
+
+  <section id="specialization" class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-14">
+        Flagship Specializations
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow">AI Engineering</div>
+
+        <div class="bg-white p-6 rounded-xl shadow">Data Science</div>
+
+        <div class="bg-white p-6 rounded-xl shadow">Data Analytics</div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Machine Learning Engineering
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Deep Learning & Neural Networks
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">Generative AI</div>
+
+        <div class="bg-white p-6 rounded-xl shadow">Computer Vision</div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Natural Language Processing
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">AI for Healthcare</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-14">
+        Comprehensive Curriculum
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-blue-50 p-8 rounded-xl">
+          <h3 class="font-bold text-2xl mb-4">Programming</h3>
+
+          <ul class="space-y-2">
+            <li>Python Programming</li>
+            <li>Advanced Python</li>
+            <li>API Integration</li>
+            <li>Git & GitHub</li>
+            <li>Software Development</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-8 rounded-xl">
+          <h3 class="font-bold text-2xl mb-4">Machine Learning</h3>
+
+          <ul class="space-y-2">
+            <li>Regression</li>
+            <li>Decision Trees</li>
+            <li>Random Forest</li>
+            <li>XGBoost</li>
+            <li>Scikit-Learn</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-8 rounded-xl">
+          <h3 class="font-bold text-2xl mb-4">Deep Learning</h3>
+
+          <ul class="space-y-2">
+            <li>CNN</li>
+            <li>RNN</li>
+            <li>LSTM</li>
+            <li>Transformers</li>
+            <li>PyTorch</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-8 rounded-xl">
+          <h3 class="font-bold text-2xl mb-4">Generative AI</h3>
+
+          <ul class="space-y-2">
+            <li>ChatGPT</li>
+            <li>Claude</li>
+            <li>Gemini</li>
+            <li>Midjourney</li>
+            <li>Stable Diffusion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSR -->
+
+  <section id="csr" class="bg-indigo-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        CSR Skill Development Initiative 2026
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-xl p-8">
+          <h3 class="font-bold text-3xl">1000</h3>
+          <p>Youth Trained</p>
+        </div>
+
+        <div class="glass rounded-xl p-8">
+          <h3 class="font-bold text-3xl">500+</h3>
+          <p>Employment Opportunities</p>
+        </div>
+
+        <div class="glass rounded-xl p-8">
+          <h3 class="font-bold text-3xl">₹5.76 Cr</h3>
+          <p>CSR Sponsorship Value</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+
+  <!-- <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        Why Choose Global Business & Startup Association?
+      </h2>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow">Global Faculty</div>
+
+        <div class="bg-white p-8 rounded-xl shadow">
+          Elite Admission Process
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow">
+          100% Placement Assistance
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow">Industry Projects</div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="bg-gray-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-10 text-center">Contact Us</h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Corporate Office</h3>
+
+          <p>
+            N-1, South Extension Part-I<br />
+            New Delhi - 110049
+          </p>
+
+          <br />
+
+          <h3 class="text-2xl font-bold mb-4">International Office</h3>
+
+          <p>
+            389 La Questa Way<br />
+            Woodside, California 94062<br />
+            USA
+          </p>
+        </div>
+
+        <div>
+          <form class="space-y-4">
+            <input type="text" placeholder="Full Name" class="w-full p-4 rounded text-black" />
+
+            <input type="email" placeholder="Email" class="w-full p-4 rounded text-black" />
+
+            <textarea rows="5" placeholder="Message" class="w-full p-4 rounded text-black"></textarea>
+
+            <button type="submit" class="bg-blue-600 px-8 py-4 rounded-lg">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="bg-black text-center text-white py-8">
+    <p class="text-lg">© 2026 Global Business & Startup Association Venture Private Limited</p>
+
+    <p class="mt-2 text-gray-400">
+      Empowering Human Intelligence Through Artificial Intelligence
+    </p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <div class="fixed bottom-5 right-5 group">
+    <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+      <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+    </a>
+
+    <!-- Tooltip -->
+    <span
+      class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+      WhatsApp Us
+    </span>
+  </div>
+
+  <script src="menu.js"></script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Women Empowerment | Global Business & Startup Association</title>
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(30, 58, 138, 0.85)), url('/image/womenEmpowerHeroBackground.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            transition: all .4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <nav class="bg-white shadow sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-6 py-4">
+
+            <div class="flex justify-between items-center">
+
+                <a href="/index.html">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto" alt="BGSA Logo">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+
+                    <a href="/index.html" class="hover:text-red-500">
+                        Home
+                    </a>
+
+                    <a href="/about.html" class="hover:text-red-500">
+                        About
+                    </a>
+
+                    <!-- Services -->
+                    <div class="relative" id="consultingMenu">
+
+                        <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
+
+                            Services
+
+                            <i class="fa-solid fa-angle-down"></i>
+
+                        </button>
+
+                        <div id="consultingDropdown"
+                            class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
+                        </div>
+
+                    </div>
+
+                    <a href="/contact.html" class="hover:text-red-500">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 border-t">
+
+                <a href="/index.html" class="block px-4 py-3 border-b hover:bg-gray-50">
+                    Home
+                </a>
+
+                <a href="/about.html" class="block px-4 py-3 border-b hover:bg-gray-50">
+                    About
+                </a>
+
+                <!-- Mobile Services -->
+                <div id="mobileServicesContainer"></div>
+
+                <a href="/contact.html" class="block px-4 py-3 hover:bg-gray-50">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-20 w-full">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-white"> <span
+                        class="inline-block bg-blue-600 px-5 py-2 rounded-full text-sm font-semibold"> Government Women
+                        Empowerment Schemes </span>
+                    <h1 class="text-5xl md:text-7xl font-bold mt-6 leading-tight"> Empowering Women <span
+                            class="block text-blue-400"> Transforming Futures </span> </h1>
+                    <p class="mt-8 text-lg md:text-xl text-gray-200 leading-relaxed"> Supporting women through
+                        education, healthcare, entrepreneurship, employment, leadership, and financial independence.
+                        Explore government schemes designed to create equal opportunities and a brighter future for
+                        every woman. </p>
+                    <div class="flex flex-wrap gap-4 mt-10"> <a href="#schemes"
+                            class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold"> Explore Schemes
+                        </a> <a href="#contact"
+                            class="border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-slate-900 transition">
+                            Contact Us </a> </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img src="/image/womenEmpowerHero.jpg"
+                        alt="Women Leadership" class="rounded-3xl shadow-2xl border border-blue-500/20">
+                </div>
+            </div>
+        </div>
+    </section> <!-- ABOUT -->
+    <section id="schemes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900"> Government Women Empowerment Schemes </h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-5"></div>
+            </div>
+            <div class="max-w-5xl mx-auto text-center">
+                <p class="text-lg text-gray-600 leading-relaxed"> In the pursuit of gender equality and women's
+                    empowerment, governments have introduced impactful schemes that uplift women in every sphere of
+                    life. These initiatives focus on education, healthcare, financial inclusion, employment, leadership
+                    development, and legal protection. </p>
+            </div>
+        </div>
+    </section> <!-- FEATURES -->
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900"> Key Areas of Empowerment </h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="font-bold text-xl mb-3"> Financial Inclusion </h3>
+                    <p class="text-gray-600"> Access to loans, savings programs, and entrepreneurship opportunities.
+                    </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="font-bold text-xl mb-3"> Skill Development </h3>
+                    <p class="text-gray-600"> Professional training and education programs for career growth. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🏥</div>
+                    <h3 class="font-bold text-xl mb-3"> Healthcare Support </h3>
+                    <p class="text-gray-600"> Maternal care, health awareness, and wellness initiatives. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">👩‍💼</div>
+                    <h3 class="font-bold text-xl mb-3"> Employment </h3>
+                    <p class="text-gray-600"> Creating job opportunities and supporting women entrepreneurs. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h3 class="font-bold text-xl mb-3"> Legal Protection </h3>
+                    <p class="text-gray-600"> Awareness of legal rights and access to justice. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🏛️</div>
+                    <h3 class="font-bold text-xl mb-3"> Leadership </h3>
+                    <p class="text-gray-600"> Encouraging participation in leadership and governance. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <h3 class="font-bold text-xl mb-3"> Social Welfare </h3>
+                    <p class="text-gray-600"> Community development and welfare support initiatives. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">📢</div>
+                    <h3 class="font-bold text-xl mb-3"> Awareness </h3>
+                    <p class="text-gray-600"> Promoting gender equality and advocacy programs. </p>
+                </div>
+            </div>
+        </div>
+    </section> <!-- STATS -->
+    <section class="bg-slate-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10 text-center">
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="50000">0</h3>
+                    <p class="mt-3">Women Benefited</p>
+                </div>
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="500">0</h3>
+                    <p class="mt-3">Training Programs</p>
+                </div>
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="100">0</h3>
+                    <p class="mt-3">Government Schemes</p>
+                </div>
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="25">0</h3>
+                    <p class="mt-3">States Covered</p>
+                </div>
+            </div>
+        </div>
+    </section> <!-- GALLERY -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-bold text-slate-900"> Empowerment Gallery </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <img src="/image/womenEmpower1.jpg"
+                    class="rounded-2xl h-80 w-full object-cover shadow-lg">
+                <img src="/image/womenEmpower2.jpg"
+                    class="rounded-2xl h-80 w-full object-cover shadow-lg">
+                <img src="/image/womenEmpower3.jpg"
+                    class="rounded-2xl h-80 w-full object-cover shadow-lg">
+            </div>
+        </div>
+    </section> <!-- CTA -->
+    <section id="contact" class="bg-blue-700 text-white py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6"> Empowering Women for a Brighter Tomorrow </h2>
+            <p class="text-xl text-blue-100 leading-relaxed"> Empowering women is not just a goal; it is a
+                responsibility. Together, we can build a society where every woman has equal opportunities, rights,
+                education, and the confidence to achieve her dreams. </p> <button
+                class="mt-10 bg-white text-blue-700 font-bold px-10 py-4 rounded-lg hover:bg-gray-100"> Learn More
+            </button>
+        </div>
+    </section> <!-- FOOTER -->
+    <footer class="bg-slate-950 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-white font-bold text-xl"> Women Empowerment Initiative </h3>
+            <p class="mt-2"> Building Equal Opportunities, Leadership & Success. </p>
+        </div>
+    </footer>
+    <script> const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 100;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20);
+                } else { counter.innerText = target.toLocaleString(); }
+            }
+            updateCounter();
+        }); </script>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-black text-center text-white py-8">
+        <!-- <section class="mb-4">
+            <h2 class="text-3xl font-bold">Global Business & Startup Association</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div class="">
+
+                </div>
+                <div>dd</div>
+                <div>dd</div>
+                <div>dd</div>
+            </div>
+        </section> -->
+        <p class="text-lg">© 2026 Global Business & Startup Association Venture Private Limited</p>
+
+        <p class="mt-2 text-gray-400">
+            Empowering Human Intelligence Through Artificial Intelligence
+        </p>
+    </footer>
+    <div class="fixed bottom-5 right-5 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+    <script src="/menu.js"></script>
+</body>
+
+</html>
