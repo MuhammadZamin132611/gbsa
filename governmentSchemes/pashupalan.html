@@ -12,7 +12,28 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
+        .hero-bg {
+            background:
+                linear-gradient(rgba(2, 6, 23, .88),
+                    rgba(30, 58, 138, .85)),
+                url('/image/pashupalanCowHreo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            transition: .4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -91,8 +112,239 @@
 
     </nav>
 
-    <h1 class="text-center py-4 text-3xl font-bold">Pashupalan</h1>
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center">
 
+        <div class="max-w-7xl mx-auto px-6 py-20">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div class="text-white">
+
+                    <span class="inline-block bg-blue-600 px-5 py-2 rounded-full font-semibold">
+                        Government Pashupalan Schemes
+                    </span>
+
+                    <h1 class="text-5xl md:text-7xl font-bold mt-6 leading-tight">
+                        Pashupalan
+                        <span class="block text-blue-400">
+                            Empowering Agriculture & Livestock
+                        </span>
+                    </h1>
+
+                    <p class="mt-8 text-xl text-gray-200 leading-relaxed">
+                        Supporting farmers through livestock development,
+                        animal healthcare, subsidies, insurance coverage,
+                        and training programs to improve rural livelihoods
+                        and agricultural sustainability.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-10">
+
+                        <a href="#schemes" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold">
+                            Explore Schemes
+                        </a>
+
+                        <a href="#contact"
+                            class="border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition">
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hidden lg:block">
+
+                    <img src="/image/pashupalanGoattHreo.jpg" alt="Livestock"
+                        class="rounded-3xl shadow-2xl">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="schemes" class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-5xl font-bold text-slate-900">
+                    Government Pashupalan Schemes
+                </h2>
+
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+
+            </div>
+
+            <div class="max-w-5xl mx-auto text-center">
+
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Government Pashupalan Schemes focus on livestock
+                    development, animal health, dairy farming, poultry,
+                    goat farming, insurance protection, and financial
+                    support to strengthen rural economies and improve
+                    farmers' income.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-20 bg-slate-100">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Scheme Benefits
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">🐄</div>
+                    <h3 class="font-bold">Livestock Development</h3>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">💉</div>
+                    <h3 class="font-bold">Animal Healthcare</h3>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="font-bold">Subsidies</h3>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="font-bold">Training Programs</h3>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="font-bold">Insurance Support</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-slate-900 text-white py-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-4 gap-10 text-center">
+
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="25000">0</h3>
+                    <p class="mt-3">Farmers Supported</p>
+                </div>
+
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="1200">0</h3>
+                    <p class="mt-3">Training Camps</p>
+                </div>
+
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="500">0</h3>
+                    <p class="mt-3">Veterinary Centers</p>
+                </div>
+
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="28">0</h3>
+                    <p class="mt-3">States Covered</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Popular Programs
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="card bg-slate-50 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="/image/pashupalanGoatt1.jpg"
+                        class="h-60 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Dairy Farming</h3>
+                        <p class="mt-3 text-gray-600">
+                            Financial assistance and support for dairy farmers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-slate-50 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="/image/pashupalanCow1.jpg"
+                        class="h-60 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Animal Healthcare</h3>
+                        <p class="mt-3 text-gray-600">
+                            Vaccination and veterinary support services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-slate-50 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="/image/pashupalanGoattHreo.jpg"
+                        class="h-60 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Livestock Insurance</h3>
+                        <p class="mt-3 text-gray-600">
+                            Risk mitigation and protection for livestock owners.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="bg-blue-700 text-white py-24">
+
+        <div class="max-w-5xl mx-auto text-center px-6">
+
+            <h2 class="text-5xl font-bold mb-6">
+                Empowering Agriculture, Empowering Lives
+            </h2>
+
+            <p class="text-xl text-blue-100">
+                Join us in promoting sustainable agriculture,
+                livestock development, and better livelihoods
+                for farming communities across India.
+            </p>
+
+            <button class="mt-10 bg-white text-blue-700 font-bold px-10 py-4 rounded-lg hover:bg-gray-100">
+                Contact Us
+            </button>
+
+        </div>
+
+    </section>
 
     <!-- FOOTER -->
 
@@ -115,6 +367,30 @@
             WhatsApp Us
         </span>
     </div>
+
+    <script>
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach(counter => {
+            const updateCounter = () => {
+                const target = +counter.dataset.target;
+                const count = +counter.innerText;
+
+                const increment = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            };
+
+            updateCounter();
+        });
+    </script>
+
+
     <script src="/menu.js"></script>
 </body>
 
