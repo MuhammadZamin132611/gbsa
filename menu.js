@@ -131,7 +131,50 @@ document.addEventListener("DOMContentLoaded", () => {
                     ]
                 },
             ]
-        }
+        },
+        {
+            title: "Import & Export",
+            items: [
+                // {
+                //     name: "Government Organizations",
+                //     link: "/organization/governmentOrganizations.html"
+                // },
+                // {
+                //     name: "Private Organizations",
+                //     link: "/organization/privateOrganizations.html"
+                // }
+            ]
+        },
+        {
+            title: "International Business & Trade Law",
+            items: [
+                {
+                    name: "Export & Trade Contracts",
+                    link: "/internationalBusinessTradeLaw/exportTradeContracts.html"
+                },
+                {
+                    name: "International Business Negotiation",
+                    link: "/internationalBusinessTradeLaw/internationalBusinessNegotiation.html"
+                },
+                {
+                    name: "Cross Border Risk Management",
+                    link: "/internationalBusinessTradeLaw/crossBorderRiskManagement.html"
+                },
+                {
+                    name: "Contract Dispute Resolution",
+                    link: "/internationalBusinessTradeLaw/contractDisputeResolution.html"
+                },
+                {
+                    name: "Complaince & Regulatory Advisory",
+                    link: "/internationalBusinessTradeLaw/complainceRegulatoryAdvisory.html"
+                },
+                {
+                    name: "OME & Exporter Legal Support",
+                    link: "/internationalBusinessTradeLaw/OMEExporterLegalSupport.html"
+                },
+            ]
+        },
+
     ];
 
     /* ==========================
@@ -148,14 +191,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="nested-menu relative">
 
                         <button class="nested-btn w-full px-4 py-3 flex justify-between items-center hover:bg-blue-50">
-
-                            ${item.title}
-
+                        <span class="text-left">${item.title}</span>
                             <i class="fa-solid fa-chevron-right text-xs"></i>
 
                         </button>
 
-                        <div class="nested-dropdown hidden absolute right-full top-0 w-72 bg-white border shadow-lg rounded-lg">
+                        <div class="nested-dropdown hidden absolute right-full top-0 w-96 bg-white border shadow-lg rounded-lg">
 
                             ${renderDesktopItems(item.items)}
 
