@@ -12,7 +12,32 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
+        .hero-bg {
+            background: linear-gradient(rgba(2, 6, 23, 0.92), rgba(30, 58, 138, 0.85)),
+                url('/image/employeeHero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            transition: all .4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .glass {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -91,8 +116,178 @@
 
     </nav>
 
-    <h1 class="text-center py-4 text-3xl font-bold">Employment</h1>
-
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-white"> <span
+                        class="inline-block bg-blue-600 px-5 py-2 rounded-full text-sm font-semibold"> Government
+                        Employment Schemes </span>
+                    <h1 class="text-5xl md:text-7xl font-bold mt-6 leading-tight"> Youth <span
+                            class="block text-blue-400"> Employment </span> </h1>
+                    <p class="mt-8 text-xl text-gray-300 leading-relaxed"> Empowering youth through employment
+                        opportunities, skill development programs, apprenticeships, entrepreneurship support, and career
+                        guidance initiatives for a successful future. </p>
+                    <div class="flex flex-wrap gap-4 mt-10"> <a href="#services"
+                            class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold"> Explore
+                            Opportunities </a> <a href="#contact"
+                            class="border border-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
+                            Contact Us </a> </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="glass rounded-3xl p-6"> <img
+                            src="/image/skillIndiaHero.jpg"
+                            class="rounded-2xl shadow-2xl w-full" alt="Youth Employment"> </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- ABOUT -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold text-slate-900"> Government Employment Schemes </h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-5xl mx-auto text-center">
+                <p class="text-lg text-gray-600 leading-relaxed"> Government employment schemes are designed to reduce
+                    unemployment, improve employability, and create sustainable career opportunities for youth through
+                    training, placement assistance, apprenticeships, entrepreneurship support, and skill development.
+                </p>
+            </div>
+        </div>
+    </section> <!-- SERVICES -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16"> Employment Services </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-5xl mb-4">💼</div>
+                    <h3 class="font-bold text-xl mb-3"> Job Placement Services </h3>
+                    <p class="text-gray-600"> Connecting skilled candidates with suitable employment opportunities. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="font-bold text-xl mb-3"> Skill Development </h3>
+                    <p class="text-gray-600"> Industry-focused training programs to improve employability. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-5xl mb-4">🛠️</div>
+                    <h3 class="font-bold text-xl mb-3"> Apprenticeships </h3>
+                    <p class="text-gray-600"> Practical work experience through apprenticeship programs. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="font-bold text-xl mb-3"> Subsidized Training </h3>
+                    <p class="text-gray-600"> Affordable educational and vocational training opportunities. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="font-bold text-xl mb-3"> Entrepreneurship Support </h3>
+                    <p class="text-gray-600"> Guidance, funding, and resources for aspiring entrepreneurs. </p>
+                </div>
+                <div class="card bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="font-bold text-xl mb-3"> Career Counseling </h3>
+                    <p class="text-gray-600"> Professional guidance for career planning and growth. </p>
+                </div>
+            </div>
+        </div>
+    </section> <!-- SCHEMES -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16"> Popular Government Schemes </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-3xl shadow-xl p-8 border">
+                    <h3 class="font-bold text-2xl text-blue-600">PMKVY</h3>
+                    <p class="mt-4 text-gray-600"> Pradhan Mantri Kaushal Vikas Yojana for skill training and
+                        certification. </p>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl p-8 border">
+                    <h3 class="font-bold text-2xl text-blue-600">NAPS</h3>
+                    <p class="mt-4 text-gray-600"> National Apprenticeship Promotion Scheme for practical learning. </p>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl p-8 border">
+                    <h3 class="font-bold text-2xl text-blue-600">DDU-GKY</h3>
+                    <p class="mt-4 text-gray-600"> Rural youth employment and skill development initiative. </p>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl p-8 border">
+                    <h3 class="font-bold text-2xl text-blue-600">PMEGP</h3>
+                    <p class="mt-4 text-gray-600"> Financial support for self-employment and micro-enterprises. </p>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl p-8 border">
+                    <h3 class="font-bold text-2xl text-blue-600">MUDRA Loan</h3>
+                    <p class="mt-4 text-gray-600"> Funding assistance for startups and small businesses. </p>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl p-8 border">
+                    <h3 class="font-bold text-2xl text-blue-600">Startup India</h3>
+                    <p class="mt-4 text-gray-600"> Supporting innovation and entrepreneurship across India. </p>
+                </div>
+            </div>
+        </div>
+    </section> <!-- STATS -->
+    <section class="bg-slate-900 py-20 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10 text-center">
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="50000">0</h3>
+                    <p class="mt-3">Youth Employed</p>
+                </div>
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="1200">0</h3>
+                    <p class="mt-3">Training Programs</p>
+                </div>
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="350">0</h3>
+                    <p class="mt-3">Industry Partners</p>
+                </div>
+                <div>
+                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="28">0</h3>
+                    <p class="mt-3">States Covered</p>
+                </div>
+            </div>
+        </div>
+    </section> <!-- CAREER OPPORTUNITIES -->
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16"> Career Opportunities </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-3xl shadow-xl overflow-hidden"> <img
+                        src="/image/skillIndiaHero.jpg"
+                        class="h-64 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">IT & Digital Skills</h3>
+                        <p class="text-gray-600 mt-3"> Technology, AI, Data Analytics, and Digital Marketing. </p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl overflow-hidden"> <img
+                        src="/image/skillIndia1.jpg"
+                        class="h-64 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Manufacturing & Technical</h3>
+                        <p class="text-gray-600 mt-3"> Engineering, Production, Mechanical, and Industrial sectors. </p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-3xl shadow-xl overflow-hidden"> <img
+                        src="/image/employee1.jpg"
+                        class="h-64 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Entrepreneurship</h3>
+                        <p class="text-gray-600 mt-3"> Build startups and become job creators. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- CTA -->
+    <section id="contact" class="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-24">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2 class="text-5xl font-bold mb-6"> Empower Your Career, Embrace Your Future </h2>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto"> Whether you're a student, graduate, professional, or
+                entrepreneur, government employment schemes provide opportunities to build a successful and rewarding
+                future. </p> <button
+                class="mt-10 bg-white text-blue-700 px-10 py-4 rounded-xl font-bold hover:bg-gray-100"> Apply Now
+            </button>
+        </div>
+    </section>
 
     <!-- FOOTER -->
 
@@ -115,6 +310,27 @@
             WhatsApp Us
         </span>
     </div>
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCounter = () => {
+                const target = +counter.dataset.target;
+                const count = +counter.innerText;
+                const increment = target / 100;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            };
+            updateCounter();
+        }); 
+    </script>
+
+
+
     <script src="/menu.js"></script>
 </body>
 
