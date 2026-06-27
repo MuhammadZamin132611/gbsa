@@ -174,6 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             ]
         },
+        {
+            title: "Investment Banking",
+            items: [
+                {
+                    name: "Financial Advisory",
+                    link: "/"
+                },
+                // {
+                //     name: "Private Organizations",
+                //     link: "/organization/privateOrganizations.html"
+                // }
+            ]
+        },
 
     ];
 
