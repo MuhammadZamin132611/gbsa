@@ -15,17 +15,40 @@
 
   <style>
     .hero-bg {
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      background-image:
+        linear-gradient(rgba(0, 0, 0, .70), rgba(0, 0, 0, .70)),
         url("images/index_background.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
 
     .glass {
-      backdrop-filter: blur(15px);
       background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
       border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero-bg {
+        min-height: auto;
+        padding: 80px 0;
+        background-position: center;
+      }
+
+      .glass {
+        padding: 24px;
+      }
+    }
+
+    /* Tablet */
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .hero-bg {
+        padding: 100px 0;
+      }
     }
   </style>
 </head>
@@ -34,113 +57,208 @@
   <!-- NAVBAR -->
   <nav class="bg-white shadow sticky top-0 z-50">
 
-        <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="max-w-7xl mx-auto px-6 py-4">
 
-            <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center">
 
-                <a href="/index.html">
-                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto" alt="BGSA Logo">
-                </a>
+        <a href="/index.html">
+          <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto" alt="BGSA Logo">
+        </a>
 
-                <!-- Mobile Toggle -->
-                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
-                    <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
-                </button>
+        <!-- Mobile Toggle -->
+        <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
+          <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+        </button>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8 font-medium">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8 font-medium">
 
-                    <a href="/index.html" class="hover:text-red-500">
-                        Home
-                    </a>
+          <a href="/index.html" class="hover:text-red-500">
+            Home
+          </a>
 
-                    <a href="/about.html" class="hover:text-red-500">
-                        About
-                    </a>
+          <a href="/about.html" class="hover:text-red-500">
+            About
+          </a>
 
-                    <!-- Services -->
-                    <div class="relative" id="consultingMenu">
+          <!-- Services -->
+          <div class="relative" id="consultingMenu">
 
-                        <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
+            <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
 
-                            Services
+              Services
 
-                            <i class="fa-solid fa-angle-down"></i>
+              <i class="fa-solid fa-angle-down"></i>
 
-                        </button>
+            </button>
 
-                        <div id="consultingDropdown"
-                            class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
-                        </div>
-
-                    </div>
-
-                    <a href="/contact.html" class="hover:text-red-500">
-                        Contact Us
-                    </a>
-
-                </div>
-
+            <div id="consultingDropdown"
+              class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
             </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 border-t">
+          </div>
 
-                <a href="/index.html" class="block px-4 py-3 border-b hover:bg-gray-50">
-                    Home
-                </a>
-
-                <a href="/about.html" class="block px-4 py-3 border-b hover:bg-gray-50">
-                    About
-                </a>
-
-                <!-- Mobile Services -->
-                <div id="mobileServicesContainer"></div>
-
-                <a href="/contact.html" class="block px-4 py-3 hover:bg-gray-50">
-                    Contact Us
-                </a>
-
-            </div>
+          <a href="/contact.html" class="hover:text-red-500">
+            Contact Us
+          </a>
 
         </div>
 
-    </nav>
+      </div>
 
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 border-t">
+
+        <a href="/index.html" class="block px-4 py-3 border-b hover:bg-gray-50">
+          Home
+        </a>
+
+        <a href="/about.html" class="block px-4 py-3 border-b hover:bg-gray-50">
+          About
+        </a>
+
+        <!-- Mobile Services -->
+        <div id="mobileServicesContainer"></div>
+
+        <a href="/contact.html" class="block px-4 py-3 hover:bg-gray-50">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- 8303709944 Abdullah -->
+  <!-- 9889626278 modh vish -->
 
   <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="glass rounded-3xl p-10 text-white">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">
-          <!-- India's Premier AI, Data Science & Future Skills Talent Hub -->
+  <section class="hero-bg min-h-screen flex items-center py-20">
+    <div class="max-w-7xl mx-auto w-full px-5 sm:px-6 lg:px-8">
+      <div class="glass rounded-2xl lg:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 text-white">
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-5">
           Global Business & Startup Association
         </h1>
 
-        <p class="text-xl leading-relaxed mb-8 max-w-4xl">
-          Empowering Human Intelligence Through Artificial Intelligence.
-          International AI Education, Data Science, Practical
-          Training and Placement Support.
+        <p class="text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mb-8 text-gray-200 text-justify">
+          Connecting Businesses, Startups, Investors & Governments Across India and GCC. GBSA is a
+          professional business consultancy and strategic platform supporting entrepreneurs, startups,
+          MSMEs, investors and organizations through business solutions, project development, investment
+          facilitation and cross-border trade opportunities.
         </p>
 
-        <div class="flex flex-wrap gap-4">
-          <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-xl font-semibold">
-            <a href="mailto:info@arzooai.com">Apply Now</a>
-          </button>
 
-          <button class="border border-white px-8 py-3 rounded-xl">
-            Download Brochure
-          </button>
-        </div>
       </div>
     </div>
   </section>
 
-  
+
+  <section class="py-10">
+    <div class="container mx-auto px-6">
+
+      <div class="max-w-6xl mx-auto grid items-center">
+
+        <div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+            About Us
+          </h2>
+
+          <p class="text-gray-600 leading-8 text-lg text-justify">
+            GBSA empowers businesses with strategic guidance, consultancy, project development and
+            investment facilitation across India and GCC. Vision: Become one of the world's most trusted
+            business consultancy and investment facilitation organizations. Mission: Support entrepreneurs,
+            promote India-GCC collaboration, facilitate investments, deliver ethical solutions and create
+            long-term economic value.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <section class="pb-10">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto grid items-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Services We Offer
+        </h2>
+        <p class="text-gray-600 leading-8 text-lg text-justify">
+          Business Consultancy, Startup Advisory, Project Report Preparation, Bank Loan Consultancy,
+          Export-Import Consultancy, India-GCC Trade Support, Investment Facilitation, Market Research,
+          Business Strategy, Government Liaison Support, Business Expansion Planning, Healthcare Project
+          Consultancy.
+        </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="pb-10">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto grid items-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Why Choose GBSA
+        </h2>
+        <p class="text-gray-600 leading-8 text-lg text-justify">
+          Experienced consultants, practical solutions, India-GCC network, professional project
+          development, ethical practices and long-term partnerships.
+        </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="pb-10">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto grid items-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Industries
+        </h2>
+        <p class="text-gray-600 leading-8 text-lg text-justify">
+          Healthcare, Agriculture, Education, Food & Beverage, Manufacturing, Import-Export, Construction,
+          Renewable Energy, Retail and Technology.
+        </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="pb-10">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto grid items-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Values
+        </h2>
+        <p class="text-gray-600 leading-8 text-lg text-justify">
+          Integrity, Transparency, Professionalism, Innovation, Sustainability and Long-Term Partnerships.
+        </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
 
   <footer class="bg-black text-center text-white py-8">
+    <section class="pb-10">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto grid items-center ">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center text-white">
+            Contact
+          </h2>
+          <p class="text-gray-600 leading-8 text-lg text-white">
+            Mr. Sayeed Mohammad, Founder & Chairman. Business Consultant | Entrepreneur | Project Developer
+            | India-GCC Business Advisor. <br>Phone: +91-9811033633. Email: example@gbsa.org
+          </p>
+        </div>
+      </div>
+      </div>
+    </section>
     <p class="text-lg">© 2026 Global Business & Startup Association Venture Private Limited</p>
 
     <p class="mt-2 text-gray-400">

@@ -135,14 +135,38 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Import & Export",
             items: [
-                // {
-                //     name: "Government Organizations",
-                //     link: "/organization/governmentOrganizations.html"
-                // },
-                // {
-                //     name: "Private Organizations",
-                //     link: "/organization/privateOrganizations.html"
-                // }
+                {
+                    name: "Import & Export Consultancy",
+                    link: "/"
+                },
+                {
+                    name: "Import & Export IEC Registration",
+                    link: "/"
+                },
+                {
+                    name: "DGFT Registration & Services",
+                    link: "/"
+                },
+                {
+                    name: "Paid Finance Consultancy",
+                    link: "/"
+                },
+                {
+                    name: "Export Credit Asistance",
+                    link: "/"
+                },
+                {
+                    name: "International Business Setup",
+                    link: "/"
+                },
+                {
+                    name: "International B2B Lead Generation",
+                    link: "/"
+                },
+                {
+                    name: "End-to-End Import & Export Project Management",
+                    link: "/"
+                },
             ]
         },
         {
@@ -185,6 +209,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 //     name: "Private Organizations",
                 //     link: "/organization/privateOrganizations.html"
                 // }
+            ]
+        },
+        {
+            title: "Accounting Services & Registration",
+            items: [
+                {
+                    name: "Taxation Services",
+                    link: "/accountingServicesRegistration/taxationServices.html"
+                },
+                {
+                    name: "Company Compliance",
+                    link: "/accountingServicesRegistration/companyCompliance.html"
+                },
+                {
+                    name: "Financial Management",
+                    link: "/accountingServicesRegistration/financialManagement.html"
+                },
+                {
+                    name: "Audit Support",
+                    link: "/accountingServicesRegistration/auditSupport.html"
+                },
             ]
         },
 
