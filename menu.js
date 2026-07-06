@@ -203,40 +203,40 @@ document.addEventListener("DOMContentLoaded", () => {
             items: [
                 {
                     name: "Fund Raising",
-                    link: "/"
+                    link: "/investmentBanking/fundRaising.html"
 
                 },
                 {
                     name: "Mergers & Acquisitions (M&A)",
-                    link: "/"
+                    link: "/investmentBanking/mergersAcquisitions.html"
                 },
                 {
                     name: "Capital Market Services",
-                    link: "/"
+                    link: "/investmentBanking/capitalMarketServices.html"
                 },
                 {
                     name: "Corporate Advisory",
-                    link: "/"
+                    link: "/investmentBanking/corporateAdvisory.html"
                 },
                 {
                     name: "Valuation Services",
-                    link: "/"
+                    link: "/investmentBanking/valuationServices.html"
                 },
                 {
                     name: "Transaction Advisory",
-                    link: "/"
+                    link: "/investmentBanking/transactionAdvisory.html"
                 },
                 {
                     name: "Loan & Finance Advisory",
-                    link: "/"
+                    link: "/investmentBanking/loanFinanceAdvisory.html"
                 },
                 {
                     name: "Startup & Growth Advisory",
-                    link: "/"
+                    link: "/investmentBanking/startupGrowthAdvisory.html"
                 },
                 {
                     name: "Cross-Border Advisory",
-                    link: "/"
+                    link: "/investmentBanking/crossBorderAdvisory.html"
                 },
             ]
         },
