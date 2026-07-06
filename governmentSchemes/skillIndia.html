@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <style>
         html {
@@ -37,79 +38,82 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <nav class="bg-white shadow sticky top-0 z-50">
-
+    <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
-
             <div class="flex justify-between items-center">
-
-                <a href="/index.html">
-                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto" alt="BGSA Logo">
+                <!-- Brand Logo -->
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
                 </a>
 
-                <!-- Mobile Toggle -->
-                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
-                    <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
-                </button>
+                <!-- Desktop Menu Actions -->
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">About</a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8 font-medium">
-
-                    <a href="/index.html" class="hover:text-red-500">
-                        Home
-                    </a>
-
-                    <a href="/about.html" class="hover:text-red-500">
-                        About
-                    </a>
-
-                    <!-- Services -->
-                    <div class="relative" id="consultingMenu">
-
-                        <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
-
-                            Services
-
-                            <i class="fa-solid fa-angle-down"></i>
-
-                        </button>
-
-                        <div id="consultingDropdown"
-                            class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
-                        </div>
-
-                    </div>
-
-                    <a href="/contact.html" class="hover:text-red-500">
-                        Contact Us
-                    </a>
-
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-red-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <a href="/contact.html"
+                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
                 </div>
 
+                <!-- Mobile Toggle Menu Buttons -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-red-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 border-t">
-
-                <a href="/index.html" class="block px-4 py-3 border-b hover:bg-gray-50">
-                    Home
-                </a>
-
-                <a href="/about.html" class="block px-4 py-3 border-b hover:bg-gray-50">
-                    About
-                </a>
-
-                <!-- Mobile Services -->
-                <div id="mobileServicesContainer"></div>
-
-                <a href="/contact.html" class="block px-4 py-3 hover:bg-gray-50">
-                    Contact Us
-                </a>
-
-            </div>
-
         </div>
 
+        <!-- Mobile Navigation Drawer (Scrollable & Screen-Size Capped) -->
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">About</a>
+
+                <!-- Mobile Container Managed dynamically by JavaScript -->
+                <div id="mobileServicesContainer" class="w-full"></div>
+                <a href="/contact.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Desktop Mega Menu Base -->
+        <div id="megaMenu"
+            class="hidden absolute left-0 top-full w-full bg-[#1c1f20] text-white shadow-2xl transition-all duration-200">
+            <div class="max-w-7xl mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <!-- Static Descriptive Card -->
+                    <div class="border-r border-gray-800 pr-4">
+                        <h2 class="text-3xl font-light mb-4 text-white">
+                            Business Services
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-7">
+                            Explore government schemes, CSR opportunities, business development solutions, import-export
+                            services, and international trade advisory.
+                        </p>
+                    </div>
+
+                    <!-- Dynamic Level columns populated via JavaScript -->
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <!-- HERO SECTION -->
@@ -156,8 +160,7 @@
 
                 <div class="hidden lg:block">
 
-                    <img src="/image/skillIndiaHero.jpg"
-                        alt="Skill India" class="rounded-3xl shadow-2xl">
+                    <img src="/image/skillIndiaHero.jpg" alt="Skill India" class="rounded-3xl shadow-2xl">
 
                 </div>
 
@@ -296,8 +299,7 @@
             <div class="grid md:grid-cols-3 gap-8">
 
                 <div class="card bg-slate-50 rounded-2xl shadow-lg overflow-hidden">
-                    <img src="/image/skillIndiaHero.jpg"
-                        class="h-60 w-full object-cover">
+                    <img src="/image/skillIndiaHero.jpg" class="h-60 w-full object-cover">
                     <div class="p-6">
                         <h3 class="font-bold text-xl">Digital Skills</h3>
                         <p class="text-gray-600 mt-3">
@@ -307,8 +309,7 @@
                 </div>
 
                 <div class="card bg-slate-50 rounded-2xl shadow-lg overflow-hidden">
-                    <img src="/image/skillIndia1.jpg"
-                        class="h-60 w-full object-cover">
+                    <img src="/image/skillIndia1.jpg" class="h-60 w-full object-cover">
                     <div class="p-6">
                         <h3 class="font-bold text-xl">Technical Training</h3>
                         <p class="text-gray-600 mt-3">
@@ -318,8 +319,7 @@
                 </div>
 
                 <div class="card bg-slate-50 rounded-2xl shadow-lg overflow-hidden">
-                    <img src="/image/womenEmpowerHero.jpg"
-                        class="h-60 w-full object-cover">
+                    <img src="/image/womenEmpowerHero.jpg" class="h-60 w-full object-cover">
                     <div class="p-6">
                         <h3 class="font-bold text-xl">Entrepreneurship</h3>
                         <p class="text-gray-600 mt-3">

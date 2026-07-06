@@ -1,0 +1,13 @@
+/* Smooth subtle custom scrollbar for mobile overflow links */
+.subtle-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+
+.subtle-scroll::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+.subtle-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}

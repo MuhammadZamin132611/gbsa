@@ -11,191 +11,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <nav class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex justify-between items-center w-full md:w-auto">
-                <a href="/index.html">
-                    <h1 class="text-2xl font-bold text-red-500">AARZOOAI</h1>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
                 </a>
-                <!-- Mobile Toggle -->
-                <button id="mobileMenuBtn" class="md:hidden text-2xl text-red-500">
-                    <i id="mobileMenuIcon" class="fa-solid fa-bars transition-transform duration-300"></i>
-                </button>
-            </div>
-            <div class="hidden md:flex items-center gap-8 font-medium">
 
-                <a href="/index.html" class="hover:text-red-500">Home</a>
+                <!-- Desktop Menu Actions -->
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">About</a>
 
-                <a href="/about.html" class="hover:text-red-500">About</a>
-
-                <div class="relative group" id="consultingMenu">
-
-                    <button id="consultingBtn" class="flex items-center gap-2 hover:text-red-500">
-                        Consulting
-                        <i class="fa-solid fa-angle-down transition-transform duration-300 group-hover:rotate-180"></i>
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-red-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
                     </button>
-
-                    <div id="consultingDropdown"
-                        class="hidden absolute top-full left-0 w-52 bg-white shadow-xl rounded-lg border z-50">
-
-                        <div class="menu-item relative">
-                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
-                                Courses
-                                <span class="course-arrow transition-transform duration-300">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </span>
-                            </button>
-
-                            <div
-                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
-
-                                <a href="/courses/dataScience.html" class="block px-4 py-3 hover:bg-red-50">
-                                    Data Science
-                                </a>
-
-                                <a href="/courses/dataAnalytics.html" class="block px-4 py-3 hover:bg-red-50">
-                                    Data Analytics
-                                </a>
-
-                                <a href="/courses/aiDiploma.html" class="block px-4 py-3 hover:bg-red-50">
-                                    AI Diploma
-                                </a>
-
-                                <a href="/courses/placementSupport.html" class="block px-4 py-3 hover:bg-red-50">
-                                    Placement Support
-                                </a>
-
-                            </div>
-                        </div>
-
-                        <div class="menu-item relative">
-                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
-                                Organization
-                                <span class="course-arrow transition-transform duration-300">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </span>
-                            </button>
-
-                            <div
-                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
-
-                                <a href="/organization/governmentOrganizations.html"
-                                    class="block px-4 py-3 hover:bg-red-50">
-                                    Government Organizations
-                                </a>
-
-                                <a href="/organization/privateOrganizations.html"
-                                    class="block px-4 py-3 hover:bg-red-50">
-                                    Private Organizations
-                                </a>
-
-                            </div>
-                        </div>
-
-                        <div class="menu-item relative">
-                            <button class="submenu-btn w-full text-left px-4 py-3 hover:bg-red-50 flex justify-between">
-                                Institutes
-                                <span class="course-arrow transition-transform duration-300">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </span>
-                            </button>
-
-                            <div
-                                class="submenu hidden absolute right-full top-0 w-64 bg-white shadow-xl rounded-lg border">
-
-                                <a href="/institutes/colleges.html" class="block px-4 py-3 hover:bg-red-50">
-                                    Colleges
-                                </a>
-
-                                <a href="/institutes/universities.html" class="block px-4 py-3 hover:bg-red-50">
-                                    Universities
-                                </a>
-
-                                <a href="/institutes/trainingInstitutes.html" class="block px-4 py-3 hover:bg-red-50">
-                                    Training Institutes
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
+                    <a href="/contact.html"
+                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
                 </div>
 
-                <a href="/contact.html" class="hover:text-red-500">Contact</a>
-
+                <!-- Mobile Toggle Menu Buttons -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-red-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-
         </div>
 
+        <!-- Mobile Navigation Drawer (Scrollable & Screen-Size Capped) -->
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">About</a>
 
-
-        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
-
-            <a href="/index.html" class="block px-6 py-4 border-b">Home</a>
-
-            <a href="/about.html" class="block px-6 py-4 border-b">About</a>
-
-            <!-- Consulting -->
-            <button id="mobileConsultingBtn" class="w-full flex justify-between items-center px-6 py-4 border-b">
-
-                Consulting
-
-                <i id="mobileConsultingArrow" class="fa-solid fa-angle-down transition-transform duration-300"></i>
-            </button>
-
-            <div id="mobileConsultingMenu" class="hidden bg-gray-50">
-
-                <!-- Courses -->
-                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
-                    Courses
-                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
-                </button>
-
-                <div class="mobileSubmenu hidden">
-                    <a href="/courses/dataScience.html" class="block px-14 py-3">Data Science</a>
-                    <a href="/courses/dataAnalytics.html" class="block px-14 py-3">Data Analytics</a>
-                    <a href="/courses/aiDiploma.html" class="block px-14 py-3">AI Diploma</a>
-                    <a href="/courses/placementSupport.html" class="block px-14 py-3">Placement Support</a>
-                </div>
-
-                <!-- Organization -->
-                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
-                    Organization
-                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
-                </button>
-
-                <div class="mobileSubmenu hidden">
-                    <a href="/organization/governmentOrganizations.html" class="block px-14 py-3">Government
-                        Organizations</a>
-                    <a href="/organization/privateOrganizations.html" class="block px-14 py-3">Private Organizations</a>
-                </div>
-
-                <!-- Institutes -->
-                <button class="mobileSubmenuBtn w-full flex justify-between px-10 py-3 border-b">
-                    Institutes
-                    <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
-                </button>
-
-                <div class="mobileSubmenu hidden">
-                    <a href="/institutes/colleges.html" class="block px-14 py-3">Colleges</a>
-                    <a href="/institutes/universities.html" class="block px-14 py-3">Universities</a>
-                    <a href="/institutes/trainingInstitutes.html" class="block px-14 py-3">Training Institutes</a>
-                </div>
-
+                <!-- Mobile Container Managed dynamically by JavaScript -->
+                <div id="mobileServicesContainer" class="w-full"></div>
+                <a href="/contact.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">Contact</a>
             </div>
+        </div>
 
-            <a href="/contact.html" class="block px-6 py-4">Contact</a>
+        <!-- Desktop Mega Menu Base -->
+        <div id="megaMenu"
+            class="hidden absolute left-0 top-full w-full bg-[#1c1f20] text-white shadow-2xl transition-all duration-200">
+            <div class="max-w-7xl mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <!-- Static Descriptive Card -->
+                    <div class="border-r border-gray-800 pr-4">
+                        <h2 class="text-3xl font-light mb-4 text-white">
+                            Business Services
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-7">
+                            Explore government schemes, CSR opportunities, business development solutions, import-export
+                            services, and international trade advisory.
+                        </p>
+                    </div>
 
+                    <!-- Dynamic Level columns populated via JavaScript -->
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative h-screen">
-        <img src="/images/goverment_organisation.jpg"
-            class="absolute inset-0 w-full h-full object-cover" alt="Government Organizations">
+        <img src="/images/goverment_organisation.jpg" class="absolute inset-0 w-full h-full object-cover"
+            alt="Government Organizations">
 
         <div class="absolute inset-0 bg-black/60"></div>
 
