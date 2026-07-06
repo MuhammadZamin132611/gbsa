@@ -137,35 +137,35 @@ document.addEventListener("DOMContentLoaded", () => {
             items: [
                 {
                     name: "Import & Export Consultancy",
-                    link: "/"
+                    link: "/importExport/import&ExportConsultancy.html"
                 },
                 {
                     name: "Import & Export IEC Registration",
-                    link: "/"
+                    link: "/importExport/importExportIECRegistration.html"
                 },
                 {
                     name: "DGFT Registration & Services",
-                    link: "/"
+                    link: "/importExport/DGFTRegistrationServices.html"
                 },
                 {
                     name: "Paid Finance Consultancy",
-                    link: "/"
+                    link: "/importExport/paidFinanceConsultancy.html"
                 },
                 {
                     name: "Export Credit Asistance",
-                    link: "/"
+                    link: "/importExport/exportCreditAsistance.html"
                 },
                 {
                     name: "International Business Setup",
-                    link: "/"
+                    link: "/importExport/internationalBusinessSetup.html"
                 },
                 {
                     name: "International B2B Lead Generation",
-                    link: "/"
+                    link: "/importExport/internationalB2BLeadGeneration.html"
                 },
                 {
                     name: "End-to-End Import & Export Project Management",
-                    link: "/"
+                    link: "/importExport/endToEndImportExportProjectManagement.html"
                 },
             ]
         },
@@ -261,20 +261,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             ]
         },
-        {
-            title: "Traning & Placement Asistance",
-            items: [
-                {
-                    name: "Fund Raising",
-                    link: "/"
+        // {
+        //     title: "Traning & Placement Asistance",
+        //     items: [
+        //         {
+        //             name: "Fund Raising",
+        //             link: "/"
 
-                },
-            ]
-        }
+        //         },
+        //     ]
+        // },
+        {
+            name: "Traning & Placement Asistance",
+            link: "/"
+
+        },
 
     ];
 
-   // Get current path route (e.g., "/header.html")
+    // Get current path route (e.g., "/header.html")
     const currentPath = window.location.pathname;
 
     // --- HIGHLIGHT ENGINE UTILITIES ---
@@ -298,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function checkAndHighlightMegaMenuLinks() {
         let hasActiveChild = false;
-        
+
         document.querySelectorAll("#megaMenu a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
                 // Highlight active link inside dark mega menu
@@ -319,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("#mobileServicesContainer a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
                 link.classList.add("text-red-500", "bg-red-50", "font-medium");
-                
+
                 // Automatically auto-expand parent categories if child is active
                 let parentContent = link.closest(".mobile-sub-content");
                 while (parentContent) {
@@ -349,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const servicesBtn = document.getElementById("servicesBtn");
     const megaMenu = document.getElementById("megaMenu");
     const servicesArrow = document.getElementById("servicesArrow");
-    
+
     const mainMenuEl = document.getElementById("mainMenu");
     const categoryMenuEl = document.getElementById("categoryMenu");
     const linksMenuEl = document.getElementById("linksMenu");
@@ -414,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderSecondLevel(subItems) {
         if (!categoryMenuEl) return;
         categoryMenuEl.classList.remove("hidden");
-        if (linksMenuEl) linksMenuEl.classList.add("hidden"); 
+        if (linksMenuEl) linksMenuEl.classList.add("hidden");
 
         categoryMenuEl.innerHTML = subItems.map((item, index) => {
             if (item.items) {
@@ -510,10 +515,10 @@ document.addEventListener("DOMContentLoaded", () => {
         masterContent.addEventListener("click", (e) => {
             const btn = e.target.closest(".mobile-toggle-btn");
             if (!btn) return;
-            
+
             const dropdown = btn.nextElementSibling;
             const icon = btn.querySelector("svg");
-            
+
             if (dropdown) dropdown.classList.toggle("hidden");
             if (icon) icon.classList.toggle("rotate-180");
         });
