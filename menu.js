@@ -865,11 +865,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ];
 
+   // Get current path route (e.g., "/header.html")
+    const currentPath = window.location.pathname;
+
+    // --- HIGHLIGHT ENGINE UTILITIES ---
+    function highlightStaticLinks() {
+        // Highlight active layout components inside Desktop Nav
+        document.querySelectorAll("#desktopNavLinks a").forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("text-red-500", "border-red-500");
+                link.classList.remove("text-gray-700", "border-transparent");
+            }
+        });
+
+        // Highlight active layout components inside Mobile Nav Panel
+        document.querySelectorAll("#mobileNavLinks > a").forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("text-red-500", "bg-red-50");
+                link.classList.remove("text-gray-700");
+            }
+        });
+    }
+
+    function checkAndHighlightMegaMenuLinks() {
+        let hasActiveChild = false;
+        
+        document.querySelectorAll("#megaMenu a").forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                // Highlight active link inside dark mega menu
+                link.classList.add("text-red-500", "font-semibold");
+                link.classList.remove("text-gray-300");
+                hasActiveChild = true;
+            }
+        });
+
+        // If a nested child link is active, keep the parent desktop 'Services' button highlighted
+        const servicesBtn = document.getElementById("servicesBtn");
+        if (hasActiveChild && servicesBtn) {
+            servicesBtn.classList.add("text-red-500");
+        }
+    }
+
+    function checkAndHighlightMobileDynamicLinks() {
+        document.querySelectorAll("#mobileServicesContainer a").forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("text-red-500", "bg-red-50", "font-medium");
+                
+                // Automatically auto-expand parent categories if child is active
+                let parentContent = link.closest(".mobile-sub-content");
+                while (parentContent) {
+                    parentContent.classList.remove("hidden");
+                    const toggleBtn = parentContent.previousElementSibling;
+                    if (toggleBtn && toggleBtn.classList.contains("mobile-toggle-btn")) {
+                        toggleBtn.querySelector("svg")?.classList.add("rotate-180");
+                    }
+                    // Keep walking up tree if double nested
+                    const grandparent = parentContent.parentElement.closest(".mobile-sub-content");
+                    parentContent = grandparent;
+                }
+
+                // Expand main level panel container
+                const masterContent = document.getElementById("mobileMasterContent");
+                const masterArrow = document.getElementById("mobileMasterArrow");
+                if (masterContent && masterArrow) {
+                    masterContent.classList.remove("hidden");
+                    masterArrow.classList.add("rotate-180");
+                    document.getElementById("mobileMasterServicesBtn")?.classList.add("text-red-500");
+                }
+            }
+        });
+    }
+
     // --- DOM ELEMENT REFERENCES ---
     const servicesBtn = document.getElementById("servicesBtn");
     const megaMenu = document.getElementById("megaMenu");
     const servicesArrow = document.getElementById("servicesArrow");
-
+    
     const mainMenuEl = document.getElementById("mainMenu");
     const categoryMenuEl = document.getElementById("categoryMenu");
     const linksMenuEl = document.getElementById("linksMenu");
@@ -878,6 +949,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.getElementById("mobileMenu");
     const mobileMenuIcon = document.getElementById("mobileMenuIcon");
     const mobileServicesContainer = document.getElementById("mobileServicesContainer");
+
+    // Run basic validation logic setups
+    highlightStaticLinks();
 
     // --- DESKTOP LOGIC CONTROLLER ---
     if (servicesBtn && megaMenu) {
@@ -918,6 +992,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return `<a href="${item.link}" class="block py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white transition-all w-full">${item.title || item.name}</a>`;
         }).join("");
 
+        checkAndHighlightMegaMenuLinks();
+
         document.querySelectorAll(".lvl1-btn").forEach(btn => {
             btn.addEventListener("mouseenter", (e) => {
                 const idx = e.currentTarget.getAttribute("data-idx");
@@ -929,7 +1005,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderSecondLevel(subItems) {
         if (!categoryMenuEl) return;
         categoryMenuEl.classList.remove("hidden");
-        if (linksMenuEl) linksMenuEl.classList.add("hidden");
+        if (linksMenuEl) linksMenuEl.classList.add("hidden"); 
 
         categoryMenuEl.innerHTML = subItems.map((item, index) => {
             if (item.items) {
@@ -939,6 +1015,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             return `<a href="${item.link}" class="block py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white transition-all w-full">${item.name}</a>`;
         }).join("");
+
+        checkAndHighlightMegaMenuLinks();
 
         document.querySelectorAll(".lvl2-btn").forEach(btn => {
             btn.addEventListener("mouseenter", (e) => {
@@ -954,24 +1032,23 @@ document.addEventListener("DOMContentLoaded", () => {
         linksMenuEl.innerHTML = deepItems.map(item => {
             return `<a href="${item.link}" class="block py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white transition-all w-full">${item.name}</a>`;
         }).join("");
+
+        checkAndHighlightMegaMenuLinks();
     }
 
 
-    // --- MOBILE LOGIC CONTROLLER (WITH ACCORDIONS & MAX-HEIGHT SCROLLING) ---
+    // --- MOBILE LOGIC CONTROLLER ---
     if (mobileMenuBtn && mobileMenu && mobileMenuIcon) {
         mobileMenuBtn.addEventListener("click", () => {
             const isHidden = mobileMenu.classList.toggle("hidden");
             if (!isHidden) {
-                // Open Drawer state -> display "X" shape
                 mobileMenuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />`;
             } else {
-                // Close Drawer state -> display "Hamburger" icon paths
                 mobileMenuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />`;
             }
         });
     }
 
-    // Dynamic clean native HTML multi-level drawer expansion tree compiler
     function generateMobileTreeHTML(items) {
         return items.map(item => {
             if (item.items) {
@@ -1017,14 +1094,17 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        // Event delegation handler monitoring inside sub panels
+        // Run checking filter rules inside mobile accordion trees
+        checkAndHighlightMobileDynamicLinks();
+
+        // Event delegation listener monitoring inside sub panels
         masterContent.addEventListener("click", (e) => {
             const btn = e.target.closest(".mobile-toggle-btn");
             if (!btn) return;
-
+            
             const dropdown = btn.nextElementSibling;
             const icon = btn.querySelector("svg");
-
+            
             if (dropdown) dropdown.classList.toggle("hidden");
             if (icon) icon.classList.toggle("rotate-180");
         });
