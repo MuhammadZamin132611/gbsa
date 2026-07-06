@@ -202,13 +202,42 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Investment Banking",
             items: [
                 {
-                    name: "Financial Advisory",
+                    name: "Fund Raising",
+                    link: "/"
+
+                },
+                {
+                    name: "Mergers & Acquisitions (M&A)",
                     link: "/"
                 },
-                // {
-                //     name: "Private Organizations",
-                //     link: "/organization/privateOrganizations.html"
-                // }
+                {
+                    name: "Capital Market Services",
+                    link: "/"
+                },
+                {
+                    name: "Corporate Advisory",
+                    link: "/"
+                },
+                {
+                    name: "Valuation Services",
+                    link: "/"
+                },
+                {
+                    name: "Transaction Advisory",
+                    link: "/"
+                },
+                {
+                    name: "Loan & Finance Advisory",
+                    link: "/"
+                },
+                {
+                    name: "Startup & Growth Advisory",
+                    link: "/"
+                },
+                {
+                    name: "Cross-Border Advisory",
+                    link: "/"
+                },
             ]
         },
         {
@@ -232,6 +261,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             ]
         },
+        {
+            title: "Traning & Placement Asistance",
+            items: [
+                {
+                    name: "Fund Raising",
+                    link: "/"
+
+                },
+            ]
+        }
 
     ];
 
