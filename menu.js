@@ -1,5 +1,596 @@
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
+//     const servicesMenu = [
+//         {
+//             title: "Government Scheme",
+//             items: [
+//                 {
+//                     name: "Agriculture Scheme",
+//                     link: "/governmentSchemes/aggriculture.html"
+//                 },
+//                 {
+//                     name: "Women Empower",
+//                     link: "/governmentSchemes/womenEmpower.html"
+//                 },
+//                 {
+//                     name: "Skill India",
+//                     link: "/governmentSchemes/skillIndia.html"
+//                 },
+//                 {
+//                     name: "Pashupalan",
+//                     link: "/governmentSchemes/pashupalan.html"
+//                 },
+//                 {
+//                     name: "MSME Loan",
+//                     link: "/governmentSchemes/msmeLoan.html"
+//                 },
+//                 {
+//                     name: "Employment",
+//                     link: "/governmentSchemes/employment.html"
+//                 },
+//                 {
+//                     name: "FSSAI",
+//                     link: "/governmentSchemes/fssai.html"
+//                 },
+//                 {
+//                     name: "Cooperatives Scheme",
+//                     link: "/governmentSchemes/cooperativesScheme.html"
+//                 }
+//             ]
+//         },
+//         {
+//             title: "CSR Scheme",
+//             items: [
+//                 {
+//                     name: "Government Organizations",
+//                     link: "/organization/governmentOrganizations.html"
+//                 },
+//                 {
+//                     name: "Private Organizations",
+//                     link: "/organization/privateOrganizations.html"
+//                 }
+//             ]
+//         },
+//         {
+//             title: "Business Development",
+//             items: [
+//                 {
+//                     title: "Business Strategy & Expansion",
+//                     items: [
+//                         {
+//                             name: "Startup & Business Consulting",
+//                             link: "/businessDevelopment/businessStrategyExpansion/startupBusinessConsulting.html"
+//                         },
+//                         {
+//                             name: "Business Growth & Scaling Strategy",
+//                             link: "/businessDevelopment/businessStrategyExpansion/BusinessGrowthScalingStrategy.html"
+//                         },
+//                         {
+//                             name: "Franchise Development & Expansion",
+//                             link: "/businessDevelopment/businessStrategyExpansion/franchiseDevelopmentExpansion.html"
+//                         },
+//                         {
+//                             name: "Investor & Funding Support",
+//                             link: "/businessDevelopment/businessStrategyExpansion/investorFundingSupport.html"
+//                         },
+//                         {
+//                             name: "Founder & Leadership Coaching",
+//                             link: "/businessDevelopment/businessStrategyExpansion/founderLeadershipCoaching.html"
+//                         },
+//                     ]
+//                 },
+//                 {
+//                     title: "Branding, Marketing & Lead Generation",
+//                     items: [
+//                         {
+//                             name: "Branding, Marketing & Digital Growth",
+//                             link: "/businessDevelopment/brandingMarketingLeadGeneration/brandingMarketingDigitalGrowth.html"
+//                         },
+//                         {
+//                             name: "PR, Marketing & Podcast Promotion",
+//                             link: "/businessDevelopment/brandingMarketingLeadGeneration/PRMarketingPodcastPromotion.html"
+//                         },
+//                         {
+//                             name: "Ads & Lead Generation",
+//                             link: "/businessDevelopment/brandingMarketingLeadGeneration/adsLeadGeneration.html"
+//                         },
+//                         {
+//                             name: "Video Marketing & Training",
+//                             link: "/businessDevelopment/brandingMarketingLeadGeneration/videoMarketingTraining.html"
+//                         },
+//                     ]
+//                 },
+//                 {
+//                     title: "Technology & Automation Solutions",
+//                     items: [
+//                         {
+//                             name: "Website & Mobile App Development",
+//                             link: "/businessDevelopment/technologyAutomationSolutions/websiteMobileAppDevelopment.html"
+//                         },
+//                         {
+//                             name: "WhatsApp API & Marketing Automation",
+//                             link: "/businessDevelopment/technologyAutomationSolutions/whatsAppAPIMarketingAutomation.html"
+//                         },
+//                         {
+//                             name: "IVR, CRM & Voice Marketing Systems",
+//                             link: "/businessDevelopment/technologyAutomationSolutions/IVRCRMVoiceMarketingSystems.html"
+//                         },
+//                         {
+//                             name: "Operations, Systems & Process Setup",
+//                             link: "/businessDevelopment/technologyAutomationSolutions/operationsSystemsProcessSetup.html"
+//                         },
+//                     ]
+//                 },
+//                 {
+//                     title: "Corporate Events & Recognition",
+//                     items: [
+//                         {
+//                             name: "Events & Awards Show Management",
+//                             link: "/businessDevelopment/corporateEventsRecognition/eventsAwardsShowManagement.html"
+//                         },
+//                     ]
+//                 },
+//             ]
+//         },
+//         {
+//             title: "Import & Export",
+//             items: [
+//                 {
+//                     name: "Import & Export Consultancy",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Import & Export IEC Registration",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "DGFT Registration & Services",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Paid Finance Consultancy",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Export Credit Asistance",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "International Business Setup",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "International B2B Lead Generation",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "End-to-End Import & Export Project Management",
+//                     link: "/"
+//                 },
+//             ]
+//         },
+//         {
+//             title: "International Business & Trade Law",
+//             items: [
+//                 {
+//                     name: "Export & Trade Contracts",
+//                     link: "/internationalBusinessTradeLaw/exportTradeContracts.html"
+//                 },
+//                 {
+//                     name: "International Business Negotiation",
+//                     link: "/internationalBusinessTradeLaw/internationalBusinessNegotiation.html"
+//                 },
+//                 {
+//                     name: "Cross Border Risk Management",
+//                     link: "/internationalBusinessTradeLaw/crossBorderRiskManagement.html"
+//                 },
+//                 {
+//                     name: "Contract Dispute Resolution",
+//                     link: "/internationalBusinessTradeLaw/contractDisputeResolution.html"
+//                 },
+//                 {
+//                     name: "Complaince & Regulatory Advisory",
+//                     link: "/internationalBusinessTradeLaw/complainceRegulatoryAdvisory.html"
+//                 },
+//                 {
+//                     name: "OME & Exporter Legal Support",
+//                     link: "/internationalBusinessTradeLaw/OMEExporterLegalSupport.html"
+//                 },
+//             ]
+//         },
+//         {
+//             title: "Investment Banking",
+//             items: [
+//                 {
+//                     name: "Fund Raising",
+//                     link: "/"
+
+//                 },
+//                 {
+//                     name: "Mergers & Acquisitions (M&A)",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Capital Market Services",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Corporate Advisory",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Valuation Services",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Transaction Advisory",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Loan & Finance Advisory",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Startup & Growth Advisory",
+//                     link: "/"
+//                 },
+//                 {
+//                     name: "Cross-Border Advisory",
+//                     link: "/"
+//                 },
+//             ]
+//         },
+//         {
+//             title: "Accounting Services & Registration",
+//             items: [
+//                 {
+//                     name: "Taxation Services",
+//                     link: "/accountingServicesRegistration/taxationServices.html"
+//                 },
+//                 {
+//                     name: "Company Compliance",
+//                     link: "/accountingServicesRegistration/companyCompliance.html"
+//                 },
+//                 {
+//                     name: "Financial Management",
+//                     link: "/accountingServicesRegistration/financialManagement.html"
+//                 },
+//                 {
+//                     name: "Audit Support",
+//                     link: "/accountingServicesRegistration/auditSupport.html"
+//                 },
+//             ]
+//         },
+//         {
+//             title: "Traning & Placement Asistance",
+//             items: [
+//                 {
+//                     name: "Fund Raising",
+//                     link: "/"
+
+//                 },
+//             ]
+//         }
+
+//     ];
+
+//     /* ==========================
+//     DESKTOP RENDER FUNCTION
+//     ========================== */
+
+//     function renderDesktopItems(items) {
+
+//         return items.map(item => {
+
+//             if (item.items) {
+
+//                 return `
+//                     <div class="nested-menu relative">
+
+//                         <button class="nested-btn w-full px-4 py-3 flex justify-between items-center hover:bg-blue-50">
+//                         <span class="text-left">${item.title}</span>
+//                             <i class="fa-solid fa-chevron-right text-xs"></i>
+
+//                         </button>
+
+//                         <div class="nested-dropdown hidden absolute right-full top-0 w-96 bg-white border shadow-lg rounded-lg">
+
+//                             ${renderDesktopItems(item.items)}
+
+//                         </div>
+
+//                     </div>
+//                 `;
+//             }
+
+//             return `
+//                 <a href="${item.link}" class="block px-4 py-3 hover:bg-blue-50">
+//                     ${item.name}
+//                 </a>
+//             `;
+
+//         }).join("");
+//     }
+
+//     /* ==========================
+//     MOBILE RENDER FUNCTION
+//     ========================== */
+
+//     function renderMobileItems(items) {
+
+//         return items.map(item => {
+
+//             if (item.items) {
+
+//                 return `
+//                     <div class="border-t">
+
+//                         <button
+//                             class="mobile-nested-btn w-full px-6 py-3 flex justify-between items-center bg-gray-100 hover:bg-gray-200">
+
+//                             ${item.title}
+
+//                             <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+
+//                         </button>
+
+//                         <div class="mobile-nested-content hidden">
+
+//                             ${renderMobileItems(item.items)}
+
+//                         </div>
+
+//                     </div>
+//                 `;
+//             }
+
+//             return `
+//                 <a href="${item.link}" class="block px-10 py-3 border-t hover:bg-white">
+//                     ${item.name}
+//                 </a>
+//             `;
+
+//         }).join("");
+//     }
+
+//     /* ==========================
+//     DESKTOP SERVICES MENU
+//     ========================== */
+
+//     const consultingDropdown =
+//         document.getElementById("consultingDropdown");
+
+//     if (consultingDropdown) {
+
+//         consultingDropdown.innerHTML = servicesMenu.map(category => `
+
+//             <div class="menu-item relative border-b last:border-b-0">
+
+//                 <button
+//                     class="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-blue-50">
+
+//                     ${category.title}
+
+//                     <i class="fa-solid fa-chevron-right"></i>
+
+//                 </button>
+
+//                 <div
+//                     class="submenu hidden absolute right-full top-0 w-72 bg-white border shadow-xl rounded-lg z-50">
+
+//                     ${renderDesktopItems(category.items)}
+
+//                 </div>
+
+//             </div>
+
+//         `).join("");
+
+//         const consultingMenu =
+//             document.getElementById("consultingMenu");
+
+//         if (consultingMenu) {
+
+//             consultingMenu.addEventListener("mouseenter", () => {
+//                 consultingDropdown.classList.remove("hidden");
+//             });
+
+//             consultingMenu.addEventListener("mouseleave", () => {
+//                 consultingDropdown.classList.add("hidden");
+
+//                 document
+//                     .querySelectorAll(".submenu,.nested-dropdown")
+//                     .forEach(menu => {
+//                         menu.classList.add("hidden");
+//                     });
+//             });
+//         }
+
+//         document.querySelectorAll(".menu-item").forEach(item => {
+
+//             const submenu =
+//                 item.querySelector(".submenu");
+
+//             item.addEventListener("mouseenter", () => {
+//                 submenu.classList.remove("hidden");
+//             });
+
+//             item.addEventListener("mouseleave", () => {
+//                 submenu.classList.add("hidden");
+//             });
+
+//         });
+
+//         document.querySelectorAll(".nested-menu").forEach(item => {
+
+//             const submenu =
+//                 item.querySelector(".nested-dropdown");
+
+//             item.addEventListener("mouseenter", () => {
+//                 submenu.classList.remove("hidden");
+//             });
+
+//             item.addEventListener("mouseleave", () => {
+//                 submenu.classList.add("hidden");
+//             });
+
+//         });
+//     }
+
+//     /* ==========================
+//     MOBILE MENU TOGGLE
+//     ========================== */
+
+//     const mobileMenuBtn =
+//         document.getElementById("mobileMenuBtn");
+
+//     const mobileMenu =
+//         document.getElementById("mobileMenu");
+
+//     const mobileMenuIcon =
+//         document.getElementById("mobileMenuIcon");
+
+//     if (
+//         mobileMenuBtn &&
+//         mobileMenu &&
+//         mobileMenuIcon
+//     ) {
+
+//         mobileMenuBtn.addEventListener("click", () => {
+
+//             mobileMenu.classList.toggle("hidden");
+
+//             if (mobileMenu.classList.contains("hidden")) {
+
+//                 mobileMenuIcon.classList.remove("fa-xmark");
+//                 mobileMenuIcon.classList.add("fa-bars");
+
+//             } else {
+
+//                 mobileMenuIcon.classList.remove("fa-bars");
+//                 mobileMenuIcon.classList.add("fa-xmark");
+//             }
+
+//         });
+
+//     }
+
+//     /* ==========================
+//     MOBILE SERVICES MENU
+//     ========================== */
+
+//     const mobileServicesContainer =
+//         document.getElementById("mobileServicesContainer");
+
+//     if (mobileServicesContainer) {
+
+//         mobileServicesContainer.innerHTML = `
+
+//             <div class="border-b">
+
+//                 <button
+//                     id="mobileServicesBtn"
+//                     class="w-full px-4 py-3 flex justify-between items-center hover:bg-gray-50">
+
+//                     Services
+
+//                     <i
+//                         id="mobileServicesIcon"
+//                         class="fa-solid fa-angle-down transition-transform duration-300">
+//                     </i>
+
+//                 </button>
+
+//                 <div
+//                     id="mobileServicesDropdown"
+//                     class="hidden bg-gray-50">
+
+//                     ${servicesMenu.map(category => `
+
+//                         <div class="border-t">
+
+//                             <button
+//                                 class="category-btn w-full px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold hover:bg-gray-200">
+
+//                                 ${category.title}
+
+//                                 <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
+
+//                             </button>
+
+//                             <div class="category-content hidden">
+
+//                                 ${renderMobileItems(category.items)}
+
+//                             </div>
+
+//                         </div>
+
+//                     `).join("")}
+
+//                 </div>
+
+//             </div>
+//         `;
+
+//         const mobileServicesBtn =
+//             document.getElementById("mobileServicesBtn");
+
+//         const mobileServicesDropdown =
+//             document.getElementById("mobileServicesDropdown");
+
+//         const mobileServicesIcon =
+//             document.getElementById("mobileServicesIcon");
+
+//         mobileServicesBtn.addEventListener("click", () => {
+
+//             mobileServicesDropdown.classList.toggle("hidden");
+//             mobileServicesIcon.classList.toggle("rotate-180");
+
+//         });
+
+//         document.querySelectorAll(".category-btn").forEach(btn => {
+
+//             btn.addEventListener("click", () => {
+
+//                 const content =
+//                     btn.nextElementSibling;
+
+//                 const icon =
+//                     btn.querySelector("i");
+
+//                 content.classList.toggle("hidden");
+//                 icon.classList.toggle("rotate-180");
+
+//             });
+
+//         });
+
+//         document.addEventListener("click", (e) => {
+
+//             const btn =
+//                 e.target.closest(".mobile-nested-btn");
+
+//             if (!btn) return;
+
+//             const content =
+//                 btn.nextElementSibling;
+
+//             const icon =
+//                 btn.querySelector("i");
+
+//             content.classList.toggle("hidden");
+//             icon.classList.toggle("rotate-180");
+
+//         });
+
+//     }
+
+// });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Normalized Object Array Schema
     const servicesMenu = [
         {
             title: "Government Scheme",
@@ -274,316 +865,168 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ];
 
-    /* ==========================
-    DESKTOP RENDER FUNCTION
-    ========================== */
-
-    function renderDesktopItems(items) {
-
-        return items.map(item => {
-
-            if (item.items) {
-
-                return `
-                    <div class="nested-menu relative">
-
-                        <button class="nested-btn w-full px-4 py-3 flex justify-between items-center hover:bg-blue-50">
-                        <span class="text-left">${item.title}</span>
-                            <i class="fa-solid fa-chevron-right text-xs"></i>
-
-                        </button>
-
-                        <div class="nested-dropdown hidden absolute right-full top-0 w-96 bg-white border shadow-lg rounded-lg">
-
-                            ${renderDesktopItems(item.items)}
-
-                        </div>
-
-                    </div>
-                `;
-            }
-
-            return `
-                <a href="${item.link}" class="block px-4 py-3 hover:bg-blue-50">
-                    ${item.name}
-                </a>
-            `;
-
-        }).join("");
-    }
-
-    /* ==========================
-    MOBILE RENDER FUNCTION
-    ========================== */
-
-    function renderMobileItems(items) {
-
-        return items.map(item => {
-
-            if (item.items) {
-
-                return `
-                    <div class="border-t">
-
-                        <button
-                            class="mobile-nested-btn w-full px-6 py-3 flex justify-between items-center bg-gray-100 hover:bg-gray-200">
-
-                            ${item.title}
-
-                            <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
-
-                        </button>
-
-                        <div class="mobile-nested-content hidden">
-
-                            ${renderMobileItems(item.items)}
-
-                        </div>
-
-                    </div>
-                `;
-            }
-
-            return `
-                <a href="${item.link}" class="block px-10 py-3 border-t hover:bg-white">
-                    ${item.name}
-                </a>
-            `;
-
-        }).join("");
-    }
-
-    /* ==========================
-    DESKTOP SERVICES MENU
-    ========================== */
-
-    const consultingDropdown =
-        document.getElementById("consultingDropdown");
-
-    if (consultingDropdown) {
-
-        consultingDropdown.innerHTML = servicesMenu.map(category => `
-
-            <div class="menu-item relative border-b last:border-b-0">
-
-                <button
-                    class="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-blue-50">
-
-                    ${category.title}
-
-                    <i class="fa-solid fa-chevron-right"></i>
-
-                </button>
-
-                <div
-                    class="submenu hidden absolute right-full top-0 w-72 bg-white border shadow-xl rounded-lg z-50">
-
-                    ${renderDesktopItems(category.items)}
-
-                </div>
-
-            </div>
-
-        `).join("");
-
-        const consultingMenu =
-            document.getElementById("consultingMenu");
-
-        if (consultingMenu) {
-
-            consultingMenu.addEventListener("mouseenter", () => {
-                consultingDropdown.classList.remove("hidden");
-            });
-
-            consultingMenu.addEventListener("mouseleave", () => {
-                consultingDropdown.classList.add("hidden");
-
-                document
-                    .querySelectorAll(".submenu,.nested-dropdown")
-                    .forEach(menu => {
-                        menu.classList.add("hidden");
-                    });
-            });
-        }
-
-        document.querySelectorAll(".menu-item").forEach(item => {
-
-            const submenu =
-                item.querySelector(".submenu");
-
-            item.addEventListener("mouseenter", () => {
-                submenu.classList.remove("hidden");
-            });
-
-            item.addEventListener("mouseleave", () => {
-                submenu.classList.add("hidden");
-            });
-
-        });
-
-        document.querySelectorAll(".nested-menu").forEach(item => {
-
-            const submenu =
-                item.querySelector(".nested-dropdown");
-
-            item.addEventListener("mouseenter", () => {
-                submenu.classList.remove("hidden");
-            });
-
-            item.addEventListener("mouseleave", () => {
-                submenu.classList.add("hidden");
-            });
-
-        });
-    }
-
-    /* ==========================
-    MOBILE MENU TOGGLE
-    ========================== */
-
-    const mobileMenuBtn =
-        document.getElementById("mobileMenuBtn");
-
-    const mobileMenu =
-        document.getElementById("mobileMenu");
-
-    const mobileMenuIcon =
-        document.getElementById("mobileMenuIcon");
-
-    if (
-        mobileMenuBtn &&
-        mobileMenu &&
-        mobileMenuIcon
-    ) {
-
-        mobileMenuBtn.addEventListener("click", () => {
-
-            mobileMenu.classList.toggle("hidden");
-
-            if (mobileMenu.classList.contains("hidden")) {
-
-                mobileMenuIcon.classList.remove("fa-xmark");
-                mobileMenuIcon.classList.add("fa-bars");
-
+    // --- DOM ELEMENT REFERENCES ---
+    const servicesBtn = document.getElementById("servicesBtn");
+    const megaMenu = document.getElementById("megaMenu");
+    const servicesArrow = document.getElementById("servicesArrow");
+
+    const mainMenuEl = document.getElementById("mainMenu");
+    const categoryMenuEl = document.getElementById("categoryMenu");
+    const linksMenuEl = document.getElementById("linksMenu");
+
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+    const mobileServicesContainer = document.getElementById("mobileServicesContainer");
+
+    // --- DESKTOP LOGIC CONTROLLER ---
+    if (servicesBtn && megaMenu) {
+        servicesBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = !megaMenu.classList.contains("hidden");
+            if (isOpen) {
+                closeMegaMenu();
             } else {
-
-                mobileMenuIcon.classList.remove("fa-bars");
-                mobileMenuIcon.classList.add("fa-xmark");
+                megaMenu.classList.remove("hidden");
+                servicesArrow?.classList.add("rotate-180");
+                renderFirstLevel();
             }
-
-        });
-
-    }
-
-    /* ==========================
-    MOBILE SERVICES MENU
-    ========================== */
-
-    const mobileServicesContainer =
-        document.getElementById("mobileServicesContainer");
-
-    if (mobileServicesContainer) {
-
-        mobileServicesContainer.innerHTML = `
-
-            <div class="border-b">
-
-                <button
-                    id="mobileServicesBtn"
-                    class="w-full px-4 py-3 flex justify-between items-center hover:bg-gray-50">
-
-                    Services
-
-                    <i
-                        id="mobileServicesIcon"
-                        class="fa-solid fa-angle-down transition-transform duration-300">
-                    </i>
-
-                </button>
-
-                <div
-                    id="mobileServicesDropdown"
-                    class="hidden bg-gray-50">
-
-                    ${servicesMenu.map(category => `
-
-                        <div class="border-t">
-
-                            <button
-                                class="category-btn w-full px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold hover:bg-gray-200">
-
-                                ${category.title}
-
-                                <i class="fa-solid fa-angle-down transition-transform duration-300"></i>
-
-                            </button>
-
-                            <div class="category-content hidden">
-
-                                ${renderMobileItems(category.items)}
-
-                            </div>
-
-                        </div>
-
-                    `).join("")}
-
-                </div>
-
-            </div>
-        `;
-
-        const mobileServicesBtn =
-            document.getElementById("mobileServicesBtn");
-
-        const mobileServicesDropdown =
-            document.getElementById("mobileServicesDropdown");
-
-        const mobileServicesIcon =
-            document.getElementById("mobileServicesIcon");
-
-        mobileServicesBtn.addEventListener("click", () => {
-
-            mobileServicesDropdown.classList.toggle("hidden");
-            mobileServicesIcon.classList.toggle("rotate-180");
-
-        });
-
-        document.querySelectorAll(".category-btn").forEach(btn => {
-
-            btn.addEventListener("click", () => {
-
-                const content =
-                    btn.nextElementSibling;
-
-                const icon =
-                    btn.querySelector("i");
-
-                content.classList.toggle("hidden");
-                icon.classList.toggle("rotate-180");
-
-            });
-
         });
 
         document.addEventListener("click", (e) => {
-
-            const btn =
-                e.target.closest(".mobile-nested-btn");
-
-            if (!btn) return;
-
-            const content =
-                btn.nextElementSibling;
-
-            const icon =
-                btn.querySelector("i");
-
-            content.classList.toggle("hidden");
-            icon.classList.toggle("rotate-180");
-
+            if (!megaMenu.contains(e.target) && !servicesBtn.contains(e.target)) {
+                closeMegaMenu();
+            }
         });
-
     }
 
+    function closeMegaMenu() {
+        megaMenu.classList.add("hidden");
+        servicesArrow?.classList.remove("rotate-180");
+        categoryMenuEl?.classList.add("hidden");
+        linksMenuEl?.classList.add("hidden");
+    }
+
+    function renderFirstLevel() {
+        if (!mainMenuEl) return;
+        mainMenuEl.innerHTML = servicesMenu.map((item, index) => {
+            if (item.items) {
+                return `<button data-idx="${index}" class="lvl1-btn text-left py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white flex justify-between items-center transition-all w-full">
+                    <span>${item.title}</span> <span class="text-xs">→</span>
+                </button>`;
+            }
+            return `<a href="${item.link}" class="block py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white transition-all w-full">${item.title || item.name}</a>`;
+        }).join("");
+
+        document.querySelectorAll(".lvl1-btn").forEach(btn => {
+            btn.addEventListener("mouseenter", (e) => {
+                const idx = e.currentTarget.getAttribute("data-idx");
+                renderSecondLevel(servicesMenu[idx].items);
+            });
+        });
+    }
+
+    function renderSecondLevel(subItems) {
+        if (!categoryMenuEl) return;
+        categoryMenuEl.classList.remove("hidden");
+        if (linksMenuEl) linksMenuEl.classList.add("hidden");
+
+        categoryMenuEl.innerHTML = subItems.map((item, index) => {
+            if (item.items) {
+                return `<button data-subidx="${index}" class="lvl2-btn text-left py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white flex justify-between items-center transition-all w-full">
+                    <span>${item.title}</span> <span class="text-xs">→</span>
+                </button>`;
+            }
+            return `<a href="${item.link}" class="block py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white transition-all w-full">${item.name}</a>`;
+        }).join("");
+
+        document.querySelectorAll(".lvl2-btn").forEach(btn => {
+            btn.addEventListener("mouseenter", (e) => {
+                const subIdx = e.currentTarget.getAttribute("data-subidx");
+                renderThirdLevel(subItems[subIdx].items);
+            });
+        });
+    }
+
+    function renderThirdLevel(deepItems) {
+        if (!linksMenuEl) return;
+        linksMenuEl.classList.remove("hidden");
+        linksMenuEl.innerHTML = deepItems.map(item => {
+            return `<a href="${item.link}" class="block py-2 px-3 rounded hover:bg-gray-800 text-gray-300 hover:text-white transition-all w-full">${item.name}</a>`;
+        }).join("");
+    }
+
+
+    // --- MOBILE LOGIC CONTROLLER (WITH ACCORDIONS & MAX-HEIGHT SCROLLING) ---
+    if (mobileMenuBtn && mobileMenu && mobileMenuIcon) {
+        mobileMenuBtn.addEventListener("click", () => {
+            const isHidden = mobileMenu.classList.toggle("hidden");
+            if (!isHidden) {
+                // Open Drawer state -> display "X" shape
+                mobileMenuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />`;
+            } else {
+                // Close Drawer state -> display "Hamburger" icon paths
+                mobileMenuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />`;
+            }
+        });
+    }
+
+    // Dynamic clean native HTML multi-level drawer expansion tree compiler
+    function generateMobileTreeHTML(items) {
+        return items.map(item => {
+            if (item.items) {
+                return `
+                    <div class="w-full pl-2 mt-2 border-l-2 border-gray-200">
+                        <button class="mobile-toggle-btn w-full py-2.5 px-3 flex justify-between items-center text-left text-gray-700 bg-gray-50 rounded hover:bg-gray-100 font-medium transition-colors">
+                            <span>${item.title}</span>
+                            <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="mobile-sub-content hidden flex flex-col gap-1 mt-1 pl-2">
+                            ${generateMobileTreeHTML(item.items)}
+                        </div>
+                    </div>
+                `;
+            }
+            return `
+                <a href="${item.link}" class="block py-2 px-4 text-sm text-gray-600 hover:text-red-500 hover:bg-gray-50 rounded transition-all">
+                    ${item.name || item.title}
+                </a>
+            `;
+        }).join("");
+    }
+
+    if (mobileServicesContainer) {
+        mobileServicesContainer.innerHTML = `
+            <button id="mobileMasterServicesBtn" class="w-full py-2 flex justify-between items-center text-left font-semibold border-b border-gray-100 hover:text-red-500 transition-colors">
+                <span>Services</span>
+                <svg id="mobileMasterArrow" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="mobileMasterContent" class="hidden flex flex-col gap-1 mt-2">
+                ${generateMobileTreeHTML(servicesMenu)}
+            </div>
+        `;
+
+        const masterBtn = document.getElementById("mobileMasterServicesBtn");
+        const masterContent = document.getElementById("mobileMasterContent");
+        const masterArrow = document.getElementById("mobileMasterArrow");
+
+        if (masterBtn && masterContent && masterArrow) {
+            masterBtn.addEventListener("click", () => {
+                masterContent.classList.toggle("hidden");
+                masterArrow.classList.toggle("rotate-180");
+            });
+        }
+
+        // Event delegation handler monitoring inside sub panels
+        masterContent.addEventListener("click", (e) => {
+            const btn = e.target.closest(".mobile-toggle-btn");
+            if (!btn) return;
+
+            const dropdown = btn.nextElementSibling;
+            const icon = btn.querySelector("svg");
+
+            if (dropdown) dropdown.classList.toggle("hidden");
+            if (icon) icon.classList.toggle("rotate-180");
+        });
+    }
 });
