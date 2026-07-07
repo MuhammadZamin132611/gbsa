@@ -11,22 +11,25 @@
   background: #cbd5e1;
   border-radius: 4px;
 }
-
-.tree-line::before {
-  content: "";
-  position: absolute;
-  left: -16px;
-  top: 50%;
-  width: 16px;
-  height: 1px;
-  background-color: #cbd5e1;
+.tree-container {
+  position: relative;
 }
+
 .tree-container::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 22px; /* Margins the vertical line to end exactly at the final item */
+  bottom: 14px; /* Stops line cleanly at the last child node */
   width: 1px;
+  background-color: #cbd5e1; /* slate-300 */
+}
+.tree-line::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 18px; /* Perfectly aligns horizontal lines to text center */
+  width: 16px;
+  height: 1px;
   background-color: #cbd5e1;
 }

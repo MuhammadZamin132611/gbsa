@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Import & Export",
             items: [
-                { name: "Import & Export Consultancy", link: "/importExport/import&ExportConsultancy.html" },
+                { name: "Import & Export Consultancy", link: "/importExport/importExportConsultancy.html" },
                 { name: "Import & Export IEC Registration", link: "/importExport/importExportIECRegistration.html" },
                 { name: "DGFT Registration & Services", link: "/importExport/DGFTRegistrationServices.html" },
                 { name: "Paid Finance Consultancy", link: "/importExport/paidFinanceConsultancy.html" },
