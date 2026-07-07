@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // },
         {
             name: "Traning & Placement Asistance",
-            link: "/"
+            link: "/traningPlacement/traningPlacementAsistance.html"
 
         },
 
