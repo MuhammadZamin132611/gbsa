@@ -110,10 +110,29 @@ const secondTreeData = [
             { name: "Audit Support", link: "/accountingServicesRegistration/auditSupport.html" },
         ]
     },
+];
+
+const thirdTreeData = [
+    {
+        title: "Traning & Placement Asistance",
+        items: [
+            { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
+            { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
+            { name: "Employability Training", link: "/traningPlacement/employabilityTraining.html" },
+            { name: "Placement Services", link: "/traningPlacement/placementServices.html" },
+            { name: "Corporate Training", link: "/traningPlacement/corporateTraining.html" },
+            { name: "Internship Services", link: "/traningPlacement/internshipServices.html" },
+            { name: "Career Services", link: "/traningPlacement/careerServices.html" },
+            { name: "Recruitment Process Outsourcing (RPO)", link: "/traningPlacement/recruitmentProcessOutsourcing.html" },
+            { name: "College Services", link: "/traningPlacement/collegeServices.html" },
+            { name: "Certification Programs", link: "/traningPlacement/certificationPrograms.html" },
+        ]
+    },
 ]
 
 const firstrootContainer = document.getElementById('first-tree-root-container');
 const secondrootContainer = document.getElementById('second-tree-root-container');
+const thirdrootContainer = document.getElementById('third-tree-root-container');
 
 // Recursive function to parse and generate infinite level tree arrays
 function buildTreeNodes(nodes) {
@@ -170,6 +189,21 @@ const secondfullTreeHTML = secondTreeData.map(category => `
         </div>
     `).join('');
 
+// Initialize root mapping layout structure
+const thirdfullTreeHTML = thirdTreeData.map(category => `
+        <div>
+            <div class="mb-3">
+                <h2 class="text-base md:text-xl font-bold text-slate-800 tracking-tight">
+                    ${category.title}
+                </h2>
+            </div>
+            <div class="relative tree-container ml-2 pl-4">
+                ${buildTreeNodes(category.items)}
+            </div>
+        </div>
+    `).join('');
+
 // Inject complete tree code block into UI
 firstrootContainer.innerHTML = firstfullTreeHTML;
 secondrootContainer.innerHTML = secondfullTreeHTML;
+thirdrootContainer.innerHTML = thirdfullTreeHTML;

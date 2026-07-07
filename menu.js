@@ -110,16 +110,16 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Traning & Placement Asistance",
             items: [
-                { name: "Skill Development Training", link: "/" },
-                { name: "Technical Training", link: "/" },
-                { name: "Employability Training", link: "/" },
-                { name: "Placement Services", link: "/" },
-                { name: "Corporate Training", link: "/" },
-                { name: "Internship Services", link: "/" },
-                { name: "Career Services", link: "/" },
-                { name: "Recruitment Process Outsourcing (RPO)", link: "/" },
-                { name: "College Services", link: "/" },
-                { name: "Certification Programs", link: "/" },
+                { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
+                { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
+                { name: "Employability Training", link: "/traningPlacement/employabilityTraining.html" },
+                { name: "Placement Services", link: "/traningPlacement/placementServices.html" },
+                { name: "Corporate Training", link: "/traningPlacement/corporateTraining.html" },
+                { name: "Internship Services", link: "/traningPlacement/internshipServices.html" },
+                { name: "Career Services", link: "/traningPlacement/careerServices.html" },
+                { name: "Recruitment Process Outsourcing (RPO)", link: "/traningPlacement/recruitmentProcessOutsourcing.html" },
+                { name: "College Services", link: "/traningPlacement/collegeServices.html" },
+                { name: "Certification Programs", link: "/traningPlacement/certificationPrograms.html" },
             ]
         },
     ];
