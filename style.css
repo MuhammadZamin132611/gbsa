@@ -1,13 +1,32 @@
 /* Smooth subtle custom scrollbar for mobile overflow links */
 .subtle-scroll::-webkit-scrollbar {
-    width: 4px;
+  width: 4px;
 }
 
 .subtle-scroll::-webkit-scrollbar-track {
-    background: #f3f4f6;
+  background: #f3f4f6;
 }
 
 .subtle-scroll::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.tree-line::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background-color: #cbd5e1;
+}
+.tree-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 22px; /* Margins the vertical line to end exactly at the final item */
+  width: 1px;
+  background-color: #cbd5e1;
 }

@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navigation with Link Highlighting</title>
     <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body class="bg-gray-50">
-
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -89,6 +92,112 @@
             </div>
         </div>
     </nav>
+
+    <h1 class="text-4xl font-bold text-center my-10">Header & Footer | Global Business & Startup Association</h1>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+
+
+    <footer class="bg-black  text-white py-8">
+        <section class="pb-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto grid items-center ">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center text-white">
+                        Contact
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 ">
+                        <div>
+                            <p class="text-gray-600 leading-6 text-lg text-white">
+                                Mr. Sayeed Mohammad
+                                <span class="text-sm">
+                                    <br>Founder & Chairman
+                                    <br>Business Consultant, Entrepreneur
+                                    <br>India-GCC Business Advisor.
+                                    <br>Phone: +91-9811033633
+                                    <br> Email: example@gbsa.org</span>
+                            </p>
+                        </div>
+                        <div class="">
+
+                            <div class="w-full max-w-md">
+
+                                <div class="mb-4">
+                                    <h2 id="tree-title"
+                                        class="text-base md:text-xl font-semibold  tracking-tight"></h2>
+                                </div>
+
+                                <div id="tree-root" class="relative tree-container ml-2 pl-4"></div>
+
+                            </div>
+                        </div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-gray-400 text-sm">
+            <p class="text-lg">© 2026 Global Business & Startup Association Venture Private Limited</p>
+            <p class="mt-2 text-gray-400">
+                Empowering Human Intelligence Through Artificial Intelligence
+            </p>
+        </section>
+    </footer>
+
+    <script>
+        // 1. Define your structured data
+        const aiTreeData = {
+            title: "AI and Generative AI",
+            items: [
+                "AI Factory",
+                "AI Force",
+                "AI Foundry",
+                "AI Labs",
+                "Industry AI Solutions",
+                "Kinetic AI",
+                "Physical AI"
+            ]
+        };
+
+        // 2. DOM Elements Selection
+        const titleEl = document.getElementById('tree-title');
+        const containerEl = document.getElementById('tree-root');
+
+        // 3. Render Title
+        titleEl.textContent = aiTreeData.title;
+
+        // 4. Generate and Map Nodes using JS loop
+        const treeHTML = aiTreeData.items.map(item => `
+            <div class="relative tree-line py-2.5 flex items-center group cursor-pointer" data-item="${item}">
+                <span class="text-sm md:text-base font-medium group-hover:text-indigo-600 group-hover:translate-x-1 transition-all duration-200">
+                    ${item}
+                </span>
+            </div>
+        `).join('');
+
+        // 5. Inject generated markup into DOM
+        containerEl.innerHTML = treeHTML;
+
+        // 6. Interactive Event Listener
+        containerEl.addEventListener('click', (event) => {
+            const TargetNode = event.target.closest('.tree-line');
+            if (TargetNode) {
+                const selectedItem = TargetNode.getAttribute('data-item');
+                alert(`You selected: ${selectedItem}`);
+            }
+        });
+    </script>
 
     <!-- Script connection link -->
     <script src="/menu.js"></script>

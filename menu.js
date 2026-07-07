@@ -261,22 +261,61 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             ]
         },
-        // {
-        //     title: "Traning & Placement Asistance",
-        //     items: [
-        //         {
-        //             name: "Fund Raising",
-        //             link: "/"
-
-        //         },
-        //     ]
-        // },
         {
-            name: "Traning & Placement Asistance",
-            link: "/traningPlacement/traningPlacementAsistance.html"
+            title: "Traning & Placement Asistance",
+            items: [
+                {
+                    name: "Skill Development Training",
+                    link: "/"
 
+                },
+                {
+                    name: "Technical Training",
+                    link: "/"
+
+                },
+                {
+                    name: "Employability Training",
+                    link: "/"
+
+                },
+                {
+                    name: "Placement Services",
+                    link: "/"
+
+                },
+                {
+                    name: "Corporate Training",
+                    link: "/"
+
+                },
+                {
+                    name: "Internship Services",
+                    link: "/"
+
+                },
+                {
+                    name: "Career Services",
+                    link: "/"
+
+                },
+                {
+                    name: "Recruitment Process Outsourcing (RPO)",
+                    link: "/"
+
+                },
+                {
+                    name: "College Services",
+                    link: "/"
+
+                },
+                {
+                    name: "Certification Programs",
+                    link: "/"
+
+                },
+            ]
         },
-
     ];
 
     // Get current path route (e.g., "/header.html")
