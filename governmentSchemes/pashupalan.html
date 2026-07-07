@@ -242,38 +242,6 @@
 
     </section>
 
-    <!-- STATS -->
-    <section class="bg-slate-900 text-white py-20">
-
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="grid md:grid-cols-4 gap-10 text-center">
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="25000">0</h3>
-                    <p class="mt-3">Farmers Supported</p>
-                </div>
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="1200">0</h3>
-                    <p class="mt-3">Training Camps</p>
-                </div>
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="500">0</h3>
-                    <p class="mt-3">Veterinary Centers</p>
-                </div>
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="28">0</h3>
-                    <p class="mt-3">States Covered</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <!-- PROGRAMS -->
     <section class="py-20 bg-white">
@@ -367,27 +335,6 @@
         </span>
     </div>
 
-    <script>
-        const counters = document.querySelectorAll(".counter");
-
-        counters.forEach(counter => {
-            const updateCounter = () => {
-                const target = +counter.dataset.target;
-                const count = +counter.innerText;
-
-                const increment = target / 100;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCounter, 20);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            };
-
-            updateCounter();
-        });
-    </script>
 
 
     <script src="/menu.js"></script>

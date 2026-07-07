@@ -329,39 +329,6 @@
 
     </section>
 
-    <!-- STATISTICS -->
-    <section class="bg-slate-900 text-white py-20">
-
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="grid md:grid-cols-4 gap-10 text-center">
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="500000">0</h3>
-                    <p class="mt-3">Registered Businesses</p>
-                </div>
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="12000">0</h3>
-                    <p class="mt-3">Food Safety Officers</p>
-                </div>
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="5000">0</h3>
-                    <p class="mt-3">Training Programs</p>
-                </div>
-
-                <div>
-                    <h3 class="counter text-5xl font-bold text-blue-400" data-target="28">0</h3>
-                    <p class="mt-3">States Covered</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
     <!-- COMPLIANCE SERVICES -->
     <section class="py-20 bg-slate-100">
 
@@ -473,27 +440,6 @@
     </div>
     <script src="/menu.js"></script>
 
-    <script>
-        const counters = document.querySelectorAll(".counter");
-
-        counters.forEach(counter => {
-            const updateCounter = () => {
-                const target = +counter.dataset.target;
-                const count = +counter.innerText;
-
-                const increment = target / 100;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCounter, 20);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            };
-
-            updateCounter();
-        });
-    </script>
 
 
 

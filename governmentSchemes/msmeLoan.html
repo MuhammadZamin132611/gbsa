@@ -310,37 +310,6 @@
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="bg-yellow-500 py-16">
-
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-
-                <div>
-                    <h3 class="text-5xl font-bold counter" data-target="5000">0</h3>
-                    <p class="font-semibold">Businesses Supported</p>
-                </div>
-
-                <div>
-                    <h3 class="text-5xl font-bold counter" data-target="250">0</h3>
-                    <p class="font-semibold">Crores Funded</p>
-                </div>
-
-                <div>
-                    <h3 class="text-5xl font-bold counter" data-target="95">0</h3>
-                    <p class="font-semibold">% Approval Rate</p>
-                </div>
-
-                <div>
-                    <h3 class="text-5xl font-bold counter" data-target="48">0</h3>
-                    <p class="font-semibold">Hours Processing</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
     <!-- CTA -->
     <section id="contact" class="py-24 bg-gray-900 text-white">
@@ -364,27 +333,6 @@
 
     </section>
 
-    <script>
-        const counters = document.querySelectorAll('.counter');
-
-        counters.forEach(counter => {
-            const updateCounter = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-
-                const increment = target / 100;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCounter, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-
-            updateCounter();
-        });
-    </script>
 
 
     <!-- FOOTER -->
