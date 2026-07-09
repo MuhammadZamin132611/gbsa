@@ -1,5 +1,3 @@
-
-// 1. Define your structured data with object parameters containing names and URLs
 const firstTreeData = [
     {
         title: "Government Scheme",
@@ -60,6 +58,21 @@ const firstTreeData = [
             },
         ]
     },
+    {
+        title: "Traning & Placement Asistance",
+        items: [
+            { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
+            { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
+            { name: "Employability Training", link: "/traningPlacement/employabilityTraining.html" },
+            { name: "Placement Services", link: "/traningPlacement/placementServices.html" },
+            { name: "Corporate Training", link: "/traningPlacement/corporateTraining.html" },
+            { name: "Internship Services", link: "/traningPlacement/internshipServices.html" },
+            { name: "Career Services", link: "/traningPlacement/careerServices.html" },
+            { name: "Recruitment Process Outsourcing (RPO)", link: "/traningPlacement/recruitmentProcessOutsourcing.html" },
+            { name: "College Services", link: "/traningPlacement/collegeServices.html" },
+            { name: "Certification Programs", link: "/traningPlacement/certificationPrograms.html" },
+        ]
+    },
 ];
 
 const secondTreeData = [
@@ -112,98 +125,102 @@ const secondTreeData = [
     },
 ];
 
-const thirdTreeData = [
-    {
-        title: "Traning & Placement Asistance",
-        items: [
-            { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
-            { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
-            { name: "Employability Training", link: "/traningPlacement/employabilityTraining.html" },
-            { name: "Placement Services", link: "/traningPlacement/placementServices.html" },
-            { name: "Corporate Training", link: "/traningPlacement/corporateTraining.html" },
-            { name: "Internship Services", link: "/traningPlacement/internshipServices.html" },
-            { name: "Career Services", link: "/traningPlacement/careerServices.html" },
-            { name: "Recruitment Process Outsourcing (RPO)", link: "/traningPlacement/recruitmentProcessOutsourcing.html" },
-            { name: "College Services", link: "/traningPlacement/collegeServices.html" },
-            { name: "Certification Programs", link: "/traningPlacement/certificationPrograms.html" },
-        ]
-    },
-]
-
 const firstrootContainer = document.getElementById('first-tree-root-container');
 const secondrootContainer = document.getElementById('second-tree-root-container');
-const thirdrootContainer = document.getElementById('third-tree-root-container');
 
-// Recursive function to parse and generate infinite level tree arrays
+// Recursive function to parse and generate infinite level tree structures
 function buildTreeNodes(nodes) {
     return nodes.map(node => {
-        // Check if this object is a subcategory header (has .title) or a leaf node link (has .link)
         if (node.title) {
             return `
-                    <div class="relative tree-line pt-2 pb-1">
-                        <span class="text-sm md:text-base font-semibold text-slate-500 uppercase tracking-wider block mb-1">
-                            ${node.title}
-                        </span>
-                        <div class="relative tree-container ml-2 pl-4 mt-1">
-                            ${buildTreeNodes(node.items)}
-                        </div>
+                <div class="relative tree-line pt-2">
+                    <span class="tree-toggle text-sm font-semibold text-slate-300 uppercase tracking-wider block mb-1 cursor-pointer hover:text-indigo-400 transition-colors duration-200">
+                        <i class="fa-solid fa-angle-right mr-1"></i> ${node.title}
+                    </span>
+                    <div class="relative tree-container ml-2 pl-4 hidden border-l border-slate-700">
+                        ${buildTreeNodes(node.items)}
                     </div>
-                `;
+                </div>
+            `;
         } else {
             return `
-                    <div class="relative tree-line py-1.5 flex items-center group cursor-pointer">
-                        <a href="${node.link}" class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
-                            ${node.name}
-                        </a>
-                    </div>
-                `;
+                <div class="relative tree-line py-1 flex items-center">
+                    <a href="${node.link}" class="w-full text-sm font-medium text-slate-200 hover:text-indigo-400 hover:translate-x-1 transition-all duration-200 block">
+                        • ${node.name}
+                    </a>
+                </div>
+            `;
         }
     }).join('');
 }
 
-// Initialize root mapping layout structure
-const firstfullTreeHTML = firstTreeData.map(category => `
+// Render logic for Root Categories
+const generateRootHTML = (data) => data.map(category => `
+    <div class="tree-branch mb-2">
         <div>
-            <div class="mb-3">
-                <h2 class="text-base md:text-xl font-bold text-slate-800 tracking-tight">
-                    ${category.title}
-                </h2>
-            </div>
-            <div class="relative tree-container ml-2 pl-4">
-                ${buildTreeNodes(category.items)}
-            </div>
+            <h2 class="tree-toggle whitespace-nowrap text-sm md:text-base font-semibold tracking-tight cursor-pointer hover:text-indigo-400 transition-colors duration-200">
+                <i class="fa-solid fa-angle-right mr-1"></i> ${category.title}
+            </h2>
         </div>
-    `).join('');
-
-// Initialize root mapping layout structure
-const secondfullTreeHTML = secondTreeData.map(category => `
-        <div>
-            <div class="mb-3">
-                <h2 class="text-base md:text-xl font-bold text-slate-800 tracking-tight">
-                    ${category.title}
-                </h2>
-            </div>
-            <div class="relative tree-container ml-2 pl-4">
-                ${buildTreeNodes(category.items)}
-            </div>
+        <div class="relative tree-container ml-2 pl-4 hidden border-l border-slate-600 mt-1">
+            ${buildTreeNodes(category.items)}
         </div>
-    `).join('');
+    </div>
+`).join('');
 
-// Initialize root mapping layout structure
-const thirdfullTreeHTML = thirdTreeData.map(category => `
-        <div>
-            <div class="mb-3">
-                <h2 class="text-base md:text-xl font-bold text-slate-800 tracking-tight">
-                    ${category.title}
-                </h2>
-            </div>
-            <div class="relative tree-container ml-2 pl-4">
-                ${buildTreeNodes(category.items)}
-            </div>
-        </div>
-    `).join('');
+// Inject generated structures into containers
+if (firstrootContainer) firstrootContainer.innerHTML = generateRootHTML(firstTreeData);
+if (secondrootContainer) secondrootContainer.innerHTML = generateRootHTML(secondTreeData);
 
-// Inject complete tree code block into UI
-firstrootContainer.innerHTML = firstfullTreeHTML;
-secondrootContainer.innerHTML = secondfullTreeHTML;
-thirdrootContainer.innerHTML = thirdfullTreeHTML;
+// --- Fixed Event Delegation for Accordion Toggling ---
+[firstrootContainer, secondrootContainer].forEach(container => {
+    if (!container) return;
+
+    container.addEventListener('click', function (e) {
+        const toggleHeader = e.target.closest('.tree-toggle');
+        if (!toggleHeader) return;
+
+        // Resolve Target Dropdown Element cleanly based on where it was invoked
+        let targetContainer = toggleHeader.nextElementSibling;
+        if (!targetContainer || !targetContainer.classList.contains('tree-container')) {
+            targetContainer = toggleHeader.parentElement.nextElementSibling;
+        }
+
+        if (targetContainer && targetContainer.classList.contains('tree-container')) {
+            const isCurrentlyHidden = targetContainer.classList.contains('hidden');
+
+            // Limit target context boundaries so deeper selections do not unexpectedly shut parent elements
+            const scopeContainer = toggleHeader.closest('.tree-container') || container;
+
+            // 1. Target and hide matching sibling nodes residing inside this exact wrapper layer
+            const immediateDivs = Array.from(scopeContainer.querySelectorAll(':scope > div, :scope > .tree-line'));
+            immediateDivs.forEach(div => {
+                const childContainer = div.querySelector('.tree-container');
+                if (childContainer && childContainer !== targetContainer) {
+                    childContainer.classList.add('hidden');
+                }
+                const childToggle = div.querySelector('.tree-toggle .fa-solid');
+                if (childToggle && childContainer !== targetContainer) {
+                    childToggle.classList.remove('fa-angle-down');
+                    childToggle.classList.add('fa-angle-right');
+                }
+            });
+
+            // 2. Toggle current selection item
+            const icon = toggleHeader.querySelector('.fa-solid');
+            if (isCurrentlyHidden) {
+                targetContainer.classList.remove('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-angle-right');
+                    icon.classList.add('fa-angle-down');
+                }
+            } else {
+                targetContainer.classList.add('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-angle-down');
+                    icon.classList.add('fa-angle-right');
+                }
+            }
+        }
+    });
+});
