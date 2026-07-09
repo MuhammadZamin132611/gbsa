@@ -53,7 +53,7 @@
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
   <!-- NAVBAR -->
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4">
@@ -130,30 +130,490 @@
     </div>
   </nav>
 
-  <!-- 8303709944 Abdullah -->
-  <!-- 9889626278 modh vish -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0B192C',
+            royalblue: '#1E3A8A',
+            gold: '#F59E0B',
+            golddark: '#D97706',
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center py-20">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-navy via-navy to-royalblue text-white overflow-hidden py-24 lg:py-32">
+    <div
+      class="absolute inset-0 opacity-10 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px]">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span
+        class="inline-block bg-royalblue/50 border border-gold/30 text-gold px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner">
+        Building India's Future
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight max-w-5xl mx-auto leading-tight">
+        Empowering Businesses.<br>
+        <span class="bg-gradient-to-r from-gold via-amber-300 to-gold bg-clip-text text-transparent">Enabling
+          Innovation.</span>
+      </h1>
+      <p class="mt-8 text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        Global Business & Startup Association (GBSA) helps startups, MSMEs, entrepreneurs, NGOs, and corporates with
+        business consulting, government projects, funding support, training, and digital transformation.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="#membership"
+          class="w-full sm:w-auto bg-gradient-to-r from-gold to-golddark text-navy font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-gold/20 transform hover:-translate-y-0.5 transition-all text-center">
+          Become a Member
+        </a>
+        <a href="#services"
+          class="w-full sm:w-auto bg-white/10 hover:bg-white/15 border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center">
+          Explore Services
+        </a>
+        <a href="#contact"
+          class="w-full sm:w-auto bg-transparent hover:bg-royalblue border border-royalblue text-slate-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all text-center">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">Our Services</h2>
+      <div class="h-1 w-20 bg-gold mx-auto mt-4 rounded-full"></div>
+      <p class="text-slate-600 mt-4">Comprehensive ecosystem support designed to accelerate organizational growth and
+        innovation.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Startup Consulting</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Ideation to execution strategies, market positioning, and
+          business model validation.</p>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">MSME & Government Schemes</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">End-to-end guidance to access subsidies, grants, incentives,
+          and government benefits.</p>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Import & Export</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Global trade consulting, compliance management, and
+          cross-border expansion setups.</p>
+      </div>
+      <!-- Card 4 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-file-contract"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Tender & GeM Consultancy</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Government e-Marketplace onboarding, bid preparation, and
+          procurement management.</p>
+      </div>
+      <!-- Card 5 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Business Funding</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Connecting businesses with equity investors, debt financing
+          channels, and working capital solutions.</p>
+      </div>
+      <!-- Card 6 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Skill Development</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Tailored enterprise training, corporate leadership bootcamps,
+          and vocational upgrades.</p>
+      </div>
+      <!-- Card 7 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">AI & Automation</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Deploying intelligent workflows, automated legacy processes,
+          and modern AI tools.</p>
+      </div>
+      <!-- Card 8 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Branding & Digital Marketing</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Performance-driven marketing campaigns, identity design, and
+          strategic content reach.</p>
+      </div>
+      <!-- Card 9 -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Website & App Development</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Engineering premium digital products, high-velocity websites,
+          and interactive apps.</p>
+      </div>
+      <!-- Card 10 (Centered option or full grid span) -->
+      <div
+        class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 md:col-span-2 lg:col-span-1 mx-auto w-full">
+        <div
+          class="w-12 h-12 rounded-xl bg-royalblue/10 text-royalblue flex items-center justify-center text-xl font-bold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mt-6 mb-3">Legal & Compliance</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Corporate structuring, licensing setups, IP filing, and
+          corporate governance architectures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose GBSA Section -->
+  <section id="why-gbsa" class="bg-gradient-to-br from-navy to-royalblue text-white py-24 relative overflow-hidden">
+    <div
+      class="absolute inset-0 opacity-5 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Why Choose GBSA?</h2>
+        <div class="h-1 w-20 bg-gold mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Point 1 -->
+        <div class="flex items-start space-x-4 bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="p-3 bg-gold/10 text-gold rounded-xl"><i class="fa-solid fa-user-tie text-xl"></i></div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Expert Team</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Vetted industry operators and seasoned strategists guiding
+              your scaling trajectory.</p>
+          </div>
+        </div>
+        <!-- Point 2 -->
+        <div class="flex items-start space-x-4 bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="p-3 bg-gold/10 text-gold rounded-xl"><i class="fa-solid fa-hubspot text-xl"></i></div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Trusted Business Network</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Immediate entry pathways into elite domestic and global
+              business alliances.</p>
+          </div>
+        </div>
+        <!-- Point 3 -->
+        <div class="flex items-start space-x-4 bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="p-3 bg-gold/10 text-gold rounded-xl"><i class="fa-solid fa-arrows-spin text-xl"></i></div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">End-to-End Consulting</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Cohesive advisory mapping requirements flawlessly from
+              blueprint to deployment.</p>
+          </div>
+        </div>
+        <!-- Point 4 -->
+        <div class="flex items-start space-x-4 bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="p-3 bg-gold/10 text-gold rounded-xl"><i class="fa-solid fa-gavel text-xl"></i></div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Government Project Support</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Expert execution intelligence optimized for complex state
+              and federal projects.</p>
+          </div>
+        </div>
+        <!-- Point 5 -->
+        <div class="flex items-start space-x-4 bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="p-3 bg-gold/10 text-gold rounded-xl"><i class="fa-solid fa-eye text-xl"></i></div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Transparent Process</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Structured milestone updates and unambiguous alignment
+              structures.</p>
+          </div>
+        </div>
+        <!-- Point 6 -->
+        <div class="flex items-start space-x-4 bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="p-3 bg-gold/10 text-gold rounded-xl"><i class="fa-solid fa-headset text-xl"></i></div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Dedicated Relationship Manager</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Direct communication line ensuring fast, friction-free
+              turnaround speeds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Plans -->
+  <section id="membership" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">Membership</h2>
+      <div class="h-1 w-20 bg-gold mx-auto mt-4 rounded-full"></div>
+      <p class="text-slate-600 mt-4">Join an elite community aligned with your goals and unlock priority growth
+        opportunities.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
+      <!-- Plan 1: Student -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all text-center">
+        <div>
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-royalblue bg-royalblue/5 px-3 py-1 rounded-full">Learn</span>
+          <h3 class="text-xl font-bold text-navy mt-4">Student</h3>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <ul class="text-slate-600 text-sm text-left space-y-2.5 mb-6">
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Skill Workshops</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Network Access</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Mentorship Path</li>
+          </ul>
+        </div>
+        <button
+          class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+          Now</button>
+      </div>
+
+      <!-- Plan 2: Startup -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all text-center">
+        <div>
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Launch</span>
+          <h3 class="text-xl font-bold text-navy mt-4">Startup</h3>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <ul class="text-slate-600 text-sm text-left space-y-2.5 mb-6">
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Investor Pitching</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Incubation Entry</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Consulting Perks</li>
+          </ul>
+        </div>
+        <button
+          class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+          Now</button>
+      </div>
+
+      <!-- Plan 3: MSME (Featured) -->
+      <div
+        class="bg-gradient-to-b from-navy to-royalblue text-white border-2 border-gold rounded-2xl p-6 flex flex-col justify-between shadow-xl relative transform lg:-translate-y-2 text-center">
+        <div
+          class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gold text-navy text-[10px] uppercase font-black tracking-widest px-3 py-1 rounded-full shadow-md">
+          Most Popular
+        </div>
+        <div>
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-gold bg-white/10 px-3 py-1 rounded-full">Scale</span>
+          <h3 class="text-xl font-bold text-white mt-4">MSME</h3>
+          <div class="h-px bg-white/10 my-4"></div>
+          <ul class="text-slate-200 text-sm text-left space-y-2.5 mb-6">
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Scheme Filings</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Tender Access</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Premium Networking</li>
+          </ul>
+        </div>
+        <button
+          class="w-full bg-gradient-to-r from-gold to-golddark text-navy font-bold py-2.5 rounded-xl transition-all shadow-md">Apply
+          Now</button>
+      </div>
+
+      <!-- Plan 4: Corporate -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all text-center">
+        <div>
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Optimize</span>
+          <h3 class="text-xl font-bold text-navy mt-4">Corporate</h3>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <ul class="text-slate-600 text-sm text-left space-y-2.5 mb-6">
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Automation Audits</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Brand Integration</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Global Delegations</li>
+          </ul>
+        </div>
+        <button
+          class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+          Now</button>
+      </div>
+
+      <!-- Plan 5: NGO -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all text-center">
+        <div>
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">Impact</span>
+          <h3 class="text-xl font-bold text-navy mt-4">NGO</h3>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <ul class="text-slate-600 text-sm text-left space-y-2.5 mb-6">
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Grant Matching</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Compliance Support</li>
+            <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> CSR Connections</li>
+          </ul>
+        </div>
+        <button
+          class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+          Now</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Upcoming Events -->
+  <section id="events" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">Upcoming Events</h2>
+      <div class="h-1 w-20 bg-gold mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Event 1 -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="bg-royalblue/10 text-royalblue font-bold rounded-lg text-xs px-3 py-1.5 inline-block mb-4">SUMMIT
+          </div>
+          <h3 class="text-lg font-bold text-navy leading-snug">Startup Summit</h3>
+          <p class="text-slate-500 text-xs mt-2"><i class="fa-regular fa-calendar-days mr-1.5 text-gold"></i>Coming Soon
+          </p>
+        </div>
+        <div class="p-6 pt-0">
+          <button
+            class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+            Now</button>
+        </div>
+      </div>
+      <!-- Event 2 -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="bg-royalblue/10 text-royalblue font-bold rounded-lg text-xs px-3 py-1.5 inline-block mb-4">
+            NETWORKING</div>
+          <h3 class="text-lg font-bold text-navy leading-snug">Business Networking Meet</h3>
+          <p class="text-slate-500 text-xs mt-2"><i class="fa-regular fa-calendar-days mr-1.5 text-gold"></i>Coming Soon
+          </p>
+        </div>
+        <div class="p-6 pt-0">
+          <button
+            class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+            Now</button>
+        </div>
+      </div>
+      <!-- Event 3 -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="bg-royalblue/10 text-royalblue font-bold rounded-lg text-xs px-3 py-1.5 inline-block mb-4">
+            INVESTOR</div>
+          <h3 class="text-lg font-bold text-navy leading-snug">Investor Connect</h3>
+          <p class="text-slate-500 text-xs mt-2"><i class="fa-regular fa-calendar-days mr-1.5 text-gold"></i>Coming Soon
+          </p>
+        </div>
+        <div class="p-6 pt-0">
+          <button
+            class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+            Now</button>
+        </div>
+      </div>
+      <!-- Event 4 -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="bg-royalblue/10 text-royalblue font-bold rounded-lg text-xs px-3 py-1.5 inline-block mb-4">
+            WORKSHOP</div>
+          <h3 class="text-lg font-bold text-navy leading-snug">Skill Development Workshops</h3>
+          <p class="text-slate-500 text-xs mt-2"><i class="fa-regular fa-calendar-days mr-1.5 text-gold"></i>Coming Soon
+          </p>
+        </div>
+        <div class="p-6 pt-0">
+          <button
+            class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+            Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section id="about" class="bg-gradient-to-r from-navy via-navy to-royalblue text-white py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-white/5 border border-white/10 p-8 lg:p-12 rounded-3xl backdrop-blur-md shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-gold/10 rounded-full blur-2xl"></div>
+
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+          <!-- Photo Silhouette/Avatar -->
+          <div class="flex-shrink-0">
+            <div
+              class="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl bg-gradient-to-tr from-gold to-amber-300 flex items-center justify-center text-navy shadow-xl border-4 border-white/10">
+              <i class="fa-solid fa-user-tie text-6xl opacity-90"></i>
+            </div>
+          </div>
+          <!-- Details -->
+          <div class="space-y-4 text-center md:text-left">
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-gold bg-gold/10 px-3 py-1 rounded-full">Leadership
+              Perspective</span>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Sayeed Mohammad</h3>
+              <p class="text-sm text-slate-300 font-medium mt-1">Founder & Chairman</p>
+            </div>
+            <div class="h-px bg-white/10 my-4 max-w-xs mx-auto md:mx-0"></div>
+            <p class="text-base sm:text-lg italic text-slate-200 leading-relaxed max-w-2xl font-serif">
+              "Our mission is to empower entrepreneurs and businesses with the right guidance, opportunities, and
+              strategic partnerships for sustainable growth."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="hero-bg min-h-screen flex items-center py-20">
     <div class="max-w-7xl mx-auto w-full px-5 sm:px-6 lg:px-8">
       <div class="glass rounded-2xl lg:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 text-white">
 
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-5">
-          Global Business & Startup Association
+          Empowering Businesses. Enabling Innovation. Building India's Future.
         </h1>
 
         <p class="text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mb-8 text-gray-200 text-justify">
-          Connecting Businesses, Startups, Investors & Governments Across India and GCC. GBSA is a
-          professional business consultancy and strategic platform supporting entrepreneurs, startups,
-          MSMEs, investors and organizations through business solutions, project development, investment
-          facilitation and cross-border trade opportunities.
+          Global Business & Startup Association (GBSA) helps startups, MSMEs, entrepreneurs, NGOs, and corporates with
+          business consulting, government projects, funding support, training, and digital transformation.
         </p>
 
 
       </div>
     </div>
   </section>
-
 
   <section class="py-10">
     <div class="container mx-auto px-6">
@@ -239,115 +699,115 @@
       </div>
     </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- FOOTER -->
 
   <footer class="bg-gradient-to-r from-[#F1EEFA] to-[#D2DEF5]  text-black py-8">
-        <section class="pb-10">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto grid items-center ">
-                    <!-- <h2 class="text-3xl font-bold mb-6 text-center text-black">
+    <section class="pb-10">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto grid items-center ">
+          <!-- <h2 class="text-3xl font-bold mb-6 text-center text-black">
                         Contact
                     </h2> -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-                        <div>
-                            <div class="grid place-items-center p-5">
-                                <img src="/image/BGSA Logo1.jpeg" class="rounded-3xl object-contain" alt="Logo">
-                            </div>
-                            <p class="leading-6 text-lg text-black">
-                                <span class="font-bold">Mr. Sayeed Mohammad</span>
-                                <span class="text-sm">
-                                    <br>Founder & Chairman
-                                    <br>Business Consultant, Entrepreneur
-                                    <br>India-GCC Business Advisor.
-                                    <br>Phone: +91-9811033633
-                                    <br> Email: example@gbsa.org</span>
-                            </p>
-                            <div class="w-full max-w-lg pt-5">
-                                <div class="mb-3">
-                                    <a href="/index.html"
-                                        class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
-                                        Home
-                                    </a>
-                                    <a href="/about.html"
-                                        class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
-                                        About Us
-                                    </a>
-                                    <a href="/contact.html"
-                                        class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
-                                        Contact Us
-                                    </a>
-                                </div>
-                                <div class="w-full max-w-lg  ">
-                                    <div id="third-tree-root-container" class="space-y-8">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <div class="w-full max-w-lg p-5 ">
-                                <div id="first-tree-root-container" class="space-y-8">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="w-full max-w-lg p-5 ">
-                                <div id="second-tree-root-container" class="space-y-8">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+            <div>
+              <div class="grid place-items-center p-5">
+                <img src="/image/BGSA Logo1.jpeg" class="rounded-3xl object-contain" alt="Logo">
+              </div>
+              <p class="leading-6 text-lg text-black">
+                <span class="font-bold">Mr. Sayeed Mohammad</span>
+                <span class="text-sm">
+                  <br>Founder & Chairman
+                  <br>Business Consultant, Entrepreneur
+                  <br>India-GCC Business Advisor.
+                  <br>Phone: +91-9811033633
+                  <br> Email: example@gbsa.org</span>
+              </p>
+              <div class="w-full max-w-lg pt-5">
+                <div class="mb-3">
+                  <a href="/index.html"
+                    class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
+                    Home
+                  </a>
+                  <a href="/about.html"
+                    class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
+                    About Us
+                  </a>
+                  <a href="/contact.html"
+                    class="w-full text-sm md:text-base font-medium text-slate-700 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
+                    Contact Us
+                  </a>
                 </div>
-            </div>
-        </section>
-        <section class="text-center  text-sm">
-            <hr class="bg-black h-[1px]">
-            <div class="grid grid-cols-1">
-                <div class="flex justify-center gap-4 md:gap-10 p-4 text-2xl">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-facebook text-2xl"></i>
-                        </div>
-                    </a>
-
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-x-twitter text-xl"></i>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-linkedin text-xl"></i>
-                        </div>
-                    </a>
-
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-youtube text-xl"></i>
-                        </div>
-                    </a>
-
-                    <a href="https://www.threads.net" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-threads text-xl"></i>
-                        </div>
-                    </a>
+                <div class="w-full max-w-lg  ">
+                  <div id="third-tree-root-container" class="space-y-8">
+                  </div>
                 </div>
+              </div>
             </div>
-            <p class="md:text-lg">© 2026 Global Business & Startup Association Venture Private Limited</p>
+            <div class="">
+              <div class="w-full max-w-lg p-5 ">
+                <div id="first-tree-root-container" class="space-y-8">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="w-full max-w-lg p-5 ">
+                <div id="second-tree-root-container" class="space-y-8">
+                </div>
+              </div>
+            </div>
 
-        </section>
-    </footer>
-    <script src="/headerFooter.js"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center  text-sm">
+      <hr class="bg-black h-[1px]">
+      <div class="grid grid-cols-1">
+        <div class="flex justify-center gap-4 md:gap-10 p-4 text-2xl">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-facebook text-2xl"></i>
+            </div>
+          </a>
+
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-x-twitter text-xl"></i>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-linkedin text-xl"></i>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-youtube text-xl"></i>
+            </div>
+          </a>
+
+          <a href="https://www.threads.net" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-full border border-[#183a6f] text-[#183a6f] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-threads text-xl"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <p class="md:text-lg">© 2026 Global Business & Startup Association Venture Private Limited</p>
+
+    </section>
+  </footer>
+  <script src="/headerFooter.js"></script>
 
   <!-- WhatsApp Button -->
   <div class="fixed bottom-5 right-5 group">
