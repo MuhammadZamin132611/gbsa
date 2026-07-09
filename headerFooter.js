@@ -224,3 +224,23 @@ if (secondrootContainer) secondrootContainer.innerHTML = generateRootHTML(second
         }
     });
 });
+
+
+// 1. Define your social media URLs in an object
+const socialLinks = {
+    'link-facebook': 'https://www.facebook.com/yourprofile',
+    'link-twitter': 'https://twitter.com/yourprofile',
+    'link-linkedin': 'https://www.linkedin.com/in/yourprofile',
+    'link-youtube': 'https://www.youtube.com/c/yourchannel',
+    'link-threads': 'https://www.threads.net/@yourprofile'
+};
+
+// 2. Loop through the object and apply the hrefs to the HTML elements
+document.addEventListener("DOMContentLoaded", () => {
+    Object.keys(socialLinks).forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.href = socialLinks[id];
+        }
+    });
+});
