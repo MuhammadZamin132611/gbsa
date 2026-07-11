@@ -146,7 +146,7 @@
   </script>
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-b from-navy via-navy to-royalblue text-white overflow-hidden py-24 lg:py-32">
+  <!-- <section class="relative bg-gradient-to-b from-navy via-navy to-royalblue text-white overflow-hidden py-24 lg:py-32">
     <div
       class="absolute inset-0 opacity-10 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px]">
     </div>
@@ -179,7 +179,56 @@
         </a>
       </div>
     </div>
+  </section> -->
+
+  <section class="relative bg-navy text-white overflow-hidden py-20 sm:py-24 lg:py-32">
+
+    <!-- DYNAMIC BACKGROUND SLIDER -->
+    <div id="hero-bg-slider" class="absolute inset-0 z-0"></div>
+
+    <!-- GRADIENT & DOT OVERLAYS -->
+    <div class="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/90 to-royalblue/95 z-1"></div>
+    <div
+      class="absolute inset-0 opacity-10 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px] z-1">
+    </div>
+
+    <!-- FOREGROUND CONTENT -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span
+        class="inline-block bg-royalblue/50 border border-gold/30 text-gold px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner">
+        Building India's Future
+      </span>
+
+      <!-- RESPONSIVE HEADING CONTAINER (No hardcoded heights) -->
+      <div id="hero-text-slider" class="relative max-w-5xl mx-auto min-h-fit"></div>
+
+      <!-- RESPONSIVE SUBHEADING CONTAINER -->
+      <div id="hero-sub-slider" class="relative max-w-3xl mx-auto mt-6 sm:mt-8 min-h-fit"></div>
+
+      <!-- BUTTON GROUP -->
+      <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 relative z-20">
+        <a href="#membership"
+          class="w-full sm:w-auto bg-gradient-to-r from-gold to-golddark text-navy font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-gold/20 transform hover:-translate-y-0.5 transition-all text-center">
+          Become a Member
+        </a>
+        <a href="#services"
+          class="w-full sm:w-auto bg-white/10 hover:bg-white/15 border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center">
+          Explore Services
+        </a>
+        <a href="#contact"
+          class="w-full sm:w-auto bg-transparent hover:bg-royalblue border border-royalblue text-slate-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all text-center">
+          Contact Us
+        </a>
+      </div>
+    </div>
   </section>
+
+  <!-- RESPONSIVE ENGINE SCRIPT -->
+  
+
+
+
+
 
   <!-- Services Section -->
   <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -841,6 +890,7 @@
   </div>
 
   <script src="menu.js"></script>
+  <script src="index.js"></script>
   <script>
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
