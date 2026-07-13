@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const sliderData = [
         {
             image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600",
+            line1: "Empowering Businesses.",
+            line2: "Enabling Innovation.",
+            subheading: "Global Business & Startup Association (GBSA) helps startups, MSMEs, entrepreneurs, NGOs, and corporates with business consulting, government projects, and digital transformation."
+        },
+        {
+            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600",
             line1: "Government Scheme",
             line2: "",
             subheading: "End-to-end consultancy for government schemes, subsidies, grants, and financial assistance."
@@ -60,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Headings - First slide remains static/relative to hold natural screen space, others overlay absolute
         const heading = document.createElement("h1");
-        heading.className = `${isActive ? 'relative opacity-100 translate-y-0' : 'absolute inset-x-0 top-0 opacity-0 translate-y-4 pointer-events-none'} text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight transition-all duration-1000 w-full`;
+        heading.className = `${isActive ? 'relative opacity-100 translate-y-0' : 'absolute inset-x-0 top-0 opacity-0 translate-y-4 pointer-events-none'} text-xl sm:text-2xl lg:text-5xl font-black tracking-tight leading-tight transition-all duration-1000 w-full`;
         heading.innerHTML = `${slide.line1}<br><span class="bg-gradient-to-r from-gold via-amber-300 to-gold bg-clip-text text-transparent">${slide.line2}</span>`;
         textContainer.appendChild(heading);
 
