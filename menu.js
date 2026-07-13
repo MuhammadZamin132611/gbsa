@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Highlight active layout components inside Desktop Nav
         document.querySelectorAll("#desktopNavLinks a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
-                link.classList.add("text-red-500", "border-red-500");
+                link.classList.add("text-[#F59E0B]", "border-[#F59E0B]");
                 link.classList.remove("text-gray-700", "border-transparent");
             }
         });
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Highlight active layout components inside Mobile Nav Panel
         document.querySelectorAll("#mobileNavLinks > a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
-                link.classList.add("text-red-500", "bg-red-50");
+                link.classList.add("text-[#F59E0B]", "bg-red-50");
                 link.classList.remove("text-gray-700");
             }
         });
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("#megaMenu a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
                 // Highlight active link inside dark mega menu
-                link.classList.add("text-red-500", "font-semibold");
+                link.classList.add("text-[#F59E0B]", "font-semibold");
                 link.classList.remove("text-gray-300");
                 hasActiveChild = true;
             }
@@ -176,14 +176,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // If a nested child link is active, keep the parent desktop 'Services' button highlighted
         const servicesBtn = document.getElementById("servicesBtn");
         if (hasActiveChild && servicesBtn) {
-            servicesBtn.classList.add("text-red-500");
+            servicesBtn.classList.add("text-[#F59E0B]");
         }
     }
 
     function checkAndHighlightMobileDynamicLinks() {
         document.querySelectorAll("#mobileServicesContainer a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
-                link.classList.add("text-red-500", "bg-red-50", "font-medium");
+                link.classList.add("text-[#F59E0B]", "bg-red-50", "font-medium");
 
                 // Automatically auto-expand parent categories if child is active
                 let parentContent = link.closest(".mobile-sub-content");
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (masterContent && masterArrow) {
                     masterContent.classList.remove("hidden");
                     masterArrow.classList.add("rotate-180");
-                    document.getElementById("mobileMasterServicesBtn")?.classList.add("text-red-500");
+                    document.getElementById("mobileMasterServicesBtn")?.classList.add("text-[#F59E0B]");
                 }
             }
         });
@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
             }
             return `
-                <a href="${item.link}" class="block py-2 px-4 text-sm text-gray-600 hover:text-red-500 hover:bg-gray-50 rounded transition-all">
+                <a href="${item.link}" class="block py-2 px-4 text-sm text-gray-600 hover:text-[#F59E0B] hover:bg-gray-50 rounded transition-all">
                     ${item.name || item.title}
                 </a>
             `;
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (mobileServicesContainer) {
         mobileServicesContainer.innerHTML = `
-            <button id="mobileMasterServicesBtn" class="w-full pl-4 py-2 flex justify-between items-center text-left font-semibold border-b border-gray-100 hover:text-red-500 transition-colors">
+            <button id="mobileMasterServicesBtn" class="w-full pl-4 py-2 flex justify-between items-center text-left font-semibold border-b border-gray-100 hover:text-[#F59E0B] transition-colors">
                 <span>Services</span>
                 <svg id="mobileMasterArrow" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
