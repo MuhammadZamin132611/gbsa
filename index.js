@@ -2,22 +2,46 @@ document.addEventListener("DOMContentLoaded", function () {
     const sliderData = [
         {
             image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600",
-            line1: "Empowering Businesses.",
-            line2: "Enabling Innovation.",
-            subheading: "Global Business & Startup Association (GBSA) helps startups, MSMEs, entrepreneurs, NGOs, and corporates with business consulting, government projects, and digital transformation."
+            line1: "Government Scheme",
+            line2: "",
+            subheading: "End-to-end consultancy for government schemes, subsidies, grants, and financial assistance."
         },
         {
             image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600",
-            line1: "Accelerating Scale.",
-            line2: "Driving Growth.",
-            subheading: "Gain access to seed funding, venture networks, and comprehensive investor relations strategy to scale your enterprise across national and international markets."
+            line1: "Business Development",
+            line2: "",
+            subheading: "Strategic solutions to accelerate business growth, market expansion, and revenue generation."
         },
         {
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600",
-            line1: "Fostering Startups.",
-            line2: "Securing Funding.",
-            subheading: "Navigate corporate incubation programs, exclusive leadership mentorship cycles, and direct pathways to critical central and state government funding projects."
-        }
+            line1: "Import & Export",
+            line2: "",
+            subheading: "Comprehensive assistance with international trade, documentation, compliance, and global market access."
+        },
+        {
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600",
+            line1: "International Business",
+            line2: "& Trade Law",
+            subheading: "Professional guidance on international contracts, trade regulations, and legal compliance."
+        },
+        {
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600",
+            line1: "Investment Banking",
+            line2: "",
+            subheading: "Advisory services for project financing, debt funding, investor relations, and capital raising."
+        },
+        {
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600",
+            line1: "Accounting Services",
+            line2: "& Registration",
+            subheading: "Complete support for business registration, GST, taxation, accounting, and regulatory compliance."
+        },
+        {
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600",
+            line1: "Training",
+            line2: "& Placement Assistance",
+            subheading: "Industry-oriented training programs, skill development, and career placement support."
+        },
     ];
 
     const bgContainer = document.getElementById("hero-bg-slider");

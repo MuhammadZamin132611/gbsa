@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { name: "Import & Export Consultancy", link: "/importExport/importExportConsultancy.html" },
                 { name: "Import & Export IEC Registration", link: "/importExport/importExportIECRegistration.html" },
                 { name: "DGFT Registration & Services", link: "/importExport/DGFTRegistrationServices.html" },
-                { name: "Paid Finance Consultancy", link: "/importExport/paidFinanceConsultancy.html" },
+                // { name: "Paid Finance Consultancy", link: "/importExport/paidFinanceConsultancy.html" },
                 { name: "Export Credit Asistance", link: "/importExport/exportCreditAsistance.html" },
                 { name: "International Business Setup", link: "/importExport/internationalBusinessSetup.html" },
                 { name: "International B2B Lead Generation", link: "/importExport/internationalB2BLeadGeneration.html" },
@@ -122,6 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 { name: "Certification Programs", link: "/traningPlacement/certificationPrograms.html" },
             ]
         },
+        {
+            title: "Legal Services",
+            items: [
+                // { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
+                // { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
+            ]
+        },
+
     ];
 
     // Get current path route (e.g., "/header.html")
