@@ -244,3 +244,62 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+// 1. Data Structure holding URLs and Text matching your routes
+const quickLinksData = [
+    { text: "Home", href: "/index.html" },
+    { text: "About Us", href: "/about.html" },
+    { text: "Membership", href: "/membership.html" },
+    { text: "Events", href: "/events.html" },
+    { text: "Gallery", href: "/gallery.html" },
+    { text: "Careers", href: "/careers.html" },
+    { text: "Privacy Policy", href: "/privacyPolicy.html" },
+    { text: "Terms & Conditions", href: "/termsConditions.html" },
+    { text: "Contact Us", href: "/contact.html" }
+];
+
+// 2. Select the DOM target element
+const quickLinksContainer = document.getElementById("quick-links-container");
+
+// 3. Render and inject elements dynamically
+if (quickLinksContainer) {
+    quickLinksContainer.innerHTML = quickLinksData
+        .map(link => `
+        <a href="${link.href}" 
+            class="w-full text-sm md:text-base font-medium text-white hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
+            ${link.text}
+        </a>
+    `)
+        .join('');
+}
+
+
+
+// 1. Data Structure holding URLs and Text
+const schemesData = [
+    { text: "Startup India", href: "/startupIndia.html" },
+    { text: "MSME", href: "/msme.html" },
+    { text: "PMEGP", href: "/pmegm.html" }, // Note: Kept your original /pmegm.html naming
+    { text: "NSDC", href: "/nsdc.html" },
+    { text: "SIDBI", href: "/sidbi.html" },
+    { text: "NABARD", href: "/nabard.html" },
+    { text: "Ministry of Agriculture", href: "/ministryOfAgriculture.html" },
+    { text: "Ministry of Food Processing", href: "/ministryOfFoodProcessing.html" },
+    { text: "Ministry of Cooperation", href: "/ministryOfCooperation.html" }
+];
+
+// 2. Target the wrapper container
+const container = document.getElementById("government-schemes-container");
+
+// 3. Generate HTML dynamically and inject it
+if (container) {
+    container.innerHTML = schemesData
+        .map(scheme => `
+        <a href="${scheme.href}" 
+        class="w-full text-sm md:text-base font-medium text-white hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
+            ${scheme.text}
+        </a>
+    `)
+        .join('');
+}
