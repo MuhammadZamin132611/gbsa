@@ -37,6 +37,7 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
+        
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -48,12 +49,12 @@
                 <!-- Desktop Menu Actions -->
                 <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
                     <a href="/index.html"
-                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
                     <a href="/about.html"
-                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">About</a>
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">About</a>
 
                     <button id="servicesBtn"
-                        class="flex items-center gap-2 hover:text-red-500 focus:outline-none transition-colors py-1">
+                        class="flex items-center gap-2 hover:text-yellow-500 focus:outline-none transition-colors py-1">
                         Services
                         <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
                             class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
@@ -62,12 +63,12 @@
                         </svg>
                     </button>
                     <a href="/contact.html"
-                        class="hover:text-red-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
                 </div>
 
                 <!-- Mobile Toggle Menu Buttons -->
                 <div class="flex items-center gap-4 md:hidden">
-                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-red-500 focus:outline-none p-1">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
                         <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -81,18 +82,19 @@
         <div id="mobileMenu"
             class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
             <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
-                <a href="/index.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">Home</a>
-                <a href="/about.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">About</a>
+                <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
 
                 <!-- Mobile Container Managed dynamically by JavaScript -->
                 <div id="mobileServicesContainer" class="w-full"></div>
-                <a href="/contact.html" class="hover:text-red-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+                <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
             </div>
         </div>
 
         <!-- Desktop Mega Menu Base -->
+
         <div id="megaMenu"
-            class="hidden absolute left-0 top-full w-full bg-[#1c1f20] text-white shadow-2xl transition-all duration-200">
+            class="hidden absolute left-0 top-full w-full bg-[#0B192C] text-white shadow-2xl transition-all duration-200 max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
             <div class="max-w-7xl mx-auto px-6 py-10">
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
                     <!-- Static Descriptive Card -->
@@ -114,6 +116,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- HERO -->
     <section class="hero-bg min-h-screen flex items-center">

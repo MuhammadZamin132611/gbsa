@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Highlight active layout components inside Mobile Nav Panel
         document.querySelectorAll("#mobileNavLinks > a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
-                link.classList.add("text-[#F59E0B]", "bg-red-50");
+                link.classList.add("text-[#F59E0B]", "bg-yellow-50");
                 link.classList.remove("text-gray-700");
             }
         });
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function checkAndHighlightMobileDynamicLinks() {
         document.querySelectorAll("#mobileServicesContainer a").forEach(link => {
             if (link.getAttribute("href") === currentPath) {
-                link.classList.add("text-[#F59E0B]", "bg-red-50", "font-medium");
+                link.classList.add("text-[#F59E0B]", "bg-yellow-50", "font-medium");
 
                 // Automatically auto-expand parent categories if child is active
                 let parentContent = link.closest(".mobile-sub-content");
