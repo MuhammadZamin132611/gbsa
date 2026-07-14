@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             subheading: "Complete support for business registration, GST, taxation, accounting, and regulatory compliance."
         },
         {
-            image: "/homeImages/traningPlacement.jpg",
+            image: "/homeImages/traningPlacement.jpeg",
             line1: "Training",
             line2: "& Placement Assistance",
             subheading: "Industry-oriented training programs, skill development, and career placement support."
