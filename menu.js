@@ -136,6 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 // { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
             ]
         },
+        {
+            title: "Medical and Healthcare",
+            items: [
+                // { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
+                // { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
+            ]
+        },
 
     ];
 
