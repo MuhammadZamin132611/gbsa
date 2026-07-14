@@ -117,34 +117,45 @@
         <section class="pb-10">
             <div class="container mx-auto px-4">
                 <div class="max-w-6xl mx-auto">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1fr_2fr_1fr] gap-4">
-                        <div class="grid grid-cols-1 content-start">
+                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
                             <div>
-                                <h1 class="text-[#F59E0B] text-xl font-bold">Quick Links</h1>
-                                <div class="w-full max-w-lg pt-5">
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Quick Links</h1>
+                                <div class="w-full pt-4 md:pt-5">
                                     <div id="quick-links-container" class="space-y-3">
                                         <!-- Dynamic quick links will be injected here -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 content-start">
-                            <h1 class="text-[#F59E0B] text-xl font-bold">Services</h1>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-5">
-                                <div>
-                                    <div id="first-tree-root-container" class="space-y-8">
+
+                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+                            <h1
+                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                Services</h1>
+                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="first-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
                                     </div>
                                 </div>
-                                <div>
-                                    <div id="second-tree-root-container" class="space-y-8">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="second-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 content-start">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
                             <div>
-                                <h1 class="text-[#F59E0B] text-xl font-bold">Government Schemes</h1>
-                                <div class="w-full max-w-lg pt-5">
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Government Schemes</h1>
+                                <div class="w-full pt-4 md:pt-5">
                                     <div id="government-schemes-container" class="space-y-3">
                                         <!-- Dynamic links will render here -->
                                     </div>
@@ -155,7 +166,6 @@
                 </div>
             </div>
         </section>
-
         <section class="text-center text-sm">
             <hr class="bg-black h-[1px]">
             <div class="grid grid-cols-1 justify-items-center py-4">
@@ -192,9 +202,10 @@
                     </a>
                 </div>
             </div>
-            <p class="md:text-lg pb-4">© Provided by Vertexcel Export India Pvt Ltd</p>
+            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
         </section>
     </footer>
+    
     
     
     <script src="/headerFooter.js"></script>
