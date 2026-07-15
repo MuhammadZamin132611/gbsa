@@ -267,8 +267,8 @@ if (quickLinksContainer) {
     quickLinksContainer.innerHTML = quickLinksData
         .map(link => `
         <a href="${link.href}" 
-            class="w-full text-sm md:text-base font-medium text-white hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
-            ${link.text}
+            class="w-full text-sm md:text-base font-medium text-white hover:text-gray-600 hover:translate-x-1 transition-all duration-200 block">
+            <i class="fa-solid fa-circle-arrow-right"></i> ${link.text}
         </a>
     `)
         .join('');
@@ -297,8 +297,8 @@ if (container) {
     container.innerHTML = schemesData
         .map(scheme => `
         <a href="${scheme.href}" 
-        class="w-full text-sm md:text-base font-medium text-white hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 block">
-            ${scheme.text}
+        class="w-full text-sm md:text-base font-medium text-white hover:text-gray-600 hover:translate-x-1 transition-all duration-200 block">
+            <i class="fa-solid fa-circle-arrow-right"></i> ${scheme.text}
         </a>
     `)
         .join('');
