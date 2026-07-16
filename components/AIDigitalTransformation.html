@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Digital Transformation</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
+                </a>
+
+                <!-- Desktop Menu Actions -->
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">About</a>
+
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-yellow-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <a href="/contact.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
+                </div>
+
+                <!-- Mobile Toggle Menu Buttons -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer (Scrollable & Screen-Size Capped) -->
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
+
+                <!-- Mobile Container Managed dynamically by JavaScript -->
+                <div id="mobileServicesContainer" class="w-full"></div>
+                <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Desktop Mega Menu Base -->
+
+        <div id="megaMenu"
+            class="hidden absolute left-0 top-full w-full bg-[#0B192C] text-white shadow-2xl transition-all duration-200 max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div class="max-w-7xl mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <!-- Static Descriptive Card -->
+                    <div class="border-r border-gray-800 pr-4">
+                        <h2 class="text-3xl font-light mb-4 text-white">
+                            Business Services
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-7">
+                            Explore government schemes, CSR opportunities, business development solutions, import-export
+                            services, and international trade advisory.
+                        </p>
+                    </div>
+
+                    <!-- Dynamic Level columns populated via JavaScript -->
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="font-sans antialiased overflow-x-hidden">
+        <!-- Hero Section with Background Image -->
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-fixed">
+            <!-- Color Overlays for Readability & Brand Match -->
+            <div class="absolute inset-0 bg-[#0B192C]/80 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Next-Gen Enterprise Solutions
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    AI & Digital <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Transformation</span>
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    Future-proof your business. We engineer intelligent workflows, deploy cutting-edge generative AI,
+                    and drive comprehensive digital pivots to keep you ahead of the curve.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="pb-20 relative bg-[#0B192C]">
+            <!-- Decorative background glow -->
+            <div
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="card-container">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-chess-knight"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI Strategy & Transformation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Guiding enterprises through comprehensive
+                            digital pivots using customized, AI-first technological roadmaps.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Business Process Automation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Streamlining repetitive, high-volume tasks
+                            with robotic process automation (RPA) to boost operational efficiency.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI Chatbot Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Building intelligent, natural language
+                            conversational agents for 24/7 customer engagement and lead generation.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Custom AI Solutions</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Developing bespoke machine learning and deep
+                            learning models tailored to solve your unique business challenges.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Generative AI (ChatGPT, Gemini)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Integrating cutting-edge generative AI to
+                            accelerate content creation, coding, and dynamic problem-solving.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI Workflow Automation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Connecting disjointed systems with AI-driven
+                            triggers to automate complex, multi-departmental business workflows.</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">CRM Implementation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Deploying and optimizing intelligent CRM
+                            platforms to manage leads, forecast revenue, and automate sales funnels.</p>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">ERP Consulting & Setup</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Centralizing your enterprise data and supply
+                            chain processes with robust, AI-enhanced ERP solutions.</p>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Digital Business Transformation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Modernizing legacy architectures and business
+                            models to ensure agility in the digital-first economy.</p>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Data Analytics & BI</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Transforming raw data into actionable insights
+                            through advanced Business Intelligence and visual dashboards.</p>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI-Powered Customer Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Enhancing ticketing systems and call routing
+                            using sentiment analysis and AI-driven automated categorization.</p>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-chart-area"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Predictive Analytics & Forecasting</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Utilizing historical data and AI models to
+                            accurately predict market trends, customer churn, and inventory demand.</p>
+                    </div>
+
+                    <!-- Card 13 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Document Digitization & OCR</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Converting physical paperwork into searchable
+                            digital assets with intelligent optical character recognition.</p>
+                    </div>
+
+                    <!-- Card 14 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Cloud Migration Solutions</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Seamlessly transitioning on-premise
+                            infrastructure to highly scalable, secure, and cost-effective cloud environments.</p>
+                    </div>
+
+                    <!-- Card 15 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Website & Mobile App Dev</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Engineering high-performance, scalable web and
+                            mobile applications equipped with smart AI integrations.</p>
+                    </div>
+
+                    <!-- Card 16 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">E-commerce Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Building conversion-optimized digital
+                            storefronts powered by AI product recommendation engines.</p>
+                    </div>
+
+                    <!-- Card 17 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">API & System Integration</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Ensuring secure, seamless data flow across
+                            your entire tech stack through robust API connections.</p>
+                    </div>
+
+                    <!-- Card 18 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">WhatsApp Business API</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Automating customer outreach, notifications,
+                            and instant support directly through WhatsApp integrations.</p>
+                    </div>
+
+                    <!-- Card 19 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Digital Marketing Automation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Executing complex, multi-channel marketing
+                            campaigns driven by algorithmic targeting and real-time optimization.</p>
+                    </div>
+
+                    <!-- Card 20 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Email & SMS Automation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Setting up intelligent, trigger-based
+                            communication workflows to maximize customer retention and engagement.</p>
+                    </div>
+
+                    <!-- Card 21 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Cybersecurity & Protection</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Securing your digital transformation journey
+                            with advanced threat detection AI and strict compliance frameworks.</p>
+                    </div>
+
+                    <!-- Card 22 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI Training & Workshops</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Upskilling your executive and operational
+                            workforce through immersive AI training and adoption strategies.</p>
+                    </div>
+
+                    <!-- Card 23 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Employee Digital Skills</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Cultivating a digital-first corporate culture
+                            through continuous learning programs and tech empowerment.</p>
+                    </div>
+
+                    <!-- Card 24 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Dashboard & MIS Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Creating real-time Management Information
+                            Systems for crystal-clear executive oversight and rapid decision-making.</p>
+                    </div>
+
+                    <!-- Card 25 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">IoT (Internet of Things)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Connecting physical enterprise assets to the
+                            digital realm for real-time monitoring, analytics, and control.</p>
+                    </div>
+
+                    <!-- Card 26 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI for Industry 4.0</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Deploying predictive maintenance and advanced
+                            computer vision to build smart, highly efficient manufacturing facilities.</p>
+                    </div>
+
+                    <!-- Card 27 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI for Healthcare</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Revolutionizing patient care with AI-assisted
+                            diagnostics, secure data management, and telemedicine technology.</p>
+                    </div>
+
+                    <!-- Card 28 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-tractor"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI for Agriculture</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Implementing precision farming techniques,
+                            crop yield prediction, and smart supply chain analytics.</p>
+                    </div>
+
+                    <!-- Card 29 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI for Education (EdTech)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Personalizing student learning paths and
+                            automating institutional administrative tasks with intelligent AI systems.</p>
+                    </div>
+
+                    <!-- Card 30 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI for Finance & Banking</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Enhancing risk assessment, fraud detection,
+                            algorithmic trading, and personalized financial advisory services.</p>
+                    </div>
+
+                    <!-- Card 31 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI for HR & Recruitment</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Streamlining global talent acquisition, resume
+                            parsing, and employee retention using predictive AI models.</p>
+                    </div>
+
+                    <!-- Card 32 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">AI Compliance & Governance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Ensuring your enterprise AI deployments meet
+                            ethical standards, avoid bias, and adhere to regulatory compliance.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/animation.js"></script>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+
+
+
+    <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white py-8">
+        <section class="pb-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Quick Links</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="quick-links-container" class="space-y-3">
+                                        <!-- Dynamic quick links will be injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+                            <h1
+                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                Services</h1>
+                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="first-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <div id="second-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Government Schemes</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="government-schemes-container" class="space-y-3">
+                                        <!-- Dynamic links will render here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-sm">
+            <hr class="bg-black h-[1px]">
+            <div class="grid grid-cols-1 justify-items-center py-4">
+                <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
+                    <a id="link-facebook" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-twitter" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-youtube" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-threads" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-threads text-xl"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
+        </section>
+    </footer>
+
+
+    <script src="/headerFooter.js"></script>
+
+    <!-- Script connection link -->
+    <script src="/menu.js"></script>
+</body>
+
+</html>

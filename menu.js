@@ -124,15 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             name: "Legal Services",
-            link: "/"
+            link: "/components/legalServices.html"
         },
         {
             name: "AI & Digital Transformation",
-            link: "/"
+            link: "/components/AIDigitalTransformation.html"
         },
         {
             name: "Medical and Healthcare",
-            link: "/"
+            link: "/components/medicalandHealthcare.html"
         },
 
     ];

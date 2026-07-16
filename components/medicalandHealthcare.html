@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical and Healthcare</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
+                </a>
+
+                <!-- Desktop Menu Actions -->
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">About</a>
+
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-yellow-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <a href="/contact.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
+                </div>
+
+                <!-- Mobile Toggle Menu Buttons -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer (Scrollable & Screen-Size Capped) -->
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
+
+                <!-- Mobile Container Managed dynamically by JavaScript -->
+                <div id="mobileServicesContainer" class="w-full"></div>
+                <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Desktop Mega Menu Base -->
+
+        <div id="megaMenu"
+            class="hidden absolute left-0 top-full w-full bg-[#0B192C] text-white shadow-2xl transition-all duration-200 max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div class="max-w-7xl mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <!-- Static Descriptive Card -->
+                    <div class="border-r border-gray-800 pr-4">
+                        <h2 class="text-3xl font-light mb-4 text-white">
+                            Business Services
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-7">
+                            Explore government schemes, CSR opportunities, business development solutions, import-export
+                            services, and international trade advisory.
+                        </p>
+                    </div>
+
+                    <!-- Dynamic Level columns populated via JavaScript -->
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="font-sans antialiased overflow-x-hidden">
+        <!-- Hero Section with Background Image -->
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop')] bg-cover bg-center bg-fixed">
+            <!-- Color Overlays for Readability & Brand Match -->
+            <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Expert Advisory Services
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    Medical & <br class="hidden md:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Health
+                        Care</span>
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    Transforming healthcare visions into reality. We provide comprehensive, end-to-end consultancy for
+                    hospital setups, accreditations, digital transformations, and clinical business scaling.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="pb-20 relative bg-[#0B192C]">
+            <!-- Decorative background glow -->
+            <div
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="card-container">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-regular fa-hospital"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Hospital Project Consultancy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Comprehensive end-to-end guidance for
+                            designing, funding, and building state-of-the-art hospitals from ground zero.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-bed-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Hospital Planning & Setup</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Strategic architectural planning, clinical
+                            workflow design, and operational setup tailored for modern medical facilities.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Diagnostic Lab Setup</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Expert advisory on establishing advanced
+                            pathology, radiology, and diagnostic centers with automated testing workflows.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Clinic & Polyclinic Setup</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Tailored, cost-effective solutions for
+                            launching highly efficient, patient-centric single-specialty or multi-specialty clinics.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Medical College Project</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Navigating academic infrastructure, regulatory
+                            norms (NMC/INC), and curriculum alignment for medical and nursing colleges.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Business Planning (DPR)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Crafting Detailed Project Reports encompassing
+                            financial modeling, market viability, demographic research, and ROI analysis.</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Govt Scheme Assistance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Strategic support to identify, apply for, and
+                            leverage national and state-level healthcare grants, subsidies, and financial aids.</p>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Healthcare Infrastructure</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Turnkey project management of large-scale
+                            medical infrastructure, ensuring adherence to global safety and structural standards.</p>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">NABH & NABL Accreditation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Streamlined, step-by-step pathways and audits
+                            to achieve top-tier quality accreditations for hospitals and diagnostic labs.</p>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Licensing & Compliance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Hassle-free navigation of medical board
+                            approvals, environmental clearances, fire safety, and local health regulations.</p>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Equipment Procurement</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Cost-effective sourcing, specification
+                            analysis, and vendor management for cutting-edge medical and surgical technologies.</p>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">HMS Implementation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Deploying robust Hospital Management Systems
+                            for seamless patient records, billing, inventory, and inter-departmental data flow.</p>
+                    </div>
+
+                    <!-- Card 13 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Telemedicine Consultancy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Designing, integrating, and scaling secure
+                            digital health platforms for remote patient monitoring and virtual consultations.</p>
+                    </div>
+
+                    <!-- Card 14 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Digital Transformation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Modernizing traditional healthcare delivery by
+                            integrating AI diagnostics, IoT devices, and cloud-based medical data lakes.</p>
+                    </div>
+
+                    <!-- Card 15 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">CSR Healthcare Projects</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Designing and executing highly impactful
+                            corporate social responsibility programs focused on public health and rural outreach.</p>
+                    </div>
+
+                    <!-- Card 16 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">PPP Healthcare Projects</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Structuring and managing mutually beneficial
+                            Public-Private Partnerships to enhance community healthcare access.</p>
+                    </div>
+
+                    <!-- Card 17 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Funding & Investor Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Connecting medical ventures with private
+                            equity, venture capital, and institutional investors for expansion and scaling.</p>
+                    </div>
+
+                    <!-- Card 18 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Bank Loan & Project Finance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">End-to-end documentation, valuation, and
+                            liaison services for securing competitive healthcare financing and working capital.</p>
+                    </div>
+
+                    <!-- Card 19 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Tender & Procurement</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Expert bid preparation, pricing strategy, and
+                            documentation for winning government health contracts and institutional supplies.</p>
+                    </div>
+
+                    <!-- Card 20 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Staff Recruitment Advisory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Sourcing, vetting, and onboarding top-tier
+                            clinical, administrative, and executive talent tailored to your medical institution.</p>
+                    </div>
+
+                    <!-- Card 21 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Pharmacy Setup</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Strategic location analysis, drug licensing,
+                            inventory planning, and layout design for retail chains and in-hospital pharmacies.</p>
+                    </div>
+
+                    <!-- Card 22 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-trash-can-arrow-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Medical Waste Management</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Establishing highly safe, eco-friendly, and
+                            legally compliant bio-medical waste segregation and disposal systems.</p>
+                    </div>
+
+                    <!-- Card 23 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Training & Capacity Building</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Enhancing clinical competence and soft skills
+                            of healthcare staff through specialized, certified continuing education programs.</p>
+                    </div>
+
+                    <!-- Card 24 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Market Research & Feasibility</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Providing deep, data-driven insights to
+                            evaluate local patient demographics, competition, and demand before massive investments.</p>
+                    </div>
+
+                    <!-- Card 25 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Expansion & Franchise</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Scaling successful healthcare models across
+                            new geographies via standardized branching, mergers, or franchising frameworks.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script src="/animation.js"></script>
+    </main>
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+
+
+
+    <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white py-8">
+        <section class="pb-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Quick Links</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="quick-links-container" class="space-y-3">
+                                        <!-- Dynamic quick links will be injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+                            <h1
+                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                Services</h1>
+                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="first-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <div id="second-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Government Schemes</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="government-schemes-container" class="space-y-3">
+                                        <!-- Dynamic links will render here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-sm">
+            <hr class="bg-black h-[1px]">
+            <div class="grid grid-cols-1 justify-items-center py-4">
+                <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
+                    <a id="link-facebook" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-twitter" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-youtube" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-threads" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-threads text-xl"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
+        </section>
+    </footer>
+
+
+    <script src="/headerFooter.js"></script>
+
+    <!-- Script connection link -->
+    <script src="/menu.js"></script>
+</body>
+
+</html>
