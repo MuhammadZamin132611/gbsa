@@ -123,25 +123,16 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
-            title: "Legal Services",
-            items: [
-                // { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
-                // { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
-            ]
+            name: "Legal Services",
+            link: "/"
         },
         {
-            title: "AI & Digital Transformation",
-            items: [
-                // { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
-                // { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
-            ]
+            name: "AI & Digital Transformation",
+            link: "/"
         },
         {
-            title: "Medical and Healthcare",
-            items: [
-                // { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
-                // { name: "Technical Training", link: "/traningPlacement/technicalTraining.html" },
-            ]
+            name: "Medical and Healthcare",
+            link: "/"
         },
 
     ];
