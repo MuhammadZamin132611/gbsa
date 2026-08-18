@@ -12,11 +12,18 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Base settings to ensure smooth dark theme rendering */
+        body {
+            background-color: #0B192C;
+            color: #e2e8f0;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
 
-        
+
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -97,7 +104,7 @@
     </nav>
 
 
-    <ul>
+    <!-- <ul>
         <li>Foreign Investment (FDI)</li>
         <li>Overseas Investment</li>
         <li>Cross-border M&A</li>
@@ -105,10 +112,122 @@
         <li>Joint Venture Advisory</li>
     </ul>
 
-    <h1 class="text-center py-10 text-5xl font-bold">Cross-Border Advisory</h1>
+    <h1 class="text-center py-10 text-5xl font-bold">Cross-Border Advisory</h1> -->
+
+    <main class="font-sans antialiased overflow-x-hidden">
+        <!-- Hero Section with Background Image -->
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('/pagesImages/crossBorderAdvisory.jpg')] bg-cover bg-center bg-fixed">
+            <!-- Color Overlays for Readability & Brand Match -->
+            <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Global Expansion & Capital
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    Cross-Border <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Advisory</span>
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    Navigate the complexities of international markets with confidence. We provide strategic counsel on
+                    foreign direct investments, global fundraising, and cross-border M&A, ensuring compliance across
+                    multi-jurisdictional frameworks.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="pb-20 relative bg-[#0B192C]">
+            <!-- Decorative background glow -->
+            <div
+                class="absolute top-1/3 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/3 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 6-column grid on large screens to perfectly center the 5 items (3 on top row, 2 on bottom row) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8" id="card-container">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-plane-arrival"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Foreign Investment (FDI)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Guiding international entities through complex
+                            local regulatory frameworks, FEMA guidelines, and structuring inbound capital to ensure a
+                            seamless entry into domestic markets.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Overseas Investment</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Advising domestic corporations on outbound
+                            expansion strategies (ODI), identifying global market opportunities, and structuring
+                            tax-efficient international subsidiaries.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Cross-border M&A</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">End-to-end strategic advisory for
+                            international mergers and acquisitions, covering multi-currency valuation, cross-border due
+                            diligence, and cultural integration planning.</p>
+                    </div>
+
+                    <!-- Card 4 (Centered on bottom row) -->
+                    <div
+                        class="md:col-span-1 lg:col-span-2 lg:col-start-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">International Fund Raising</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Connecting dynamic enterprises with global
+                            institutional investors, sovereign wealth funds, and international private equity to secure
+                            the capital needed for massive global scaling.</p>
+                    </div>
+
+                    <!-- Card 5 (Centered on bottom row) -->
+                    <div
+                        class="md:col-span-1 lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Joint Venture Advisory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Structuring mutually beneficial cross-border
+                            partnerships. We mitigate geopolitical risks and draft robust legal frameworks to ensure
+                            long-term stability and shared success.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/animation.js"></script>
 
     <!-- WhatsApp Button -->
-    <div class="fixed bottom-5 right-5 group">
+    <div class="fixed bottom-5 right-5 group z-50">
         <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
             <i class="fa-brands fa-square-whatsapp text-6xl"></i>
         </a>
@@ -120,9 +239,9 @@
         </span>
     </div>
 
-    
-    
-    
+
+
+
     <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white py-8">
         <section class="pb-10">
             <div class="container mx-auto px-4">
@@ -215,9 +334,9 @@
             <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
         </section>
     </footer>
-    
-    
-    
+
+
+
     <script src="/headerFooter.js"></script>
 
 
