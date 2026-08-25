@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
             }
             return `
-                <a href="${item.link}" class="block py-2 px-5 text-base font-semibold text-gray-600 hover:text-[#F59E0B] hover:bg-gray-50 rounded transition-all">
+                <a href="${item.link}" class="block py-2 px-6 text-base font-medium text-gray-600 hover:text-[#F59E0B] hover:bg-gray-50 rounded transition-all">
                     ${item.name || item.title}
                 </a>
             `;
