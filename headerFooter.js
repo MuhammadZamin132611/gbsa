@@ -13,7 +13,7 @@ const firstTreeData = [
         ]
     },
     {
-        title: "CSR Scheme",
+        title: "CSR/Grant",
         items: [
             { name: "Government Organizations", link: "/organization/governmentOrganizations.html" },
             { name: "Private Organizations", link: "/organization/privateOrganizations.html" }
@@ -252,7 +252,7 @@ const quickLinksData = [
     { text: "About Us", href: "/about.html" },
     { text: "Membership", href: "/membership.html" },
     { text: "Events", href: "/events.html" },
-    { text: "Gallery", href: "/gallery.html" },
+    { text: "Gallery", href: "/components/gallery.html" },
     { text: "Careers", href: "/careers.html" },
     { text: "Privacy Policy", href: "/privacyPolicy.html" },
     { text: "Terms & Conditions", href: "/termsConditions.html" },

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galary | Collection of Moments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importing a Serif font to match the 'GALARY' title in the image -->
+    <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        /* Base settings to ensure smooth dark theme rendering */
+        body {
+            background-color: #0B192C;
+            color: #e2e8f0;
+        }
+
+        .font-galary {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Smooth expand animation for the card text area */
+        .card-content {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .group:hover .card-content {
+            max-height: 100px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
+                </a>
+
+                <!-- Desktop Menu Actions -->
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">About</a>
+
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-yellow-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <a href="/contact.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
+                </div>
+
+                <!-- Mobile Toggle Menu Buttons -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer (Scrollable & Screen-Size Capped) -->
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
+
+                <!-- Mobile Container Managed dynamically by JavaScript -->
+                <div id="mobileServicesContainer" class="w-full"></div>
+                <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Desktop Mega Menu Base -->
+
+        <div id="megaMenu"
+            class="hidden absolute left-0 top-full w-full bg-[#0B192C] text-white shadow-2xl transition-all duration-200 max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div class="max-w-7xl mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <!-- Static Descriptive Card -->
+                    <div class="border-r border-gray-800 pr-4">
+                        <h2 class="text-3xl font-light mb-4 text-white">
+                            Business Services
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-7">
+                            Explore government schemes, CSR opportunities, business development solutions, import-export
+                            services, and international trade advisory.
+                        </p>
+                    </div>
+
+                    <!-- Dynamic Level columns populated via JavaScript -->
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section with Background Image matching the mockup -->
+        <section
+            class="relative h-[65vh] flex items-center justify-center overflow-hidden bg-[url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center bg-fixed">
+            <!-- Dark Overlays for Readability & Blending into the body background -->
+            <div class="absolute inset-0 bg-black/60 z-0 backdrop-blur-[2px]"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center flex flex-col items-center px-4">
+                <h1 class="text-6xl md:text-8xl font-galary tracking-wide text-[#F59E0B] mb-4 drop-shadow-lg">
+                    GALARY
+                </h1>
+                <p class="text-lg md:text-2xl tracking-[0.2em] uppercase text-white mb-8 font-light drop-shadow-md">
+                    Collection of Moments
+                </p>
+                <button
+                    class="bg-[#D97706] hover:bg-[#F59E0B] text-white font-medium py-3 px-8 rounded border border-[#F59E0B]/50 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all duration-300">
+                    Explore Our Works
+                </button>
+            </div>
+        </section>
+
+        <!-- Gallery Grid Section -->
+        <section class="py-20 relative bg-[#0B192C]">
+            <!-- Decorative background glow for ambiance -->
+            <div
+                class="absolute top-1/4 right-0 w-96 h-96 bg-[#1E3A8A]/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 left-0 w-96 h-96 bg-[#F59E0B]/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 3-column grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="card-container">
+
+                    <!-- Card 1 (Architecture) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
+                                alt="Architecture"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <!-- Expanding Text Section on Hover -->
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (Abstract Art) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=800&auto=format&fit=crop"
+                                alt="Abstract Art"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (Landscape/Road) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop"
+                                alt="Landscape Road"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 (Minimalist Structure) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=800&auto=format&fit=crop"
+                                alt="Minimalist Structure"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 (Portrait - Center Highlight) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+                                alt="Portrait"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 (Technology/Digital Art) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
+                                alt="Digital Abstract"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 (Portrait Variant) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop"
+                                alt="Portrait Variant"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 (Modern Architecture) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop"
+                                alt="Modern Architecture"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 (Digital Art Variant) -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-xl border-2 border-[#1E3A8A] hover:border-[#F59E0B] hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] bg-[#0B192C] overflow-hidden cursor-pointer flex flex-col">
+                        <div class="relative overflow-hidden aspect-square">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+                                alt="Digital Devices"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        </div>
+                        <div class="card-content px-4 text-center">
+                            <p class="text-sm text-slate-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/animation.js"></script>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 z-50 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+
+
+
+    <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white py-8">
+        <section class="pb-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Quick Links</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="quick-links-container" class="space-y-3">
+                                        <!-- Dynamic quick links will be injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+                            <h1
+                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                Services</h1>
+                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="first-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <div id="second-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Government Schemes</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="government-schemes-container" class="space-y-3">
+                                        <!-- Dynamic links will render here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-sm">
+            <hr class="bg-black h-[1px]">
+            <div class="grid grid-cols-1 justify-items-center py-4">
+                <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
+                    <a id="link-facebook" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-twitter" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-youtube" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-threads" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-threads text-xl"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
+        </section>
+    </footer>
+
+
+    <script src="/headerFooter.js"></script>
+
+    <!-- Script connection link -->
+    <script src="/menu.js"></script>
+
+</body>
+
+</html>
