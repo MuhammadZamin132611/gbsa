@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
-            title: "CSR Scheme",
+            title: "CSR/Grant",
             items: [
                 { name: "Government Organizations", link: "/organization/governmentOrganizations.html" },
                 { name: "Private Organizations", link: "/organization/privateOrganizations.html" }
