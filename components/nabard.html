@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navigation with Link Highlighting</title>
+    <title>GBSA | Nabard</title>
     <!-- Tailwind CSS CDN -->
     <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +15,7 @@
 </head>
 
 <body class="bg-gray-50">
-    
+
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -95,7 +95,141 @@
         </div>
     </nav>
 
-    <h1 class="text-4xl font-bold text-center my-10">Header & Footer | Global Business & Startup Association</h1>
+    <main class="font-sans antialiased overflow-x-hidden">
+        <!-- Hero Section with Background Image -->
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('/pagesImages/nabard.jpg')] bg-cover bg-center bg-fixed">
+            <!-- Color Overlays for Readability & Brand Match -->
+            <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Agrarian & Rural Empowerment
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    NABARD <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Assistance</span>
+                </h1>
+                <p class="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    Strategic support for agriculture, rural development, agri-business, producer organizations, and
+                    allied activities. We help you navigate institutional frameworks to secure funding and scale
+                    grassroots enterprises.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="pb-20 relative bg-[#0B192C]">
+            <!-- Decorative background glow -->
+            <div
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Responsive grid supporting up to 3 columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="card-container">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Agriculture & Rural Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Securing sustainable financing for
+                            farming innovations, rural infrastructure, and grassroots development projects to uplift
+                            agrarian economies and promote sustainable practices.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Agri-Business</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Providing strategic advisory, market
+                            linkages, and direct funding access for commercial agriculture ventures, enhancing supply
+                            chains, and scaling rural enterprises profitably.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">FPO/Producer Organisation Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Empowering Farmer Producer
+                            Organizations (FPOs) with legal structuring, operational capacity building, and robust
+                            credit linkages to maximize collective bargaining power.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Rural Entrepreneurship</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Fostering micro-enterprises and
+                            non-farm sectors through specialized credit schemes, comprehensive skill development, and
+                            strategic market access initiatives.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Food & Agro Processing</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Unlocking institutional capital and
+                            government subsidies for setting up modern food processing units, robust cold storage
+                            facilities, and post-harvest management infrastructure.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-bridge-water"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Infrastructure Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Securing Rural Infrastructure
+                            Development Fund (RIDF) backing for vital rural connectivity, widespread irrigation
+                            projects, and long-term social infrastructure development.</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full lg:col-start-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-cow"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Dairy, Fisheries & Allied Activities</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Providing specialized financial
+                            assistance, operational guidance, and project structuring for commercial dairy farming,
+                            aquaculture, animal husbandry, and allied sectors.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="/animation.js"></script>
     <!-- WhatsApp Button -->

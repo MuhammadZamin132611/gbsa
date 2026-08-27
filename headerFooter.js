@@ -278,15 +278,15 @@ if (quickLinksContainer) {
 
 // 1. Data Structure holding URLs and Text
 const schemesData = [
-    { text: "Startup India", href: "/startupIndia.html" },
-    { text: "MSME", href: "/msme.html" },
-    { text: "PMEGP", href: "/pmegm.html" }, // Note: Kept your original /pmegm.html naming
-    { text: "NSDC", href: "/nsdc.html" },
-    { text: "SIDBI", href: "/sidbi.html" },
-    { text: "NABARD", href: "/nabard.html" },
-    { text: "Ministry of Agriculture", href: "/ministryOfAgriculture.html" },
-    { text: "Ministry of Food Processing", href: "/ministryOfFoodProcessing.html" },
-    { text: "Ministry of Cooperation", href: "/ministryOfCooperation.html" }
+    { text: "Startup India", href: "/components/startupIndia.html" },
+    { text: "MSME", href: "/components/msme.html" },
+    { text: "PMEGP", href: "/components/pmegp.html" }, // Note: Kept your original /pmegm.html naming
+    { text: "NSDC", href: "/components/nsdc.html" },
+    { text: "SIDBI", href: "/components/sidbi.html" },
+    { text: "NABARD", href: "/components/nabard.html" },
+    { text: "Ministry of Agriculture", href: "/components/ministryOfAgriculture.html" },
+    { text: "Ministry of Food Processing", href: "/components/ministryOfFoodProcessing.html" },
+    { text: "Ministry of Cooperation", href: "/components/ministryOfCooperation.html" }
 ];
 
 // 2. Target the wrapper container
