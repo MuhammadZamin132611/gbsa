@@ -47,12 +47,10 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <!-- Brand Logo -->
                 <a href="/index.html" id="logoLink" class="flex items-center">
                     <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
                 </a>
 
-                <!-- Desktop Menu Actions -->
                 <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
                     <a href="/index.html"
                         class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
@@ -72,7 +70,6 @@
                         class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
                 </div>
 
-                <!-- Mobile Toggle Menu Buttons -->
                 <div class="flex items-center gap-4 md:hidden">
                     <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
                         <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,42 +81,37 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation Drawer (Scrollable & Screen-Size Capped) -->
         <div id="mobileMenu"
             class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
             <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
                 <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
                 <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
 
-                <!-- Mobile Container Managed dynamically by JavaScript -->
                 <div id="mobileServicesContainer" class="w-full"></div>
+
                 <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
             </div>
         </div>
 
-        <!-- Desktop Mega Menu Base -->
-
         <div id="megaMenu"
-            class="hidden absolute left-0 top-full w-full bg-[#0B192C] text-white shadow-2xl transition-all duration-200 max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
-            <div class="max-w-7xl mx-auto px-6 py-10">
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
-                    <!-- Static Descriptive Card -->
-                    <div class="border-r border-gray-800 pr-4">
-                        <h2 class="text-3xl font-light mb-4 text-white">
-                            Business Services
-                        </h2>
-                        <p class="text-gray-400 text-sm leading-7">
-                            Explore government schemes, CSR opportunities, business development solutions, import-export
-                            services, and international trade advisory.
-                        </p>
-                    </div>
+            class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-6xl bg-[#0B192C] text-white rounded-2xl shadow-[0_0_0_100vw_rgba(0,0,0,0.6),0_25px_50px_-12px_rgba(0,0,0,0.7)] z-[100] transition-all duration-300 max-h-[85vh] overflow-y-auto subtle-scroll border border-gray-800">
 
-                    <!-- Dynamic Level columns populated via JavaScript -->
+            <div class="px-6 py-8 md:px-10">
+                <div class="border-b border-gray-700 pb-4 mb-6 flex justify-between items-end">
+                    <h2 class="text-2xl font-semibold text-white tracking-wide">Our <span
+                            class="text-yellow-500">Services</span>
+                    </h2>
+                    <span class="text-xs text-gray-400 hidden sm:block">Hover to explore categories</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
                     <div id="mainMenu" class="flex flex-col gap-2"></div>
-                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
-                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-800 pl-4 hidden"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-700 pl-4 md:pl-6 hidden">
+                    </div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-700 pl-4 md:pl-6 hidden"></div>
                 </div>
             </div>
+
         </div>
     </nav>
 

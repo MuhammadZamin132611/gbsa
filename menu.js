@@ -382,25 +382,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-
-function openModal() {
-    const modal = document.getElementById('imageModal');
-    modal.classList.remove('hidden');
-    // Prevent scrolling on the background body while modal is open
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    const modal = document.getElementById('imageModal');
-    modal.classList.add('hidden');
-    // Restore scrolling
-    document.body.style.overflow = 'auto';
-}
-
-// Optional: Close modal when pressing the Escape key
-document.addEventListener('keydown', function (event) {
-    if (event.key === "Escape") {
-        closeModal();
-    }
-});
