@@ -127,13 +127,12 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "Medical and Healthcare",
             link: "/components/medicalandHealthcare.html"
         },
+
         {
-            title: "CSR / Grant",
-            items: [
-                { name: "Government Organizations", link: "/organization/governmentOrganizations.html" },
-                { name: "Private Organizations", link: "/organization/privateOrganizations.html" }
-            ]
+            name: "CSR & NGO Services",
+            link: "/components/csrNgoServices.html"
         },
+
     ];
 
     // Get current path route (e.g., "/header.html")

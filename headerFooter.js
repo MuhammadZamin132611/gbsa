@@ -13,11 +13,8 @@ const firstTreeData = [
         ]
     },
     {
-        title: "CSR/Grant",
-        items: [
-            { name: "Government Organizations", link: "/organization/governmentOrganizations.html" },
-            { name: "Private Organizations", link: "/organization/privateOrganizations.html" }
-        ]
+        name: "CSR & NGO Services",
+        link: "/components/csrNgoServices.html"
     },
     {
         title: "Business Development",
@@ -73,6 +70,10 @@ const firstTreeData = [
             { name: "Certification Programs", link: "/traningPlacement/certificationPrograms.html" },
         ]
     },
+    {
+        name: "Medical and Healthcare",
+        link: "/components/medicalandHealthcare.html"
+    },
 ];
 
 const secondTreeData = [
@@ -123,13 +124,24 @@ const secondTreeData = [
             { name: "Audit Support", link: "/accountingServicesRegistration/auditSupport.html" },
         ]
     },
+    {
+            name: "AI & Digital Transformation",
+            link: "/components/AIDigitalTransformation.html"
+        },
+    {
+        name: "Legal Services",
+        link: "/components/legalServices.html"
+    },
 ];
 
-const firstrootContainer = document.getElementById('first-tree-root-container');
 const secondrootContainer = document.getElementById('second-tree-root-container');
+
+const firstrootContainer = document.getElementById('first-tree-root-container');
 
 // Recursive function to parse and generate infinite level tree structures
 function buildTreeNodes(nodes) {
+    if (!nodes) return ''; // Safeguard in case nodes is undefined
+
     return nodes.map(node => {
         if (node.title) {
             return `
@@ -155,18 +167,35 @@ function buildTreeNodes(nodes) {
 }
 
 // Render logic for Root Categories
-const generateRootHTML = (data) => data.map(category => `
-    <div class="tree-branch mb-2">
-        <div>
-            <h2 class="tree-toggle whitespace-nowrap text-sm md:text-base font-semibold tracking-tight cursor-pointer hover:text-indigo-400 transition-colors duration-200">
-                <i class="fa-solid fa-angle-right mr-1"></i> ${category.title}
-            </h2>
-        </div>
-        <div class="relative tree-container ml-2 pl-4 hidden border-l border-slate-600 mt-1">
-            ${buildTreeNodes(category.items)}
-        </div>
-    </div>
-`).join('');
+// Render logic for Root Categories
+const generateRootHTML = (data) => data.map(category => {
+    // Check if the root item has a title (meaning it's a folder/branch)
+    if (category.title) {
+        return `
+            <div class="tree-branch mb-2">
+                <div>
+                    <h2 class="tree-toggle whitespace-nowrap text-sm md:text-base font-semibold tracking-tight cursor-pointer hover:text-indigo-400 transition-colors duration-200">
+                        <i class="fa-solid fa-angle-right mr-1"></i> ${category.title}
+                    </h2>
+                </div>
+                <div class="relative tree-container ml-2 pl-4 hidden border-l border-slate-600 mt-1">
+                    ${buildTreeNodes(category.items)}
+                </div>
+            </div>
+        `;
+    } else {
+        // If it doesn't have a title, render it as a direct link (leaf node) with an arrow
+        return `
+            <div class="tree-branch mb-2">
+                <div class="py-1 flex items-center">
+                    <a href="${category.link}" class="w-full whitespace-nowrap text-sm md:text-base font-medium text-slate-200 hover:text-indigo-400 hover:translate-x-1 transition-all duration-200 block">
+                        <i class="fa-solid fa-circle-arrow-right mr-1"></i> ${category.name}
+                    </a>
+                </div>
+            </div>
+        `;
+    }
+}).join('');
 
 // Inject generated structures into containers
 if (firstrootContainer) firstrootContainer.innerHTML = generateRootHTML(firstTreeData);
