@@ -87,125 +87,204 @@
         </div>
     </nav>
 
-    <!-- <ul>
-        <li>Buy-side Advisory</li>
-        <li>Sell-side Advisory</li>
-        <li>Financial Due Diligence</li>
-        <li>Commercial Due Diligence</li>
-        <li>Vendor Due Diligence</li>
-    </ul> -->
-
     <main class="font-sans antialiased overflow-x-hidden">
-        <!-- Hero Section with Background Image -->
         <section
             class="relative py-14 lg:py-32 overflow-hidden bg-[url('/pagesImages/meninFormal.jpg')] bg-cover bg-center bg-fixed">
-            <!-- Color Overlays for Readability & Brand Match -->
             <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
 
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span
                     class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
-                    Mergers, Acquisitions & Deals
+                    End-to-End Deal Execution
                 </span>
                 <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
                     Transaction <br class="hidden md:block" />
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Advisory</span>
                 </h1>
-                <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
-                    Maximize value and minimize risk in your corporate transactions. Our expert advisory team provides
-                    end-to-end support for buy-outs, sell-offs, and deep-dive due diligence to ensure every deal aligns
-                    with your strategic goals.
+                <p class="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    We support clients throughout the entire transaction lifecycle—from initial strategy and structuring
+                    through negotiation, documentation, and successful closing. This comprehensive approach ensures risk
+                    mitigation and value maximization.
                 </p>
+                <a href="#cta-section"
+                    class="inline-block bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-bold py-4 px-10 rounded-full hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                    Discuss Your Transaction <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </section>
 
-        <!-- Services Grid Section -->
-        <section class="pb-20 relative bg-[#0B192C]">
-            <!-- Decorative background glow -->
+        <section class="pb-20 relative bg-[#0B192C]" id="services">
             <div
-                class="absolute top-1/3 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[100px] pointer-events-none">
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[120px] pointer-events-none">
             </div>
             <div
-                class="absolute bottom-1/3 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[100px] pointer-events-none">
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[120px] pointer-events-none">
             </div>
 
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- 6-column grid on large screens to perfectly center the 5 items (3 on top row, 2 on bottom row) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8" id="card-container">
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="text-center mb-16 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Our Advisory <span
+                            class="text-[#F59E0B]">Services</span></h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Expert guidance across every critical phase of your
+                        transaction to safeguard your interests and accelerate deal closure.</p>
+                </div>
 
-                    <!-- Card 1 (Buy-side) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                     <div
-                        class="lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-chess"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Buy-side Advisory</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Strategic support for acquiring companies. We
-                            help identify lucrative targets, determine accurate valuations, provide negotiation
-                            leverage, and map out post-merger integration to maximize synergy value.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Transaction Strategy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Defining core acquisition
+                            objectives, identifying synergies, and planning a clear, actionable roadmap for successful
+                            deal execution.</p>
                     </div>
 
-                    <!-- Card 2 (Sell-side) -->
                     <div
-                        class="lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-sitemap"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Sell-side Advisory</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Dedicated to maximizing exit value for
-                            sellers. We prepare your business for market, identify ideal institutional or strategic
-                            buyers, manage competitive bidding, and structure the final deal optimally.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Deal Structuring</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Designing optimal financial, tax,
+                            and legal frameworks to minimize liabilities and strategically mitigate inherent
+                            transactional risks.</p>
                     </div>
 
-                    <!-- Card 3 (Financial DD) -->
                     <div
-                        class="lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Financial Due Diligence</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">A forensic deep dive into target financial
-                            health. We conduct rigorous Quality of Earnings (QoE) analysis, identify hidden financial
-                            liabilities, and validate historical performance against future projections.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Financial Due Diligence</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Orchestrating rigorous financial
+                            audits to validate target company earnings, assess asset quality, and uncover hidden
+                            corporate liabilities.</p>
                     </div>
 
-                    <!-- Card 4 (Commercial DD) - Centered on bottom row -->
                     <div
-                        class="md:col-span-1 lg:col-span-2 lg:col-start-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
-                            <i class="fa-solid fa-globe"></i>
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-briefcase"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Commercial Due Diligence</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Assessing the target's market positioning and
-                            commercial viability. We evaluate market size, the competitive landscape, customer
-                            concentration, and validate growth strategies to ensure the investment is strategically
-                            sound.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Commercial Due Diligence</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Deeply analyzing market positioning,
+                            competitive landscapes, and operational viability to definitively confirm the strategic fit
+                            of the deal.</p>
                     </div>
 
-                    <!-- Card 5 (Vendor DD) - Centered on bottom row -->
                     <div
-                        class="md:col-span-1 lg:col-span-2 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2">
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
-                            <i class="fa-solid fa-clipboard-check"></i>
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-calculator"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mt-6 mb-3">Vendor Due Diligence</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Proactive pre-sale preparation initiated by
-                            the seller. We conduct an independent, in-depth review before engaging buyers to identify
-                            and mitigate deal-breakers early, preserving value and accelerating the transaction
-                            timeline.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Transaction Modelling</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Building highly dynamic,
+                            comprehensive financial models to accurately forecast post-transaction performance and
+                            capital cash flows.</p>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Term Sheet Review</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Expert analysis and strategic
+                            breakdown of preliminary terms to safeguard your critical interests before legally binding
+                            commitments are made.</p>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Negotiation Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Deploying experienced tactical
+                            advisors to fiercely advocate for your valuation, protective terms, and structural
+                            preferences at the deal table.</p>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Documentation Coordination</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Managing the drafting, rigorous
+                            review, and seamless alignment of complex legal and financial transaction documents with
+                            legal counsel.</p>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Completion & Closing Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Ensuring all stringent condition
+                            precedents are met and funds flow seamlessly to finalize the transaction efficiently and
+                            legally.</p>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full lg:col-start-2">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Post-Transaction Advisory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed flex-grow">Guiding the integration process,
+                            operational alignment, and rapid synergy realization after the deal successfully closes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-section" class="pb-16 relative bg-[#0B192C] border-t border-[#1E3A8A]/30">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] p-8 md:p-12 rounded-3xl bg-gradient-to-r from-[#1E3A8A]/40 to-[#0B192C] border border-[#1E3A8A] shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
+
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#F59E0B]/20 rounded-full blur-[40px]"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#1E3A8A]/40 rounded-full blur-[40px]"></div>
+
+                    <div class="mb-8 md:mb-0 md:mr-8 relative z-10 text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-white mb-3">Ready to Move Forward with Your Transaction?</h3>
+                        <p class="text-slate-300 leading-relaxed text-sm md:text-base max-w-xl">
+                            Ensure a smooth, risk-mitigated process from initial strategy to post-merger integration.
+                            Let our expert advisory team guide your next major deal.
+                        </p>
+                    </div>
+
+                    <div class="shrink-0 relative z-10">
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-bold py-4 px-8 rounded-full hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-center whitespace-nowrap">
+                            Discuss Your Transaction <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
 
                 </div>
             </div>
         </section>
     </main>
+
     <script src="/animation.js"></script>
 
     <!-- WhatsApp Button -->
