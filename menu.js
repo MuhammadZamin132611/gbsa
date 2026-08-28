@@ -2,27 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Normalized Object Array Schema
     const servicesMenu = [
         {
-            title: "Government Scheme",
-            items: [
-                { name: "Agriculture Scheme", link: "/governmentSchemes/aggriculture.html" },
-                { name: "Women Empower", link: "/governmentSchemes/womenEmpower.html" },
-                { name: "Skill India", link: "/governmentSchemes/skillIndia.html" },
-                { name: "Pashupalan", link: "/governmentSchemes/pashupalan.html" },
-                { name: "MSME Loan", link: "/governmentSchemes/msmeLoan.html" },
-                { name: "Employment", link: "/governmentSchemes/employment.html" },
-                { name: "FSSAI", link: "/governmentSchemes/fssai.html" },
-                { name: "Cooperatives Scheme", link: "/governmentSchemes/cooperativesScheme.html" }
-            ]
-        },
-        {
-            title: "CSR/Grant",
-            items: [
-                { name: "Government Organizations", link: "/organization/governmentOrganizations.html" },
-                { name: "Private Organizations", link: "/organization/privateOrganizations.html" }
-            ]
-        },
-        {
-            title: "Business Development",
+            title: "Business Development / Consulting",
             items: [
                 {
                     title: "Business Strategy & Expansion",
@@ -58,6 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         { name: "Events & Awards Show Management", link: "/businessDevelopment/corporateEventsRecognition/eventsAwardsShowManagement.html" },
                     ]
                 },
+            ]
+        },
+        {
+            title: "Government Scheme",
+            items: [
+                { name: "Agriculture Scheme", link: "/governmentSchemes/aggriculture.html" },
+                { name: "Women Empower", link: "/governmentSchemes/womenEmpower.html" },
+                { name: "Skill India", link: "/governmentSchemes/skillIndia.html" },
+                { name: "Pashupalan", link: "/governmentSchemes/pashupalan.html" },
+                { name: "MSME Loan", link: "/governmentSchemes/msmeLoan.html" },
+                { name: "Employment", link: "/governmentSchemes/employment.html" },
+                { name: "FSSAI", link: "/governmentSchemes/fssai.html" },
+                { name: "Cooperatives Scheme", link: "/governmentSchemes/cooperativesScheme.html" }
             ]
         },
         {
@@ -99,15 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
-            title: "Accounting Services & Registration",
-            items: [
-                { name: "Taxation Services", link: "/accountingServicesRegistration/taxationServices.html" },
-                { name: "Company Compliance", link: "/accountingServicesRegistration/companyCompliance.html" },
-                { name: "Financial Management", link: "/accountingServicesRegistration/financialManagement.html" },
-                { name: "Audit Support", link: "/accountingServicesRegistration/auditSupport.html" },
-            ]
-        },
-        {
             title: "Traning & Placement Asistance",
             items: [
                 { name: "Skill Development Training", link: "/traningPlacement/skillDevelopmentTraining.html" },
@@ -123,18 +107,33 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
-            name: "Legal Services",
-            link: "/components/legalServices.html"
-        },
-        {
             name: "AI & Digital Transformation",
             link: "/components/AIDigitalTransformation.html"
+        },
+        {
+            title: "Accounting Services & Registration",
+            items: [
+                { name: "Taxation Services", link: "/accountingServicesRegistration/taxationServices.html" },
+                { name: "Company Compliance", link: "/accountingServicesRegistration/companyCompliance.html" },
+                { name: "Financial Management", link: "/accountingServicesRegistration/financialManagement.html" },
+                { name: "Audit Support", link: "/accountingServicesRegistration/auditSupport.html" },
+            ]
+        },
+        {
+            name: "Legal Services",
+            link: "/components/legalServices.html"
         },
         {
             name: "Medical and Healthcare",
             link: "/components/medicalandHealthcare.html"
         },
-
+        {
+            title: "CSR / Grant",
+            items: [
+                { name: "Government Organizations", link: "/organization/governmentOrganizations.html" },
+                { name: "Private Organizations", link: "/organization/privateOrganizations.html" }
+            ]
+        },
     ];
 
     // Get current path route (e.g., "/header.html")
