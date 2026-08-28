@@ -250,12 +250,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const quickLinksData = [
     { text: "Home", href: "/index.html" },
     { text: "About Us", href: "/about.html" },
-    { text: "Membership", href: "/membership.html" },
-    { text: "Events", href: "/events.html" },
+    { text: "Membership", href: "/components/membership.html" },
+    { text: "Events", href: "/components/events.html" },
     { text: "Gallery", href: "/components/gallery.html" },
-    { text: "Careers", href: "/careers.html" },
-    { text: "Privacy Policy", href: "/privacyPolicy.html" },
-    { text: "Terms & Conditions", href: "/termsConditions.html" },
+    { text: "Careers", href: "/components/careers.html" },
+    { text: "Privacy Policy", href: "/components/privacyPolicy.html" },
+    { text: "Terms & Conditions", href: "/components/termsConditions.html" },
     { text: "Contact Us", href: "/contact.html" }
 ];
 
