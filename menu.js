@@ -127,9 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "Medical and Healthcare",
             link: "/components/medicalandHealthcare.html"
         },
+        {
+            name: "Real Estate",
+            link: "/components/realEstate.html"
+        },
 
         {
-            name: "CSR & NGO Services",
+            name: "CSR & NGO Projects",
             link: "/components/csrNgoServices.html"
         },
 

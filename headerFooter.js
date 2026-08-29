@@ -13,7 +13,7 @@ const firstTreeData = [
         ]
     },
     {
-        name: "CSR & NGO Services",
+        name: "CSR & NGO Projects",
         link: "/components/csrNgoServices.html"
     },
     {

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBSA | Real Estate</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
+                </a>
+
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">About</a>
+
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-yellow-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <a href="/industries.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Industries</a>
+                    <a href="/projects.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Projects</a>
+                    <a href="/globalBusiness.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Global
+                        Business</a>
+                    <a href="/contact.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
+
+                <div id="mobileServicesContainer" class="w-full"></div>
+
+                <a href="/industries.html"
+                    class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Industries</a>
+                <a href="/projects.html"
+                    class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Projects</a>
+                <a href="/globalBusiness.html"
+                    class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Global Business</a>
+                <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <div id="megaMenu"
+            class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-6xl bg-[#0B192C] text-white rounded-2xl shadow-[0_0_0_100vw_rgba(0,0,0,0.6),0_25px_50px_-12px_rgba(0,0,0,0.7)] z-[100] transition-all duration-300 max-h-[85vh] overflow-y-auto subtle-scroll border border-gray-800">
+
+            <div class="px-6 py-8 md:px-10">
+                <div class="border-b border-gray-700 pb-4 mb-6 flex justify-between items-end">
+                    <h2 class="text-2xl font-semibold text-white tracking-wide">Our <span
+                            class="text-yellow-500">Services</span>
+                    </h2>
+                    <span class="text-xs text-gray-400 hidden sm:block">Hover to explore categories</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-700 pl-4 md:pl-6 hidden">
+                    </div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-700 pl-4 md:pl-6 hidden"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="font-sans antialiased overflow-x-hidden">
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('/pagesImages/B2BMeetings.jpg')] bg-cover bg-center bg-fixed">
+            <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Your Trusted Partner in Real Estate Solutions
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    Real Estate <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Services</span>
+                </h1>
+                <p class="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-6">
+                    We provide professional real estate consultancy and business support services for individuals,
+                    investors, developers, companies, financial institutions, and property owners.
+                </p>
+                <p class="max-w-3xl mx-auto text-base text-slate-400 font-medium mb-10">
+                    Our objective is to create transparent, profitable, and strategic real estate opportunities by
+                    connecting the right buyers, sellers, investors, developers, and financial partners under one
+                    comprehensive platform.
+                </p>
+                <a href="#services-grid"
+                    class="inline-block bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-bold py-4 px-10 rounded-full hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                    Explore Our Services <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="pb-20 relative bg-[#0B192C]" id="services-grid">
+            <div
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="text-center mb-16 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Comprehensive <span
+                            class="text-[#F59E0B]">Solutions</span></h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto">From property acquisition to distressed assets and
+                        project funding, we manage every facet of your real estate portfolio.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">01</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Property Buying & Selling</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">We assist clients in navigating
+                            the complexities of buying and selling high-value properties.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Residential
+                                & Commercial</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Office
+                                & Retail</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Industrial
+                                & Warehouses</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Land,
+                                Plots & Farms</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-gavel"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">02</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Bank Auction Properties</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">We help investors and buyers
+                            safely identify and acquire highly lucrative bank auction and distressed properties.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Auction
+                                Identification</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Due
+                                Diligence</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Bank
+                                Coordination</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Investment
+                                Analysis</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">03</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Commercial Real Estate</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Providing top-tier consultancy
+                            for commercial property transactions and long-term investment opportunities.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Corporate
+                                Offices</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Shopping
+                                Complexes</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Hotels</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Logistics
+                                Parks</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">04</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Investment Advisory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Helping investors identify
+                            high-potential assets based on location, demand, and future capital growth potential.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Market
+                                Analysis</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">ROI
+                                & Yield Analysis</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Portfolio
+                                Diversification</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Exit
+                                Strategies</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-map"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">05</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Land Acquisition & Dev</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Assisting companies, large
+                            developers, and corporate investors in identifying and securing suitable land opportunities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Industrial
+                                & Commercial</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Agricultural
+                                & Institutional</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Developer
+                                Partnerships</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">06</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Project Consultancy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Providing overarching strategic
+                            consultancy for real estate developers, from concept to market launch.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Project
+                                Planning</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Market
+                                Research</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Sales
+                                & Marketing</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Strategic
+                                Partnerships</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-vault"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">07</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Property Funding & Loans</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Assisting eligible clients in
+                            exploring and securing suitable financial solutions for real estate projects.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Business
+                                & LAP Loans</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Project
+                                Finance</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Construction
+                                Finance</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Investor
+                                Funding</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">08</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">NPA & Distressed Assets</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Helping sharp investors and
+                            businesses capitalize on unique opportunities within stressed and distressed properties.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">NPA
+                                Asset ID</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Bank
+                                Asset Analysis</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Acquisition
+                                Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Transaction
+                                Advisory</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                            </div>
+                            <span class="text-[#1E3A8A] text-4xl font-black opacity-30">09</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Real Estate Joint Ventures</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Connecting landowners,
+                            developers, and investors to structure mutually beneficial Joint Development agreements.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Developer
+                                Connect</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Revenue
+                                Sharing Models</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-[11px] rounded">Partnership
+                                Structuring</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-gradient-to-br from-[#1E3A8A]/40 to-[#1E3A8A]/10 border border-[#F59E0B]/30 backdrop-blur-sm p-8 rounded-2xl shadow-[0_0_15px_rgba(245,158,11,0.1)] hover:shadow-2xl hover:shadow-[#F59E0B]/40 hover:border-[#F59E0B] group hover:-translate-y-2 flex flex-col h-full lg:col-start-2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-[#F59E0B] border border-[#F59E0B] text-[#0B192C] flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-all duration-300">
+                                <i class="fa-solid fa-file-contract"></i>
+                            </div>
+                            <span class="text-[#F59E0B] text-4xl font-black opacity-30">10</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Property Documentation</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4 flex-grow">Coordinating stringent
+                            professional support for property documentation, strict due diligence, and legal
+                            requirements.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#F59E0B]/50 text-slate-200 text-[11px] rounded">Title
+                                Verification</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#F59E0B]/50 text-slate-200 text-[11px] rounded">Legal
+                                Due Diligence</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#F59E0B]/50 text-slate-200 text-[11px] rounded">Agreement
+                                Assistance</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#F59E0B]/50 text-slate-200 text-[11px] rounded">Registration
+                                Guidance</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-20 relative bg-[#0B192C] border-t border-[#1E3A8A]/30">
+            <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16">
+
+                    <div>
+                        <h2
+                            class="text-3xl font-bold text-white mb-8 border-l-4 border-[#F59E0B] pl-4 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                            Why <span class="text-[#F59E0B]">Choose Us?</span>
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                                <i class="fa-solid fa-check text-[#F59E0B] text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="text-white font-bold text-lg mb-1">Professional Network</h4>
+                                    <p class="text-slate-400 text-sm">Access to elite investors, business owners, top
+                                        developers, consultants, and financial professionals.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                                <i class="fa-solid fa-check text-[#F59E0B] text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="text-white font-bold text-lg mb-1">Strategic Advisory</h4>
+                                    <p class="text-slate-400 text-sm">Professional, data-backed guidance based on
+                                        current market opportunities and strict business requirements.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                                <i class="fa-solid fa-check text-[#F59E0B] text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="text-white font-bold text-lg mb-1">Investment Focus</h4>
+                                    <p class="text-slate-400 text-sm">We maintain an unwavering focus on identifying
+                                        high-yield, value-driven, and growth-oriented opportunities.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                                <i class="fa-solid fa-check text-[#F59E0B] text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="text-white font-bold text-lg mb-1">End-to-End Support</h4>
+                                    <p class="text-slate-400 text-sm">Seamless execution from initial opportunity
+                                        identification to final transaction coordination and closing.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                                <i class="fa-solid fa-check text-[#F59E0B] text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="text-white font-bold text-lg mb-1">Transparent Approach</h4>
+                                    <p class="text-slate-400 text-sm">We fundamentally believe in clear, professional
+                                        communication and completely transparent business practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-3xl font-bold text-white mb-8 border-l-4 border-[#F59E0B] pl-4 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                            Property Types <span class="text-[#F59E0B]">We Deal In</span>
+                        </h2>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏠</span>
+                                <span class="text-slate-200 text-sm font-medium">Residential Properties</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏢</span>
+                                <span class="text-slate-200 text-sm font-medium">Commercial Properties</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏭</span>
+                                <span class="text-slate-200 text-sm font-medium">Industrial Properties</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏬</span>
+                                <span class="text-slate-200 text-sm font-medium">Retail Spaces</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏗️</span>
+                                <span class="text-slate-200 text-sm font-medium">Development Projects</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🌍</span>
+                                <span class="text-slate-200 text-sm font-medium">Land & Plots</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏨</span>
+                                <span class="text-slate-200 text-sm font-medium">Hotels & Hospitality</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">📦</span>
+                                <span class="text-slate-200 text-sm font-medium">Warehouses & Logistics</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">🏦</span>
+                                <span class="text-slate-200 text-sm font-medium">Bank Auction Properties</span>
+                            </div>
+                            <div
+                                class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-4 rounded-xl flex items-center hover:bg-[#1E3A8A]/30 transition-colors">
+                                <span class="text-2xl mr-3">📊</span>
+                                <span class="text-slate-200 text-sm font-medium">Distressed Assets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-16 relative bg-[#0B192C] border-t border-[#1E3A8A]/30">
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] p-8 md:p-12 rounded-3xl bg-gradient-to-r from-[#1E3A8A]/40 to-[#0B192C] border border-[#1E3A8A] shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between">
+
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#F59E0B]/20 rounded-full blur-[40px]"></div>
+
+                    <div class="mb-8 lg:mb-0 lg:mr-10 relative z-10 text-center lg:text-left w-full lg:w-1/3">
+                        <h3 class="text-3xl font-bold text-white mb-3">Who We <span class="text-[#F59E0B]">Work
+                                With</span></h3>
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Our vast network spans across the entire real estate spectrum, uniting key stakeholders to
+                            close mutually beneficial transactions.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 w-full lg:w-2/3 flex flex-wrap justify-center lg:justify-start gap-3">
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-user mr-2 text-[#F59E0B]"></i> Individual Buyers</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-chart-line mr-2 text-[#F59E0B]"></i> Real Estate Investors</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-helmet-safety mr-2 text-[#F59E0B]"></i> Developers & Builders</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-map mr-2 text-[#F59E0B]"></i> Landowners</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-building mr-2 text-[#F59E0B]"></i> Corporate Companies</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-industry mr-2 text-[#F59E0B]"></i> Industrial Businesses</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-building-columns mr-2 text-[#F59E0B]"></i> Financial
+                            Institutions</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-arrows-down-to-people mr-2 text-[#F59E0B]"></i> Asset
+                            Reconstruction</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-vault mr-2 text-[#F59E0B]"></i> Banks</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-users-viewfinder mr-2 text-[#F59E0B]"></i> Investment Groups</span>
+                        <span
+                            class="px-4 py-2 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-sm font-medium rounded-lg shadow-sm"><i
+                                class="fa-solid fa-plane-departure mr-2 text-[#F59E0B]"></i> NRI Investors</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/animation.js"></script>
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 z-50 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+
+
+
+    <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white">
+        <div class="bg-[#F59E0B] h-[1px]"></div>
+        <section class="py-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Quick Links</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="quick-links-container" class="space-y-3">
+                                        <!-- Dynamic quick links will be injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+                            <h1
+                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                Services</h1>
+                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="first-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <div id="second-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Government Schemes</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="government-schemes-container" class="space-y-3">
+                                        <!-- Dynamic links will render here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-sm">
+            <hr class="bg-black h-[1px]">
+            <div class="grid grid-cols-1 justify-items-center py-4">
+                <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
+                    <a id="link-facebook" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-twitter" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-youtube" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-threads" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-threads text-xl"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
+        </section>
+    </footer>
+
+
+    <script src="/headerFooter.js"></script>
+
+    <!-- Script connection link -->
+    <script src="/menu.js"></script>
+</body>
+
+</html>

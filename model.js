@@ -130,11 +130,11 @@ function injectModalHTML() {
                             <p class="text-gray-400 mb-5 text-sm">Select all areas where you require support or opportunities (Optional):</p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6">
                                 ${[
-                                    'Business Consulting', 'Funding Support', 'Government Schemes',
-                                    'Import & Export', 'Tender & GeM Support', 'AI & Automation',
-                                    'Skill Development', 'Branding & Marketing', 'Website & App Development',
-                                    'Networking Opportunities', 'International Business Support'
-                                ].map(req => `
+            'Business Consulting', 'Funding Support', 'Government Schemes',
+            'Import & Export', 'Tender & GeM Support', 'AI & Automation',
+            'Skill Development', 'Branding & Marketing', 'Website & App Development',
+            'Networking Opportunities', 'International Business Support'
+        ].map(req => `
                                 <label class="flex items-center space-x-4 cursor-pointer group p-2 rounded-lg hover:bg-custom-blue/20 transition-colors">
                                     <div class="relative flex items-center justify-center w-6 h-6 border-2 border-custom-blue bg-custom-dark rounded-md group-hover:border-custom-amber transition-all shadow-inner">
                                         <input type="checkbox" name="businessReq" value="${req}" class="absolute opacity-0 w-full h-full cursor-pointer peer" />
@@ -194,14 +194,14 @@ function setupModalLogic() {
     const cancelBtn = document.getElementById('cancelBtn');
     const form = document.getElementById('membershipForm');
     const confirmBtn = document.getElementById('confirmBtn');
-    
+
     // Select ALL buttons with the class '.open-modal-btn'
     const openModalBtns = document.querySelectorAll('.open-modal-btn');
 
     function openModal() {
         modalOverlay.classList.remove('opacity-0', 'pointer-events-none');
         modalOverlay.classList.add('opacity-100', 'pointer-events-auto');
-        
+
         modalCard.classList.remove('scale-95');
         modalCard.classList.add('scale-100');
     }
@@ -209,7 +209,7 @@ function setupModalLogic() {
     function closeModal() {
         modalOverlay.classList.remove('opacity-100', 'pointer-events-auto');
         modalOverlay.classList.add('opacity-0', 'pointer-events-none');
-        
+
         modalCard.classList.remove('scale-100');
         modalCard.classList.add('scale-95');
     }
@@ -218,17 +218,17 @@ function setupModalLogic() {
     openModalBtns.forEach(btn => {
         btn.addEventListener('click', openModal);
     });
-    
+
     closeIconBtn.addEventListener('click', closeModal);
     cancelBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const originalText = confirmBtn.innerText;
         confirmBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-custom-dark inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processing...`;
         confirmBtn.classList.add('opacity-90', 'cursor-not-allowed', 'pointer-events-none');
-        
+
         const selectedReqs = Array.from(document.querySelectorAll('input[name="businessReq"]:checked')).map(cb => cb.value);
         const reqString = selectedReqs.length > 0 ? selectedReqs.join(', ') : 'None selected';
 
@@ -264,7 +264,7 @@ function setupModalLogic() {
 *6. Profile Brief*
 ${document.getElementById('briefProfile').value}`;
 
-        const whatsappNumber = "919811033633"; 
+        const whatsappNumber = "919811033633";
         const encodedMessage = encodeURIComponent(messageText);
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
@@ -272,11 +272,11 @@ ${document.getElementById('briefProfile').value}`;
             window.open(whatsappURL, '_blank');
             closeModal();
             setTimeout(() => {
-                confirmBtn.innerText = originalText; 
+                confirmBtn.innerText = originalText;
                 confirmBtn.classList.remove('opacity-90', 'cursor-not-allowed', 'pointer-events-none');
-                form.reset(); 
+                form.reset();
             }, 300);
-        }, 800); 
+        }, 800);
     });
 
     modalOverlay.addEventListener('click', (event) => {
@@ -288,4 +288,22 @@ ${document.getElementById('briefProfile').value}`;
             closeModal();
         }
     });
+}
+
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                navy: '#0B192C',
+                royalblue: '#1E3A8A',
+                gold: '#F59E0B',
+                golddark: '#D97706',
+                'custom-dark': '#0B192C',
+                'custom-blue': '#1E3A8A',
+                'custom-amber': '#F59E0B',
+                'custom-amber-dark': '#D97706',
+            }
+        }
+    }
 }
