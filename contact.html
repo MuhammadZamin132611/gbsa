@@ -13,6 +13,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="/style.css" />
+    <style>
+        /* Base settings to ensure smooth dark theme rendering */
+        body {
+            background-color: #0B192C;
+            color: #e2e8f0;
+        }
+
+        /* Custom autofill styling for dark mode inputs */
+        input:-webkit-autofill,
+        textarea:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px #0B192C inset !important;
+            -webkit-text-fill-color: white !important;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -101,219 +115,210 @@
         </div>
     </nav>
 
-    <section class="relative bg-cover bg-center bg-no-repeat py-28"
-        style="background-image: url('/images/contact_background.avif');">
+    <main class="font-sans antialiased overflow-x-hidden">
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('/pagesImages/crossBorderRiskManagement.jpg')] bg-cover bg-center bg-fixed">
 
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black/65"></div>
+            <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
 
-        <!-- Content -->
-        <div class="relative max-w-7xl mx-auto px-6 text-center text-white">
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-6 text-center text-white scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
 
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                <span>Global Business & Startup Association</span>
-            </h1>
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Connect With Us
+                </span>
 
-            <p class="text-xl text-gray-200 max-w-5xl mx-auto text-justify">
-                Get in touch with the Global Business & Startup Association to explore partnerships, business
-                opportunities, government initiatives, and professional support. Our dedicated team is here to answer
-                your questions, provide guidance, and help you connect with the right resources for sustainable growth
-                and long-term success.
-            </p>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    Global Business & <br class="hidden md:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Startup
+                        Association</span>
+                </h1>
 
-            <div class="mt-8 flex flex-wrap justify-center gap-4">
-                <a href="mailto:example@info.com" target="_blank"
-                    class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
-                    Get In Touch
-                </a>
+                <p class="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    Get in touch with the Global Business & Startup Association to explore partnerships, business
+                    opportunities, government initiatives, and professional support. Our dedicated team is here to
+                    answer your questions, provide guidance, and help you connect with the right resources for
+                    sustainable growth and long-term success.
+                </p>
 
-                <a href="tel:+919811033633" target="_blank"
-                    class="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition">
-                    Call Now
-                </a>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="mailto:example@info.com" target="_blank"
+                        class="bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white px-8 py-4 rounded-full font-bold hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                        Get In Touch <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </a>
+
+                    <a href="tel:+919811033633" target="_blank"
+                        class="border-2 border-[#1E3A8A] bg-[#0B192C]/50 hover:bg-[#1E3A8A] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1">
+                        Call Now <i class="fa-solid fa-phone ml-2 text-[#F59E0B]"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-6">
+        <section class="pb-20 relative bg-[#0B192C]">
+            <div
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
 
-            <div class="grid lg:grid-cols-2 gap-10">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-10">
 
-                <!-- Contact Information -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-gradient-to-br from-[#1E3A8A]/30 to-[#0B192C] border border-[#1E3A8A] p-10 rounded-3xl shadow-2xl relative overflow-hidden flex flex-col h-full">
 
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">
-                        Contact Information
-                    </h2>
+                        <div
+                            class="absolute -right-10 -top-10 w-40 h-40 bg-[#F59E0B]/10 rounded-full blur-[40px] pointer-events-none">
+                        </div>
 
-                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-white mb-8">
+                            Contact <span class="text-[#F59E0B]">Information</span>
+                        </h2>
 
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 p-3 rounded-full">
-                                <i class="fas fa-location-dot text-blue-700"></i>
+                        <div class="space-y-8 flex-grow">
+                            <div class="flex items-start gap-5 group">
+                                <div
+                                    class="w-14 h-14 bg-[#0B192C] border border-[#1E3A8A] flex items-center justify-center rounded-2xl group-hover:bg-[#F59E0B] group-hover:border-[#F59E0B] transition-all duration-300 shrink-0">
+                                    <i
+                                        class="fas fa-location-dot text-[#F59E0B] text-xl group-hover:text-[#0B192C] transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl text-white mb-2">Corporate Office</h3>
+                                    <p class="text-slate-400 leading-relaxed">
+                                        N-1, South Extension Part-I<br>
+                                        New Delhi - 110049, India
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="font-semibold text-lg">Corporate Office</h3>
-                                <p class="text-gray-600">
-                                    N-1, South Extension Part-I<br>
-                                    New Delhi - 110049, India
-                                </p>
+
+                            <div class="flex items-start gap-5 group">
+                                <div
+                                    class="w-14 h-14 bg-[#0B192C] border border-[#1E3A8A] flex items-center justify-center rounded-2xl group-hover:bg-[#F59E0B] group-hover:border-[#F59E0B] transition-all duration-300 shrink-0">
+                                    <i
+                                        class="fas fa-envelope text-[#F59E0B] text-xl group-hover:text-[#0B192C] transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl text-white mb-2">Email</h3>
+                                    <a href="mailto:example@gmail.com" target="_blank"
+                                        class="text-slate-400 hover:text-[#F59E0B] transition-colors duration-300">
+                                        example@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-5 group">
+                                <div
+                                    class="w-14 h-14 bg-[#0B192C] border border-[#1E3A8A] flex items-center justify-center rounded-2xl group-hover:bg-[#F59E0B] group-hover:border-[#F59E0B] transition-all duration-300 shrink-0">
+                                    <i
+                                        class="fas fa-phone text-[#F59E0B] text-xl group-hover:text-[#0B192C] transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl text-white mb-2">Phone</h3>
+                                    <a href="tel:+919811033633" target="_blank"
+                                        class="text-slate-400 hover:text-[#F59E0B] transition-colors duration-300">
+                                        +91 98110 33633
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="bg-purple-100 p-3 rounded-full">
-                                <i class="fas fa-envelope text-purple-700"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-lg">Email</h3>
-                                <a href="mailto:example@gmail.com" target="_blank"
-                                    class="text-blue-600 hover:underline">
-                                    example@gmail.com
+                        <div class="mt-12 pt-8 border-t border-[#1E3A8A]/50">
+                            <h3 class="text-xl font-bold text-white mb-5">Follow Us</h3>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="w-12 h-12 bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] rounded-full flex items-center justify-center hover:bg-[#F59E0B] hover:text-[#0B192C] transition-all duration-300 transform hover:-translate-y-1">
+                                    <i class="fab fa-facebook-f text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-12 h-12 bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] rounded-full flex items-center justify-center hover:bg-[#F59E0B] hover:text-[#0B192C] transition-all duration-300 transform hover:-translate-y-1">
+                                    <i class="fab fa-twitter text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-12 h-12 bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] rounded-full flex items-center justify-center hover:bg-[#F59E0B] hover:text-[#0B192C] transition-all duration-300 transform hover:-translate-y-1">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-12 h-12 bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] rounded-full flex items-center justify-center hover:bg-[#F59E0B] hover:text-[#0B192C] transition-all duration-300 transform hover:-translate-y-1">
+                                    <i class="fab fa-linkedin-in text-lg"></i>
                                 </a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="bg-red-100 p-3 rounded-full">
-                                <i class="fas fa-phone text-red-700"></i>
-                            </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/10 border border-[#1E3A8A] p-10 rounded-3xl shadow-2xl backdrop-blur-sm relative">
+
+                        <h2 class="text-3xl font-bold text-white mb-8">
+                            Send a <span class="text-[#F59E0B]">Message</span>
+                        </h2>
+
+                        <form id="contactForm" class="space-y-6">
                             <div>
-                                <h3 class="font-semibold text-lg">Phone</h3>
-                                <a href="tel:+919811033633" target="_blank" class="text-blue-600 hover:underline">
-                                    +91 98110 33633
-                                </a>
+                                <label class="block mb-2 font-medium text-slate-300">Full Name</label>
+                                <input type="text" id="name" required
+                                    class="w-full bg-[#0B192C] border border-[#1E3A8A] text-white rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all"
+                                    placeholder="Enter your name">
                             </div>
+
+                            <div>
+                                <label class="block mb-2 font-medium text-slate-300">Email Address</label>
+                                <input type="email" id="email" required
+                                    class="w-full bg-[#0B192C] border border-[#1E3A8A] text-white rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all"
+                                    placeholder="Enter your email">
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 font-medium text-slate-300">Subject</label>
+                                <input type="text" id="subject" required
+                                    class="w-full bg-[#0B192C] border border-[#1E3A8A] text-white rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all"
+                                    placeholder="Message subject">
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 font-medium text-slate-300">Message</label>
+                                <textarea id="message" rows="4" required
+                                    class="w-full bg-[#0B192C] border border-[#1E3A8A] text-white rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all resize-none"
+                                    placeholder="Write your message..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white py-4 rounded-xl hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all duration-300 transform hover:-translate-y-1 font-bold text-lg mt-4">
+                                Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+
+                        <div id="successMessage"
+                            class="hidden mt-6 bg-[#0B192C] border border-[#F59E0B] text-[#F59E0B] p-4 rounded-xl flex items-center">
+                            <i class="fa-solid fa-circle-check text-xl mr-3"></i>
+                            <span class="font-medium">Thank you! Your message has been sent successfully.</span>
                         </div>
 
-                    </div>
-
-                    <div class="mt-10">
-                        <h3 class="text-xl font-semibold mb-4">
-                            Follow Us
-                        </h3>
-
-                        <div class="flex gap-4">
-                            <a href="#"
-                                class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-
-                            <a href="#"
-                                class="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center hover:bg-sky-600 transition">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-
-                            <a href="#"
-                                class="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-
-                            <a href="#"
-                                class="w-12 h-12 bg-blue-800 text-white rounded-full flex items-center justify-center hover:bg-blue-900 transition">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
                     </div>
 
                 </div>
+            </div>
+        </section>
 
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">
-                        Send a Message
-                    </h2>
-
-                    <form id="contactForm" class="space-y-5">
-
-                        <div>
-                            <label class="block mb-2 font-medium">
-                                Full Name
-                            </label>
-                            <input type="text" id="name"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="Enter your name" required>
-                        </div>
-
-                        <div>
-                            <label class="block mb-2 font-medium">
-                                Email Address
-                            </label>
-                            <input type="email" id="email"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="Enter your email" required>
-                        </div>
-
-                        <div>
-                            <label class="block mb-2 font-medium">
-                                Subject
-                            </label>
-                            <input type="text" id="subject"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="Subject" required>
-                        </div>
-
-                        <div>
-                            <label class="block mb-2 font-medium">
-                                Message
-                            </label>
-                            <textarea id="message" rows="3"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="Write your message..." required></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-800 transition font-semibold">
-                            Send Message
-                        </button>
-
-                    </form>
-
-                    <div id="successMessage" class="hidden mt-5 bg-green-100 text-green-700 p-4 rounded-lg">
-                        Message sent successfully!
+        <section class="pb-16 relative bg-[#0B192C] border-t border-[#1E3A8A]/30">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div
+                    class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#0B192C] border border-[#1E3A8A] p-2 rounded-3xl shadow-[0_0_30px_rgba(30,58,138,0.2)]">
+                    <div class="rounded-2xl overflow-hidden w-full h-[450px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.784849187312!2d77.21415174092497!3d28.56708761274381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25b597ab5f1%3A0xe5c35b6dfc4ef8e9!2sSouth%20Extension%20I%2C%20New%20Delhi%2C%20Delhi%20110049!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0; filter: grayscale(20%) contrast(1.2);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-
                 </div>
-
             </div>
-
-        </div>
-    </section>
-
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const subject = document.getElementById("subject").value.trim();
-            const message = document.getElementById("message").value.trim();
-            const whatsappNumber = "919811033633"; // Replace with your WhatsApp number
-            const whatsappMessage = `Hi ${name},\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
-            const whatsappURL =
-                "https://wa.me/" +
-                whatsappNumber +
-                "?text=" +
-                encodeURIComponent(whatsappMessage);
-            window.open(whatsappURL, "_blank");
-        });
-    </script>
-
-    <!-- Google Map -->
-    <section class="pb-16 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3504.043525687265!2d77.22271637549854!3d28.568455675699774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM0JzA2LjQiTiA3N8KwMTMnMzEuMSJF!5e0!3m2!1sen!2sin!4v1780737796949!5m2!1sen!2sin"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
+    <script src="/animation.js"></script>
     <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white">
         <div class="bg-[#F59E0B] h-[1px]"></div>
         <section class="py-10">
@@ -442,6 +447,23 @@
 
     <script src="menu.js"></script>
     <script src="email.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const whatsappNumber = "919811033633"; // Replace with your WhatsApp number
+            const whatsappMessage = `Hi ${name},\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(whatsappMessage);
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
 </body>
 
 </html>
