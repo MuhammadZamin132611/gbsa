@@ -74,6 +74,10 @@ const firstTreeData = [
         name: "Medical and Healthcare",
         link: "/components/medicalandHealthcare.html"
     },
+    {
+        name: "Real Estate",
+        link: "/components/realEstate.html"
+    },
 ];
 
 const secondTreeData = [
@@ -125,9 +129,9 @@ const secondTreeData = [
         ]
     },
     {
-            name: "AI & Digital Transformation",
-            link: "/components/AIDigitalTransformation.html"
-        },
+        name: "AI & Digital Transformation",
+        link: "/components/AIDigitalTransformation.html"
+    },
     {
         name: "Legal Services",
         link: "/components/legalServices.html"
