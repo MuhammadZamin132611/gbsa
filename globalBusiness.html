@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBSA | Global Business & Startup Association</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="/image/BGSA_logo.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/index.html" id="logoLink" class="flex items-center">
+                    <img src="/image/BGSA Logo.jpeg" class="h-12 w-auto object-contain" alt="Logo">
+                </a>
+
+                <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="/index.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Home</a>
+                    <a href="/about.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">About</a>
+
+                    <button id="servicesBtn"
+                        class="flex items-center gap-2 hover:text-yellow-500 focus:outline-none transition-colors py-1">
+                        Services
+                        <svg id="servicesArrow" xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <a href="/industries.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Industries</a>
+                    <a href="/projects.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Projects</a>
+                    <a href="/globalBusiness.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Global
+                        Business</a>
+                    <a href="/contact.html"
+                        class="hover:text-yellow-500 transition-colors py-1 border-b-2 border-transparent">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-yellow-500 focus:outline-none p-1">
+                        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner max-h-[calc(100vh-80px)] overflow-y-auto subtle-scroll">
+            <div id="mobileNavLinks" class="px-6 py-4 flex flex-col gap-4 font-medium text-gray-700">
+                <a href="/index.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">About</a>
+
+                <div id="mobileServicesContainer" class="w-full"></div>
+
+                <a href="/industries.html"
+                    class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Industries</a>
+                <a href="/projects.html"
+                    class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Projects</a>
+                <a href="/globalBusiness.html"
+                    class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Global Business</a>
+                <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <div id="megaMenu"
+            class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-6xl bg-[#0B192C] text-white rounded-2xl shadow-[0_0_0_100vw_rgba(0,0,0,0.6),0_25px_50px_-12px_rgba(0,0,0,0.7)] z-[100] transition-all duration-300 max-h-[85vh] overflow-y-auto subtle-scroll border border-gray-800">
+
+            <div class="px-6 py-8 md:px-10">
+                <div class="border-b border-gray-700 pb-4 mb-6 flex justify-between items-end">
+                    <h2 class="text-2xl font-semibold text-white tracking-wide">Our <span
+                            class="text-yellow-500">Services</span>
+                    </h2>
+                    <span class="text-xs text-gray-400 hidden sm:block">Hover to explore categories</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+                    <div id="mainMenu" class="flex flex-col gap-2"></div>
+                    <div id="categoryMenu" class="flex flex-col gap-2 border-l border-gray-700 pl-4 md:pl-6 hidden">
+                    </div>
+                    <div id="linksMenu" class="flex flex-col gap-2 border-l border-gray-700 pl-4 md:pl-6 hidden"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="font-sans antialiased overflow-x-hidden">
+        <section
+            class="relative py-14 lg:py-32 overflow-hidden bg-[url('/pagesImages/crossBorderAdvisory.jpg')] bg-cover bg-center bg-fixed">
+            <div class="absolute inset-0 bg-[#0B192C]/85 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-[#1E3A8A]/50 text-[#F59E0B] font-semibold text-sm tracking-wider uppercase mb-6 border border-[#1E3A8A] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    Connecting Businesses Beyond Borders
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                    Global Business <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#D97706]">Solutions</span>
+                </h1>
+                <p class="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
+                    We help businesses, startups, investors, exporters, and organizations explore global opportunities,
+                    build strategic partnerships, and expand into international markets through end-to-end advisory and
+                    business development support.
+                </p>
+                <a href="#core-solutions"
+                    class="inline-block bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-bold py-4 px-10 rounded-full hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                    Explore Our Solutions <i class="fa-solid fa-earth-americas ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="pb-20 relative bg-[#0B192C]" id="core-solutions">
+            <div
+                class="absolute top-1/4 left-0 w-96 h-96 bg-[#1E3A8A]/20 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="text-center mb-16 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">End-to-End <span
+                            class="text-[#F59E0B]">Advisory & Support</span></h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Comprehensive solutions tailored to navigate the
+                        complexities of international trade, investment, and cross-border expansion.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">International Business Dev</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Helping businesses aggressively identify
+                            and actively develop highly lucrative opportunities across targeted international markets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Market
+                                Entry Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Overseas
+                                Dev</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Partner
+                                Identification</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Buyer/Supplier
+                                Connect</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Business
+                                Networking</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Cross-Border
+                                Partners</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Joint
+                                Ventures</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Expansion
+                                Strategy</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Import & Export Consultancy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Supporting businesses in developing,
+                            structuring, and massively expanding international trade operations and supply chains.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Export
+                                Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Import
+                                Advisory</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Market
+                                Identification</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Buyer
+                                Development</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Supplier
+                                ID</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Export
+                                Documentation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Trade
+                                Compliance</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Investment & Funding Advisory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">We help businesses become fundamentally
+                            investment-ready and securely connect with relevant global funding opportunities.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Business
+                                Plan Dev</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Pitch
+                                Decks</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Financial
+                                Projections</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Company
+                                Valuation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Investor
+                                Readiness</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Startup
+                                Funding</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Investor
+                                Identification</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Startup & Business Consulting</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Transforming ideas into successful
+                            businesses by supporting entrepreneurs throughout their entire startup journey.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Startup
+                                Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Business
+                                Models</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Company
+                                Formation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Market
+                                Research</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Go-To-Market</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Growth
+                                Planning</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Scaling
+                                Strategy</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Corporate & Strategic Advisory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Helping established companies make
+                            informed strategic decisions to achieve and maintain sustainable corporate growth.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Business
+                                Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Growth
+                                Planning</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Market
+                                Expansion</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Strategic
+                                Partners</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Restructuring</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Revenue
+                                Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Operational
+                                Improvement</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">International Market Entry</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Enter new markets with confidence through
+                            local knowledge, reliable business connections, and pinpoint strategies.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Country
+                                Analysis</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Entry
+                                Strategy</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Local
+                                Partner ID</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Distributor
+                                Search</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Business
+                                Representation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Strategic
+                                Alliances</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Joint Ventures & Partnerships</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">We help organizations rigorously identify
+                            potential strategic partners and structure mutually beneficial global collaborations.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Partner
+                                ID</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Matchmaking</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">JV
+                                Opportunities</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Alliance
+                                Dev</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Cross-Border
+                                Collab</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Investor
+                                Connections</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Legal & Compliance Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Through our professional network, we
+                            facilitate access to imperative business-related legal and regulatory compliance services.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Corporate
+                                Legal</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Contract
+                                Advisory</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Intl.
+                                Business Law</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Company
+                                Compliance</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">IP
+                                Support</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Regulatory
+                                Advisory</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] bg-[#1E3A8A]/20 border border-[#1E3A8A] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:shadow-[#1E3A8A]/50 hover:border-[#F59E0B]/50 group hover:-translate-y-2 flex flex-col h-full">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-[#0B192C] border border-[#1E3A8A] text-[#F59E0B] flex items-center justify-center text-2xl font-bold group-hover:bg-[#F59E0B] group-hover:text-[#0B192C] transition-all duration-300 mb-6 shrink-0">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">AI & Business Automation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Building smarter businesses by
+                            integrating technology-driven solutions to optimize productivity and customer engagement.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">AI
+                                Solutions</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Process
+                                Automation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">CRM
+                                Solutions</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">WhatsApp
+                                Automation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Digital
+                                Transformation</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">AI
+                                Chatbots</span>
+                            <span
+                                class="px-2 py-1 bg-[#0B192C] border border-[#1E3A8A] text-slate-300 text-xs rounded">Data
+                                Analytics</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-20 relative bg-[#0B192C] border-t border-[#1E3A8A]/30">
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="text-center mb-16 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <span class="text-[#F59E0B] font-bold text-sm tracking-widest uppercase mb-2 block">Global
+                        Opportunities</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Explore Business <span
+                            class="text-[#F59E0B]">Beyond Borders</span></h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto">We help businesses identify, analyze, and
+                        capitalize on opportunities across key international economic markets.</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] bg-gradient-to-br from-[#1E3A8A]/40 to-transparent border border-[#1E3A8A] p-6 rounded-2xl relative overflow-hidden group hover:border-[#F59E0B]/50 transition-colors">
+                        <i
+                            class="fa-solid fa-map-pin absolute -right-4 -top-4 text-6xl text-[#1E3A8A]/30 group-hover:text-[#F59E0B]/10 transition-colors duration-500"></i>
+                        <h3 class="text-xl font-bold text-[#F59E0B] mb-2 relative z-10">Middle East</h3>
+                        <p class="text-slate-300 text-sm relative z-10">UAE, Saudi Arabia, Qatar, Oman, Kuwait, and
+                            Bahrain.</p>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] bg-gradient-to-br from-[#1E3A8A]/40 to-transparent border border-[#1E3A8A] p-6 rounded-2xl relative overflow-hidden group hover:border-[#F59E0B]/50 transition-colors">
+                        <i
+                            class="fa-solid fa-earth-africa absolute -right-4 -top-4 text-6xl text-[#1E3A8A]/30 group-hover:text-[#F59E0B]/10 transition-colors duration-500"></i>
+                        <h3 class="text-xl font-bold text-[#F59E0B] mb-2 relative z-10">Africa</h3>
+                        <p class="text-slate-300 text-sm relative z-10">East Africa, West Africa, and rapidly emerging
+                            African markets.</p>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] bg-gradient-to-br from-[#1E3A8A]/40 to-transparent border border-[#1E3A8A] p-6 rounded-2xl relative overflow-hidden group hover:border-[#F59E0B]/50 transition-colors">
+                        <i
+                            class="fa-solid fa-earth-asia absolute -right-4 -top-4 text-6xl text-[#1E3A8A]/30 group-hover:text-[#F59E0B]/10 transition-colors duration-500"></i>
+                        <h3 class="text-xl font-bold text-[#F59E0B] mb-2 relative z-10">Asia Pacific</h3>
+                        <p class="text-slate-300 text-sm relative z-10">Singapore, Malaysia, Indonesia, Thailand, and
+                            other core growth markets.</p>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] bg-gradient-to-br from-[#1E3A8A]/40 to-transparent border border-[#1E3A8A] p-6 rounded-2xl relative overflow-hidden group hover:border-[#F59E0B]/50 transition-colors">
+                        <i
+                            class="fa-solid fa-earth-europe absolute -right-4 -top-4 text-6xl text-[#1E3A8A]/30 group-hover:text-[#F59E0B]/10 transition-colors duration-500"></i>
+                        <h3 class="text-xl font-bold text-[#F59E0B] mb-2 relative z-10">Europe</h3>
+                        <p class="text-slate-300 text-sm relative z-10">Trade partnerships, technology collaboration,
+                            and cross-border investment opportunities.</p>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] bg-gradient-to-br from-[#1E3A8A]/40 to-transparent border border-[#1E3A8A] p-6 rounded-2xl relative overflow-hidden group hover:border-[#F59E0B]/50 transition-colors">
+                        <i
+                            class="fa-solid fa-earth-americas absolute -right-4 -top-4 text-6xl text-[#1E3A8A]/30 group-hover:text-[#F59E0B]/10 transition-colors duration-500"></i>
+                        <h3 class="text-xl font-bold text-[#F59E0B] mb-2 relative z-10">North America</h3>
+                        <p class="text-slate-300 text-sm relative z-10">Business expansion, M&A, strategic partnerships,
+                            and structural market development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-20 relative bg-[#0B192C] border-t border-[#1E3A8A]/30">
+            <div
+                class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="text-center mb-16 scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <span class="text-[#F59E0B] font-bold text-sm tracking-widest uppercase mb-2 block">Why Choose
+                        Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Your Growth Partner in a <span
+                            class="text-[#F59E0B]">Global Economy</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#1E3A8A]/30 text-[#F59E0B] flex items-center justify-center text-xl shrink-0 mr-4 border border-[#1E3A8A]">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Strategic Expertise</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Practical, highly targeted business
+                                strategies designed strictly around your growth objectives.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#1E3A8A]/30 text-[#F59E0B] flex items-center justify-center text-xl shrink-0 mr-4 border border-[#1E3A8A]">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Global Network</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Direct access to international business
+                                networks, elite professionals, and exclusive market opportunities.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#1E3A8A]/30 text-[#F59E0B] flex items-center justify-center text-xl shrink-0 mr-4 border border-[#1E3A8A]">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">End-to-End Support</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Continuous partnership from initial
+                                opportunity identification directly through to operational execution.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#1E3A8A]/30 text-[#F59E0B] flex items-center justify-center text-xl shrink-0 mr-4 border border-[#1E3A8A]">
+                            <i class="fa-solid fa-plane"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Cross-Border Focus</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Deeply specialized understanding of
+                                international business law, trade, and cross-cultural market expansion.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#1E3A8A]/30 text-[#F59E0B] flex items-center justify-center text-xl shrink-0 mr-4 border border-[#1E3A8A]">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Customized Solutions</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Every client receives specific solutions
+                                based strictly on their unique industry, market reality, and size.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="scroll-card opacity-0 translate-y-12 scale-95 transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#1E3A8A]/30 text-[#F59E0B] flex items-center justify-center text-xl shrink-0 mr-4 border border-[#1E3A8A]">
+                            <i class="fa-solid fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Result-Oriented Approach</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Unwavering focus on building meaningful
+                                connections and driving tangible, measurable business outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/animation.js"></script>
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-5 right-5 z-50 group">
+        <a href="https://wa.me/919811033633" target="_blank" class="text-[#4ACA5B]">
+            <i class="fa-brands fa-square-whatsapp text-6xl"></i>
+        </a>
+
+        <!-- Tooltip -->
+        <span
+            class="absolute right-[66px] top-2/3 -translate-y-1/2 bg-[#4ACA5B] text-white text-sm px-3 py-0.5 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap pointer-events-none">
+            WhatsApp Us
+        </span>
+    </div>
+
+
+
+    <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white py-8">
+        <section class="pb-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Quick Links</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="quick-links-container" class="space-y-3">
+                                        <!-- Dynamic quick links will be injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+                            <h1
+                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                Services</h1>
+                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                                <div class="w-full sm:w-1/2">
+                                    <div id="first-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <div id="second-tree-root-container" class="space-y-3">
+                                        <!-- Dynamic links injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
+                            <div>
+                                <h1
+                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                                    Government Schemes</h1>
+                                <div class="w-full pt-4 md:pt-5">
+                                    <div id="government-schemes-container" class="space-y-3">
+                                        <!-- Dynamic links will render here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center text-sm">
+            <hr class="bg-black h-[1px]">
+            <div class="grid grid-cols-1 justify-items-center py-4">
+                <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
+                    <a id="link-facebook" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-twitter" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-youtube" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </div>
+                    </a>
+                    <a id="link-threads" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+                            <i class="fa-brands fa-threads text-xl"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
+        </section>
+    </footer>
+
+
+    <script src="/headerFooter.js"></script>
+
+    <!-- Script connection link -->
+    <script src="/menu.js"></script>
+</body>
+
+</html>
