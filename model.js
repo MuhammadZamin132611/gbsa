@@ -264,7 +264,7 @@ function setupModalLogic() {
 *6. Profile Brief*
 ${document.getElementById('briefProfile').value}`;
 
-        const whatsappNumber = "919580428178"; 
+        const whatsappNumber = "919811033633"; 
         const encodedMessage = encodeURIComponent(messageText);
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
