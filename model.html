@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Modal UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-dark': '#0B192C',
+                        'custom-blue': '#1E3A8A',
+                        'custom-amber': '#F59E0B',
+                        'custom-amber-dark': '#D97706',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-dark min-h-screen flex flex-col gap-10 items-center justify-center p-6 font-sans antialiased text-white overflow-x-hidden">
+
+    <!-- Button 1 (Top of page) -->
+    <button class="open-modal-btn bg-custom-amber hover:bg-custom-amber-dark text-custom-dark font-extrabold text-lg tracking-wide py-4 px-10 rounded-2xl shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(245,158,11,0.5)]">
+        Launch Interface 1
+    </button>
+
+    <!-- Button 2 (Somewhere else on the page) -->
+    <button class="open-modal-btn bg-transparent border-2 border-custom-amber text-custom-amber hover:bg-custom-amber hover:text-custom-dark font-extrabold text-lg tracking-wide py-4 px-10 rounded-2xl transition-all duration-300 transform hover:-translate-y-1">
+        Launch Interface 2
+    </button>
+    
+    <!-- Link to your JS file -->
+    <script src="model.js"></script>
+</body>
+</html>

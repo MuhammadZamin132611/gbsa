@@ -106,7 +106,8 @@
 
         <a href="/industries.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Industries</a>
         <a href="/projects.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Projects</a>
-        <a href="/globalBusiness.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Global Business</a>
+        <a href="/globalBusiness.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Global
+          Business</a>
         <a href="/contact.html" class="hover:text-yellow-500 py-2 px-3 rounded-md transition-colors">Contact</a>
       </div>
     </div>
@@ -140,6 +141,10 @@
             royalblue: '#1E3A8A',
             gold: '#F59E0B',
             golddark: '#D97706',
+            'custom-dark': '#0B192C',
+            'custom-blue': '#1E3A8A',
+            'custom-amber': '#F59E0B',
+            'custom-amber-dark': '#D97706',
           }
         }
       }
@@ -175,11 +180,10 @@
 
       <!-- BUTTON GROUP -->
       <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 relative z-20">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-          target="_blank"
-          class="w-full sm:w-auto bg-gradient-to-r from-gold to-golddark text-navy font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-gold/20 transform hover:-translate-y-0.5 transition-all text-center">
+        <button target="_blank"
+          class="open-modal-btn w-full sm:w-auto bg-gradient-to-r from-gold to-golddark text-navy font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-gold/20 transform hover:-translate-y-0.5 transition-all text-center">
           Become a Member
-        </a>
+        </button>
         <a href="#services"
           class="w-full sm:w-auto bg-white/10 hover:bg-white/15 border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center">
           Apply for Partnership
@@ -192,7 +196,7 @@
     </div>
   </section>
   <!-- RESPONSIVE ENGINE SCRIPT -->
-
+  <script src="/model.js"></script>
 
 
 
@@ -548,12 +552,11 @@
             <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Mentorship Path</li>
           </ul>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-          target="_blank">
-          <button
-            class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
-            Now</button>
-        </a>
+
+        <button
+          class="open-modal-btn w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+          Now</button>
+
       </div>
 
       <!-- Plan 2: Startup -->
@@ -570,12 +573,10 @@
             <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Consulting Perks</li>
           </ul>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-          target="_blank">
+        
           <button
-            class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+            class="open-modal-btn w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
             Now</button>
-        </a>
       </div>
 
       <!-- Plan 3: MSME (Featured) -->
@@ -596,12 +597,10 @@
             <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Premium Networking</li>
           </ul>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-          target="_blank">
+        
           <button
-            class="w-full bg-gradient-to-r from-gold to-golddark text-navy font-bold py-2.5 rounded-xl transition-all shadow-md">Apply
+            class="open-modal-btn w-full bg-gradient-to-r from-gold to-golddark text-navy font-bold py-2.5 rounded-xl transition-all shadow-md">Apply
             Now</button>
-        </a>
       </div>
 
       <!-- Plan 4: Corporate -->
@@ -618,12 +617,10 @@
             <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> Global Delegations</li>
           </ul>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-          target="_blank">
+        
           <button
-            class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+            class="open-modal-btn w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
             Now</button>
-        </a>
       </div>
 
       <!-- Plan 5: NGO -->
@@ -640,12 +637,9 @@
             <li><i class="fa-regular fa-circle-check text-gold mr-1.5"></i> CSR Connections</li>
           </ul>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-          target="_blank">
-          <button
-            class="w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
-            Now</button>
-        </a>
+        <button
+          class="open-modal-btn w-full bg-navy hover:bg-royalblue text-white text-sm font-bold py-2.5 rounded-xl transition-all">Apply
+          Now</button>
       </div>
     </div>
   </section>
@@ -670,12 +664,10 @@
           </p>
         </div>
         <div class="p-6 pt-0">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-            target="_blank">
+          
             <button
-              class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+              class="open-modal-btn w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
               Now</button>
-          </a>
         </div>
       </div>
       <!-- Event 2 -->
@@ -689,12 +681,10 @@
           </p>
         </div>
         <div class="p-6 pt-0">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-            target="_blank">
+         
             <button
-              class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+              class="open-modal-btn w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
               Now</button>
-          </a>
         </div>
       </div>
       <!-- Event 3 -->
@@ -708,12 +698,10 @@
           </p>
         </div>
         <div class="p-6 pt-0">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-            target="_blank">
+          
             <button
-              class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+              class="open-modal-btn w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
               Now</button>
-          </a>
         </div>
       </div>
       <!-- Event 4 -->
@@ -727,12 +715,9 @@
           </p>
         </div>
         <div class="p-6 pt-0">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8JDPfErxYLlXVlFvvLNQD6KyoyXYdGdgPEtrPwOi4u38Dnw/viewform?usp=publish-editor"
-            target="_blank">
             <button
-              class="w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
+              class="open-modal-btn w-full border border-royalblue/30 text-royalblue hover:bg-royalblue hover:text-white font-semibold text-xs py-2 rounded-xl transition-all">Register
               Now</button>
-          </a>
         </div>
       </div>
     </div>
@@ -776,98 +761,95 @@
 
 
   <footer class="bg-gradient-to-b from-[#0B192C] via-[#0B192C] to-[#1E3A8A] text-white">
-        <div class="bg-[#F59E0B] h-[1px]"></div>
-        <section class="py-10">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
-                    <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
-                    <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
-                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
-                            <div>
-                                <h1
-                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
-                                    Quick Links</h1>
-                                <div class="w-full pt-4 md:pt-5">
-                                    <div id="quick-links-container" class="space-y-3">
-                                        <!-- Dynamic quick links will be injected here -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="bg-[#F59E0B] h-[1px]"></div>
+    <section class="py-10">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <!-- 1. Fixed the 'flex-wrap' typo and balanced gap properties -->
+          <div class="flex flex-wrap w-full gap-y-8 md:gap-x-4 lg:gap-x-8">
+            <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start">
+              <div>
+                <h1 class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                  Quick Links</h1>
+                <div class="w-full pt-4 md:pt-5">
+                  <div id="quick-links-container" class="space-y-3">
+                    <!-- Dynamic quick links will be injected here -->
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                        <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
-                            <h1
-                                class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
-                                Services</h1>
-                            <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
-                            <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
-                                <div class="w-full sm:w-1/2">
-                                    <div id="first-tree-root-container" class="space-y-3">
-                                        <!-- Dynamic links injected here -->
-                                    </div>
-                                </div>
-                                <div class="w-full sm:w-1/2">
-                                    <div id="second-tree-root-container" class="space-y-3">
-                                        <!-- Dynamic links injected here -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
-                            <div>
-                                <h1
-                                    class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
-                                    Government Schemes</h1>
-                                <div class="w-full pt-4 md:pt-5">
-                                    <div id="government-schemes-container" class="space-y-3">
-                                        <!-- Dynamic links will render here -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="w-full md:w-full lg:w-[50%] flex flex-col justify-start md:order-3 lg:order-2">
+              <h1 class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                Services</h1>
+              <!-- FIXED INSUFFICIENT WIDTH: Removed 'w-1/2' constraint and replaced it with an adaptive full-width flex framework -->
+              <div class="flex flex-col sm:flex-row w-full gap-x-6 gap-y-4 pt-4 md:pt-5">
+                <div class="w-full sm:w-1/2">
+                  <div id="first-tree-root-container" class="space-y-3">
+                    <!-- Dynamic links injected here -->
+                  </div>
                 </div>
-            </div>
-        </section>
-        <section class="text-center text-sm">
-            <hr class="bg-black h-[1px]">
-            <div class="grid grid-cols-1 justify-items-center py-4">
-                <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
-                    <a id="link-facebook" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-facebook text-2xl"></i>
-                        </div>
-                    </a>
-                    <a id="link-twitter" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-x-twitter text-xl"></i>
-                        </div>
-                    </a>
-                    <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-linkedin text-xl"></i>
-                        </div>
-                    </a>
-                    <a id="link-youtube" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-youtube text-xl"></i>
-                        </div>
-                    </a>
-                    <a id="link-threads" target="_blank" rel="noopener noreferrer">
-                        <div
-                            class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
-                            <i class="fa-brands fa-threads text-xl"></i>
-                        </div>
-                    </a>
+                <div class="w-full sm:w-1/2">
+                  <div id="second-tree-root-container" class="space-y-3">
+                    <!-- Dynamic links injected here -->
+                  </div>
                 </div>
+              </div>
             </div>
-            <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
-        </section>
-    </footer>
+            <div class="w-full md:w-[45%] lg:w-[22%] flex flex-col justify-start md:order-2 lg:order-3">
+              <div>
+                <h1 class="text-[#F59E0B] text-xl font-bold border-b border-slate-700/50 pb-2 md:border-none md:pb-0">
+                  Government Schemes</h1>
+                <div class="w-full pt-4 md:pt-5">
+                  <div id="government-schemes-container" class="space-y-3">
+                    <!-- Dynamic links will render here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center text-sm">
+      <hr class="bg-black h-[1px]">
+      <div class="grid grid-cols-1 justify-items-center py-4">
+        <div class="grid grid-flow-col gap-4 md:gap-10 text-2xl">
+          <a id="link-facebook" target="_blank" rel="noopener noreferrer">
+            <div
+              class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-facebook text-2xl"></i>
+            </div>
+          </a>
+          <a id="link-twitter" target="_blank" rel="noopener noreferrer">
+            <div
+              class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-x-twitter text-xl"></i>
+            </div>
+          </a>
+          <a id="link-linkedin" target="_blank" rel="noopener noreferrer">
+            <div
+              class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-linkedin text-xl"></i>
+            </div>
+          </a>
+          <a id="link-youtube" target="_blank" rel="noopener noreferrer">
+            <div
+              class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-youtube text-xl"></i>
+            </div>
+          </a>
+          <a id="link-threads" target="_blank" rel="noopener noreferrer">
+            <div
+              class="grid items-center justify-center w-12 h-12 rounded-full border border-[#f1f1f1] text-[#f1f1f1] hover:text-[#0F5FDC]">
+              <i class="fa-brands fa-threads text-xl"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <p class="md:text-lg pb-4">© 2026 Powerd by Vertexcel Export India Pvt Ltd</p>
+    </section>
+  </footer>
 
   <script src="/headerFooter.js"></script>
 
